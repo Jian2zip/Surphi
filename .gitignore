@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Output files (generated at runtime; keep directory stubs only)
+output/papers/*.txt
+output/wiki/*.txt
+output/videos/*.txt
+output/discussions/*.txt
+output/research_logs/*.txt
+
+# IDE / editor
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
