@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Surphi | 性哲學關係圖譜</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;700&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient ambient-a"></div>
+  <div class="ambient ambient-b"></div>
+
+  <div class="page-shell">
+    <header class="hero glass-panel">
+      <nav class="topbar">
+        <div class="brand">Surphi</div>
+        <div class="nav-links">
+          <a href="#tree">關係圖譜</a>
+          <a href="#origins">思想起點</a>
+          <a href="#flow">理論流動</a>
+        </div>
+      </nav>
+
+      <div class="hero-grid">
+        <section class="hero-copy">
+          <p class="eyebrow">PHILOSOPHY RESEARCH INTERFACE</p>
+          <h1>把性哲學讀成一張<br>可展開的知識地圖。</h1>
+          <p class="lead">
+            Surphi 以極簡與流動的互動方式整理哲學中的性、欲望、禁忌與權力。
+            你可以從古典秩序出發，沿著思想裂縫，看見薩德、巴塔耶與傅柯如何重新定義這個問題。
+          </p>
+
+          <div class="hero-actions">
+            <button class="primary-button" type="button" data-focus="foucault">進入傅柯路徑</button>
+            <button class="secondary-button" type="button" data-focus="classical">觀看古典起點</button>
+          </div>
+        </section>
+
+        <section id="tree" class="tree-stage glass-panel">
+          <div class="stage-copy">
+            <span class="stage-label">Obsidian-inspired graph</span>
+            <p>點擊節點，查看它與前後思想的關聯。</p>
+          </div>
+
+          <div class="tree-canvas">
+            <svg class="tree-lines" viewBox="0 0 1000 660" preserveAspectRatio="none" aria-hidden="true">
+              <line class="branch branch-classical" x1="160" y1="126" x2="370" y2="245"></line>
+              <line class="branch branch-classical" x1="190" y1="314" x2="370" y2="340"></line>
+              <line class="branch branch-classical" x1="162" y1="502" x2="370" y2="380"></line>
+              <line class="branch branch-sade" x1="430" y1="292" x2="622" y2="214"></line>
+              <line class="branch branch-bataille" x1="430" y1="356" x2="622" y2="410"></line>
+              <line class="branch branch-forward" x1="695" y1="245" x2="878" y2="332"></line>
+              <line class="branch branch-forward" x1="695" y1="405" x2="878" y2="332"></line>
+              <line class="branch branch-cross" x1="160" y1="126" x2="190" y2="314"></line>
+              <line class="branch branch-cross" x1="190" y1="314" x2="162" y2="502"></line>
+              <line class="branch branch-cross" x1="370" y1="245" x2="370" y2="340"></line>
+              <line class="branch branch-cross" x1="370" y1="340" x2="370" y2="380"></line>
+              <line class="branch branch-cross" x1="622" y1="214" x2="622" y2="410"></line>
+            </svg>
+
+            <button class="tree-node node-classical" type="button" data-node="classical" style="--x: 7%; --y: 12%;">
+              <span class="node-year">古典</span>
+              <strong>柏拉圖</strong>
+            </button>
+
+            <button class="tree-node node-classical" type="button" data-node="aristotle" style="--x: 10%; --y: 41%;">
+              <span class="node-year">古典</span>
+              <strong>亞里斯多德</strong>
+            </button>
+
+            <button class="tree-node node-classical" type="button" data-node="theology" style="--x: 7%; --y: 69%;">
+              <span class="node-year">神學</span>
+              <strong>奧古斯丁 / 阿奎那</strong>
+            </button>
+
+            <button class="tree-node node-core active" type="button" data-node="sade" style="--x: 35%; --y: 33%;">
+              <span class="node-year">18 世紀</span>
+              <strong>薩德侯爵</strong>
+            </button>
+
+            <button class="tree-node node-core" type="button" data-node="bataille" style="--x: 35%; --y: 54%;">
+              <span class="node-year">20 世紀</span>
+              <strong>喬治・巴塔耶</strong>
+            </button>
+
+            <button class="tree-node node-core" type="button" data-node="foucault" style="--x: 61%; --y: 31%;">
+              <span class="node-year">後現代</span>
+              <strong>米歇爾・傅柯</strong>
+            </button>
+
+            <button class="tree-node node-future" type="button" data-node="contemporary" style="--x: 86%; --y: 46%;">
+              <span class="node-year">延伸</span>
+              <strong>當代性 / 性別理論</strong>
+            </button>
+          </div>
+
+          <aside class="tree-detail glass-panel" id="detailPanel" aria-live="polite">
+            <p class="detail-kicker">Active thread</p>
+            <h2 id="detailTitle">薩德侯爵</h2>
+            <p id="detailSummary">
+              薩德打破了古典與神學對性的限制，將欲望、暴力與越界推到理性難以收束的地帶。
+            </p>
+            <div class="detail-flow" id="detailFlow"></div>
+          </aside>
+        </section>
+      </div>
+    </header>
+
+    <main>
+      <section id="origins" class="section glass-panel reveal">
+        <div class="section-heading">
+          <p class="eyebrow">CLASSICAL BACKGROUND</p>
+          <h2>思想如何從秩序走向裂縫</h2>
+          <p>
+            Surphi 的閱讀方式不是單純列出哲學家，而是把問題放進思想環境。
+            古典哲學與神學先把性安置在理性、德性與目的之下，後來的性哲學才得以從中撕開一道裂口。
+          </p>
+        </div>
+
+        <div class="origin-grid">
+          <article class="origin-card">
+            <span>Plato</span>
+            <h3>愛欲被提升</h3>
+            <p>柏拉圖把欲望導向美與真理，性不是終點，而是一段上升運動。</p>
+          </article>
+          <article class="origin-card">
+            <span>Aristotle</span>
+            <h3>自然與目的</h3>
+            <p>亞里斯多德使身體與倫理落在一套自然功能與社會秩序中。</p>
+          </article>
+          <article class="origin-card">
+            <span>Augustine / Aquinas</span>
+            <h3>神學與節制</h3>
+            <p>性快感被視為應被管理與節制的力量，合法性多被放在婚姻與生殖內。</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="flow" class="section glass-panel reveal">
+        <div class="section-heading narrow">
+          <p class="eyebrow">THEORETICAL FLOW</p>
+          <h2>理論不是跳躍，而是流動</h2>
+          <p>
+            每個節點都不是孤立的名字，而是上一層秩序的回應、反抗或重寫。
+            這個流程帶你從規訓走向越界，再從越界走向權力分析。
+          </p>
+        </div>
+
+        <div class="flow-ribbon">
+          <article class="flow-step active">
+            <span>01</span>
+            <h3>古典秩序</h3>
+            <p>性被納入理性、德性、婚姻與目的論的架構。</p>
+          </article>
+          <article class="flow-step">
+            <span>02</span>
+            <h3>薩德的裂口</h3>
+            <p>欲望以衝撞道德的姿態出現，開始不再服從傳統正當性。</p>
+          </article>
+          <article class="flow-step">
+            <span>03</span>
+            <h3>巴塔耶的越界</h3>
+            <p>情色成為超出日常秩序的經驗，連結禁忌、死亡與神聖。</p>
+          </article>
+          <article class="flow-step">
+            <span>04</span>
+            <h3>傅柯的轉向</h3>
+            <p>性不只是欲望，更是被話語、制度與權力生產的現代對象。</p>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

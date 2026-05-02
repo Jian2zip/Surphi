@@ -1,17 +1,24 @@
-# Philosophy Research Agent
+# Surphi
 
-## Installation
+Surphi is an interactive philosophy website that maps the development of sexuality-related thought from classical philosophy to modern critical theory.
 
-To install the required packages for this project, run:
+The experience is designed around:
 
-```bash
-pip install -r requirements.txt
-```
+- an Obsidian-inspired relation tree
+- liquid-glass panels and floating nodes
+- Apple-like transition rhythm for content reveals
+- a curated path from Plato and Aristotle to Sade, Bataille, and Foucault
 
-## Usage
+## Files
 
-To run the CLI tool, use:
+- `index.html` : main page structure
+- `styles.css` : visual system, layout, motion, and glass effects
+- `script.js` : interactive relation tree and content switching
 
-```bash
-python main.py
-```
+## Open Locally
+
+Open `index.html` in a browser to view the site.
+
+## Theme
+
+Surphi presents philosophy as a living knowledge map rather than a static textbook timeline. The visual language emphasizes continuity, tension, and conceptual inheritance across thinkers.
