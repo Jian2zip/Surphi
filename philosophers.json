@@ -1,0 +1,1284 @@
+{
+  "western_philosophers": [
+    {
+      "name": "Thales of Miletus",
+      "born": "c. 624 BCE",
+      "died": "c. 546 BCE",
+      "era": "Pre-Socratic",
+      "nationality": "Greek",
+      "key_ideas": ["Water as the arche (first principle)", "Naturalistic explanation of the world", "Early cosmology"],
+      "major_works": [],
+      "influence": "First Western philosopher; founder of Milesian school"
+    },
+    {
+      "name": "Anaximander",
+      "born": "c. 610 BCE",
+      "died": "c. 546 BCE",
+      "era": "Pre-Socratic",
+      "nationality": "Greek",
+      "key_ideas": ["Apeiron (the indefinite) as first principle", "Natural selection precursor", "Cosmogony"],
+      "major_works": ["On Nature (fragments)"],
+      "influence": "Student of Thales; introduced the concept of apeiron"
+    },
+    {
+      "name": "Anaximenes",
+      "born": "c. 585 BCE",
+      "died": "c. 525 BCE",
+      "era": "Pre-Socratic",
+      "nationality": "Greek",
+      "key_ideas": ["Air as the arche", "Condensation and rarefaction", "Material monism"],
+      "major_works": [],
+      "influence": "Last of the Milesian philosophers"
+    },
+    {
+      "name": "Pythagoras",
+      "born": "c. 570 BCE",
+      "died": "c. 495 BCE",
+      "era": "Pre-Socratic",
+      "nationality": "Greek",
+      "key_ideas": ["Numbers as the essence of reality", "Transmigration of souls", "Mathematical harmony"],
+      "major_works": [],
+      "influence": "Founded Pythagorean school; major influence on Plato and mathematics"
+    },
+    {
+      "name": "Xenophanes",
+      "born": "c. 570 BCE",
+      "died": "c. 475 BCE",
+      "era": "Pre-Socratic",
+      "nationality": "Greek",
+      "key_ideas": ["Criticism of anthropomorphic gods", "Monotheism", "Epistemological skepticism"],
+      "major_works": ["Fragments"],
+      "influence": "Precursor of Eleatic school; early monotheist"
+    },
+    {
+      "name": "Heraclitus",
+      "born": "c. 535 BCE",
+      "died": "c. 475 BCE",
+      "era": "Pre-Socratic",
+      "nationality": "Greek",
+      "key_ideas": ["Panta rhei (everything flows)", "Logos", "Unity of opposites", "Fire as the arche"],
+      "major_works": ["On Nature (fragments)"],
+      "influence": "Profound influence on Stoicism, Hegel, and process philosophy"
+    },
+    {
+      "name": "Parmenides",
+      "born": "c. 515 BCE",
+      "died": "c. 450 BCE",
+      "era": "Pre-Socratic",
+      "nationality": "Greek",
+      "key_ideas": ["Being is one and unchanging", "Rejection of plurality and change", "Way of Truth vs Way of Opinion"],
+      "major_works": ["On Nature (poem)"],
+      "influence": "Founder of Eleatic school; major influence on Plato and metaphysics"
+    },
+    {
+      "name": "Zeno of Elea",
+      "born": "c. 490 BCE",
+      "died": "c. 430 BCE",
+      "era": "Pre-Socratic",
+      "nationality": "Greek",
+      "key_ideas": ["Paradoxes of motion (Achilles and the tortoise)", "Refutation of plurality", "Reductio ad absurdum"],
+      "major_works": ["Fragments"],
+      "influence": "Invented dialectic; paradoxes still discussed in mathematics and physics"
+    },
+    {
+      "name": "Empedocles",
+      "born": "c. 494 BCE",
+      "died": "c. 434 BCE",
+      "era": "Pre-Socratic",
+      "nationality": "Greek",
+      "key_ideas": ["Four classical elements (earth, water, fire, air)", "Love and Strife as cosmic forces", "Theory of perception"],
+      "major_works": ["On Nature", "Purifications"],
+      "influence": "Four elements theory dominated Western thought for centuries"
+    },
+    {
+      "name": "Anaxagoras",
+      "born": "c. 500 BCE",
+      "died": "c. 428 BCE",
+      "era": "Pre-Socratic",
+      "nationality": "Greek",
+      "key_ideas": ["Nous (mind/intellect) as cosmic principle", "Infinite divisibility of matter", "Everything contains everything"],
+      "major_works": ["On Nature"],
+      "influence": "Brought philosophy to Athens; influenced Socrates and Plato"
+    },
+    {
+      "name": "Leucippus",
+      "born": "c. 5th century BCE",
+      "died": "c. 5th century BCE",
+      "era": "Pre-Socratic",
+      "nationality": "Greek",
+      "key_ideas": ["Atomic theory (with Democritus)", "Void and atoms", "Determinism"],
+      "major_works": ["The Great World System (attributed)"],
+      "influence": "Co-founder of atomism with Democritus"
+    },
+    {
+      "name": "Democritus",
+      "born": "c. 460 BCE",
+      "died": "c. 370 BCE",
+      "era": "Pre-Socratic",
+      "nationality": "Greek",
+      "key_ideas": ["Atomism", "Void", "Deterministic universe", "Ethics of cheerfulness (euthymia)"],
+      "major_works": ["Many works, mostly fragments"],
+      "influence": "Atomic theory anticipated modern physics; influenced Epicurus"
+    },
+    {
+      "name": "Protagoras",
+      "born": "c. 490 BCE",
+      "died": "c. 420 BCE",
+      "era": "Classical",
+      "nationality": "Greek",
+      "key_ideas": ["Man is the measure of all things", "Relativism", "Agnosticism about the gods"],
+      "major_works": ["On Truth", "On the Gods"],
+      "influence": "Most prominent Sophist; relativism still debated today"
+    },
+    {
+      "name": "Gorgias",
+      "born": "c. 483 BCE",
+      "died": "c. 375 BCE",
+      "era": "Classical",
+      "nationality": "Greek",
+      "key_ideas": ["Nothing exists", "Nihilism", "Rhetoric over philosophy", "Nothing can be known or communicated"],
+      "major_works": ["On Non-Being", "Encomium of Helen"],
+      "influence": "Major Sophist; influenced rhetoric and skepticism"
+    },
+    {
+      "name": "Socrates",
+      "born": "c. 470 BCE",
+      "died": "399 BCE",
+      "era": "Classical",
+      "nationality": "Greek",
+      "key_ideas": ["Socratic method (elenchus)", "Know thyself", "Virtue is knowledge", "The examined life"],
+      "major_works": [],
+      "influence": "Central figure of Western philosophy; taught Plato; executed for impiety"
+    },
+    {
+      "name": "Plato",
+      "born": "c. 428 BCE",
+      "died": "c. 348 BCE",
+      "era": "Classical",
+      "nationality": "Greek",
+      "key_ideas": ["Theory of Forms/Ideas", "Allegory of the Cave", "Tripartite soul", "Philosopher-king", "Immortality of the soul"],
+      "major_works": ["Republic", "Symposium", "Phaedo", "Meno", "Timaeus", "Apology", "Phaedrus"],
+      "influence": "Whitehead called Western philosophy 'footnotes to Plato'; founded the Academy"
+    },
+    {
+      "name": "Aristotle",
+      "born": "384 BCE",
+      "died": "322 BCE",
+      "era": "Classical",
+      "nationality": "Greek",
+      "key_ideas": ["Logic (syllogism)", "Four causes", "Substance and form (hylomorphism)", "Eudaimonia (flourishing)", "Virtue ethics", "Potential and actuality"],
+      "major_works": ["Nicomachean Ethics", "Politics", "Metaphysics", "Poetics", "Prior Analytics", "Physics", "On the Soul"],
+      "influence": "The Philosopher; foundational to logic, biology, ethics, politics, and metaphysics"
+    },
+    {
+      "name": "Pyrrho of Elis",
+      "born": "c. 360 BCE",
+      "died": "c. 270 BCE",
+      "era": "Hellenistic",
+      "nationality": "Greek",
+      "key_ideas": ["Radical skepticism", "Suspension of judgment (epoché)", "Ataraxia (tranquility) through suspension"],
+      "major_works": [],
+      "influence": "Founder of Pyrrhonism; shaped ancient and modern skepticism"
+    },
+    {
+      "name": "Epicurus",
+      "born": "341 BCE",
+      "died": "270 BCE",
+      "era": "Hellenistic",
+      "nationality": "Greek",
+      "key_ideas": ["Pleasure (hedone) as highest good", "Ataraxia (tranquility)", "Aponia (absence of pain)", "Atomism", "Death is nothing to us"],
+      "major_works": ["Letter to Menoeceus", "Letter to Herodotus", "Principal Doctrines"],
+      "influence": "Founded Epicureanism; major influence on Utilitarianism and secular ethics"
+    },
+    {
+      "name": "Zeno of Citium",
+      "born": "c. 334 BCE",
+      "died": "c. 262 BCE",
+      "era": "Hellenistic",
+      "nationality": "Greek (Cypriot)",
+      "key_ideas": ["Stoicism", "Logos", "Living according to nature", "Virtue as the only good", "Cosmopolitanism"],
+      "major_works": ["Republic (lost)", "Various fragments"],
+      "influence": "Founder of Stoicism; shaped ethics and political thought"
+    },
+    {
+      "name": "Chrysippus",
+      "born": "c. 279 BCE",
+      "died": "c. 206 BCE",
+      "era": "Hellenistic",
+      "nationality": "Greek",
+      "key_ideas": ["Systematized Stoic logic and ethics", "Fate and free will", "Pneuma as cosmic principle"],
+      "major_works": ["Over 700 works (mostly lost)"],
+      "influence": "Second founder of Stoicism; systematized Stoic doctrine"
+    },
+    {
+      "name": "Cicero",
+      "born": "106 BCE",
+      "died": "43 BCE",
+      "era": "Hellenistic",
+      "nationality": "Roman",
+      "key_ideas": ["Natural law", "Republican virtues", "Eclecticism", "Rhetoric and philosophy"],
+      "major_works": ["De Republica", "De Legibus", "Tusculan Disputations", "De Officiis"],
+      "influence": "Transmitted Greek philosophy to Rome and Latin West"
+    },
+    {
+      "name": "Lucretius",
+      "born": "c. 99 BCE",
+      "died": "c. 55 BCE",
+      "era": "Hellenistic",
+      "nationality": "Roman",
+      "key_ideas": ["Epicurean atomism", "Materialism", "Rejection of divine providence", "Fear of death"],
+      "major_works": ["De Rerum Natura (On the Nature of Things)"],
+      "influence": "Preserved Epicurean atomism; influenced scientific materialism"
+    },
+    {
+      "name": "Seneca",
+      "born": "c. 4 BCE",
+      "died": "65 CE",
+      "era": "Roman",
+      "nationality": "Roman",
+      "key_ideas": ["Stoic ethics", "Brevity of life", "Virtue and inner freedom", "Consolation"],
+      "major_works": ["Letters to Lucilius", "On the Shortness of Life", "On the Happy Life"],
+      "influence": "Major Stoic moralist; influenced Christianity and Renaissance humanism"
+    },
+    {
+      "name": "Epictetus",
+      "born": "c. 50 CE",
+      "died": "c. 135 CE",
+      "era": "Roman",
+      "nationality": "Greek (Roman slave/freedman)",
+      "key_ideas": ["Dichotomy of control (what is up to us vs. not)", "Inner freedom", "Stoic practice", "Assent and impression"],
+      "major_works": ["Discourses", "Enchiridion"],
+      "influence": "Profound influence on Stoic practice and modern cognitive therapy"
+    },
+    {
+      "name": "Marcus Aurelius",
+      "born": "121 CE",
+      "died": "180 CE",
+      "era": "Roman",
+      "nationality": "Roman",
+      "key_ideas": ["Stoic practice in daily life", "Duty", "Acceptance of fate", "Service to the common good"],
+      "major_works": ["Meditations"],
+      "influence": "Philosopher-emperor; Meditations remains a Stoic classic"
+    },
+    {
+      "name": "Plotinus",
+      "born": "204 CE",
+      "died": "270 CE",
+      "era": "Late Antiquity",
+      "nationality": "Roman (Egyptian-born)",
+      "key_ideas": ["The One", "Emanation", "Neoplatonism", "Return to the One through contemplation"],
+      "major_works": ["Enneads"],
+      "influence": "Founder of Neoplatonism; major influence on Augustine and medieval mysticism"
+    },
+    {
+      "name": "Porphyry",
+      "born": "234 CE",
+      "died": "c. 305 CE",
+      "era": "Late Antiquity",
+      "nationality": "Syrian",
+      "key_ideas": ["Neoplatonism", "Isagoge (universals)", "Anti-Christian polemics"],
+      "major_works": ["Isagoge", "Life of Plotinus"],
+      "influence": "Transmitted Neoplatonism; Isagoge shaped medieval logic"
+    },
+    {
+      "name": "Augustine of Hippo",
+      "born": "354 CE",
+      "died": "430 CE",
+      "era": "Medieval",
+      "nationality": "Roman (North African)",
+      "key_ideas": ["Original sin", "Divine grace", "City of God vs. City of Man", "Time and eternity", "Faith and reason"],
+      "major_works": ["Confessions", "City of God", "On Free Choice of the Will"],
+      "influence": "Most influential Christian philosopher; shaped Western theology and philosophy"
+    },
+    {
+      "name": "Boethius",
+      "born": "c. 480 CE",
+      "died": "524 CE",
+      "era": "Medieval",
+      "nationality": "Roman",
+      "key_ideas": ["Fortune and Providence", "Free will and predestination", "The problem of universals"],
+      "major_works": ["Consolation of Philosophy", "Theological Tractates"],
+      "influence": "Bridge between ancient and medieval philosophy; shaped scholasticism"
+    },
+    {
+      "name": "Anselm of Canterbury",
+      "born": "1033",
+      "died": "1109",
+      "era": "Medieval",
+      "nationality": "Italian/English",
+      "key_ideas": ["Ontological argument for God's existence", "Faith seeking understanding (fides quaerens intellectum)", "Satisfaction theory of atonement"],
+      "major_works": ["Proslogion", "Monologion", "Cur Deus Homo"],
+      "influence": "Father of scholasticism; ontological argument still debated"
+    },
+    {
+      "name": "Peter Abelard",
+      "born": "1079",
+      "died": "1142",
+      "era": "Medieval",
+      "nationality": "French",
+      "key_ideas": ["Conceptualism (universals)", "Dialectical method in theology", "Ethics of intention"],
+      "major_works": ["Sic et Non", "Historia Calamitatum"],
+      "influence": "Pioneer of scholastic method; advanced logic in medieval philosophy"
+    },
+    {
+      "name": "Averroes (Ibn Rushd)",
+      "born": "1126",
+      "died": "1198",
+      "era": "Medieval",
+      "nationality": "Andalusian (Arab)",
+      "key_ideas": ["Commentaries on Aristotle", "Harmony of reason and revelation", "Eternity of the world"],
+      "major_works": ["The Incoherence of the Incoherence", "Commentaries on Aristotle"],
+      "influence": "The Commentator on Aristotle; reintroduced Aristotle to Europe"
+    },
+    {
+      "name": "Maimonides",
+      "born": "1135",
+      "died": "1204",
+      "era": "Medieval",
+      "nationality": "Sephardic Jewish (Moroccan)",
+      "key_ideas": ["Reconciling Judaism with Aristotelianism", "Negative theology", "Allegorical interpretation"],
+      "major_works": ["Guide for the Perplexed", "Mishneh Torah"],
+      "influence": "Greatest medieval Jewish philosopher; influenced Aquinas and Spinoza"
+    },
+    {
+      "name": "Roger Bacon",
+      "born": "c. 1214",
+      "died": "c. 1292",
+      "era": "Medieval",
+      "nationality": "English",
+      "key_ideas": ["Empiricism", "Experimental science", "Mathematics in natural philosophy"],
+      "major_works": ["Opus Majus"],
+      "influence": "Precursor of scientific method and empiricism"
+    },
+    {
+      "name": "Thomas Aquinas",
+      "born": "1225",
+      "died": "1274",
+      "era": "Medieval",
+      "nationality": "Italian",
+      "key_ideas": ["Five Ways (proofs for God's existence)", "Synthesis of Aristotle and Christianity", "Natural law", "Faith and reason"],
+      "major_works": ["Summa Theologica", "Summa Contra Gentiles"],
+      "influence": "Doctor Angelicus; Catholic philosophical tradition; still official doctrine"
+    },
+    {
+      "name": "Meister Eckhart",
+      "born": "c. 1260",
+      "died": "c. 1328",
+      "era": "Medieval",
+      "nationality": "German",
+      "key_ideas": ["Mystical union with God", "Godhead beyond God", "Detachment (Abgeschiedenheit)", "Ground of the soul"],
+      "major_works": ["German and Latin Sermons", "Talks of Instruction"],
+      "influence": "Dominant figure of German mysticism; influenced German Idealism"
+    },
+    {
+      "name": "John Duns Scotus",
+      "born": "c. 1266",
+      "died": "1308",
+      "era": "Medieval",
+      "nationality": "Scottish",
+      "key_ideas": ["Haecceity (thisness)", "Univocity of being", "Will over intellect", "Immaculate Conception"],
+      "major_works": ["Opus Oxoniense", "Quaestiones Quodlibetales"],
+      "influence": "Doctor Subtilis; influenced Scotism and Franciscan theology"
+    },
+    {
+      "name": "William of Ockham",
+      "born": "c. 1287",
+      "died": "c. 1347",
+      "era": "Medieval",
+      "nationality": "English",
+      "key_ideas": ["Ockham's Razor", "Nominalism", "Separation of faith and reason", "Political freedom"],
+      "major_works": ["Summa Logicae", "Quodlibeta Septem"],
+      "influence": "Father of nominalism; Ockham's Razor is fundamental to scientific method"
+    },
+    {
+      "name": "Nicholas of Cusa",
+      "born": "1401",
+      "died": "1464",
+      "era": "Renaissance",
+      "nationality": "German",
+      "key_ideas": ["Learned ignorance (docta ignorantia)", "Coincidence of opposites", "Infinite universe", "Religious pluralism"],
+      "major_works": ["De Docta Ignorantia", "De Visione Dei"],
+      "influence": "Bridge between medieval and Renaissance thought; influenced Giordano Bruno"
+    },
+    {
+      "name": "Niccolò Machiavelli",
+      "born": "1469",
+      "died": "1527",
+      "era": "Renaissance",
+      "nationality": "Italian",
+      "key_ideas": ["Political realism", "Virtù and fortuna", "Separation of politics and ethics", "Republicanism"],
+      "major_works": ["The Prince", "Discourses on Livy"],
+      "influence": "Father of modern political science; 'Machiavellian' entered the lexicon"
+    },
+    {
+      "name": "Erasmus",
+      "born": "1469",
+      "died": "1536",
+      "era": "Renaissance",
+      "nationality": "Dutch",
+      "key_ideas": ["Christian humanism", "Reform of the Church", "Free will (against Luther)", "Satire of scholasticism"],
+      "major_works": ["In Praise of Folly", "Adages", "Enchiridion"],
+      "influence": "Prince of Humanists; influenced Reformation and Counter-Reformation"
+    },
+    {
+      "name": "Thomas More",
+      "born": "1478",
+      "died": "1535",
+      "era": "Renaissance",
+      "nationality": "English",
+      "key_ideas": ["Utopia (ideal commonwealth)", "Christian humanism", "Religious toleration in ideal state"],
+      "major_works": ["Utopia"],
+      "influence": "Invented the word 'utopia'; influenced political philosophy and utopianism"
+    },
+    {
+      "name": "Michel de Montaigne",
+      "born": "1533",
+      "died": "1592",
+      "era": "Renaissance",
+      "nationality": "French",
+      "key_ideas": ["Skepticism ('What do I know?')", "Self-examination", "Essays as philosophical form", "Human diversity"],
+      "major_works": ["Essays (Essais)"],
+      "influence": "Invented the essay form; influenced Pascal, Descartes, and modern self-reflection"
+    },
+    {
+      "name": "Giordano Bruno",
+      "born": "1548",
+      "died": "1600",
+      "era": "Renaissance",
+      "nationality": "Italian",
+      "key_ideas": ["Infinite universe", "Multiple worlds", "Pantheism", "Heliocentrism"],
+      "major_works": ["On the Infinite Universe and Worlds", "The Ash Wednesday Supper"],
+      "influence": "Martyr for scientific thought; influenced cosmology and pantheism"
+    },
+    {
+      "name": "Francis Bacon",
+      "born": "1561",
+      "died": "1626",
+      "era": "Early Modern",
+      "nationality": "English",
+      "key_ideas": ["Inductive method", "Four Idols (obstacles to knowledge)", "Empiricism", "Science for human benefit"],
+      "major_works": ["Novum Organum", "The Advancement of Learning", "New Atlantis"],
+      "influence": "Father of empiricism; shaped scientific method and the Enlightenment"
+    },
+    {
+      "name": "Thomas Hobbes",
+      "born": "1588",
+      "died": "1679",
+      "era": "Early Modern",
+      "nationality": "English",
+      "key_ideas": ["Social contract", "Leviathan (absolute sovereign)", "State of nature (war of all against all)", "Materialism"],
+      "major_works": ["Leviathan", "De Cive"],
+      "influence": "Founder of modern political philosophy; influenced liberalism and absolutism"
+    },
+    {
+      "name": "René Descartes",
+      "born": "1596",
+      "died": "1650",
+      "era": "Early Modern",
+      "nationality": "French",
+      "key_ideas": ["Cogito ergo sum", "Method of doubt", "Mind-body dualism", "Innate ideas", "Analytic geometry"],
+      "major_works": ["Meditations on First Philosophy", "Discourse on Method", "Principles of Philosophy"],
+      "influence": "Father of modern philosophy; Cartesian dualism; analytic geometry"
+    },
+    {
+      "name": "Blaise Pascal",
+      "born": "1623",
+      "died": "1662",
+      "era": "Early Modern",
+      "nationality": "French",
+      "key_ideas": ["Pascal's Wager", "Reasons of the heart", "Infinite God and human wretchedness", "Probability theory"],
+      "major_works": ["Pensées", "Provincial Letters"],
+      "influence": "Pioneered probability theory; Pascal's Wager in philosophy of religion"
+    },
+    {
+      "name": "Baruch Spinoza",
+      "born": "1632",
+      "died": "1677",
+      "era": "Early Modern",
+      "nationality": "Dutch (Jewish)",
+      "key_ideas": ["Pantheism (Deus sive Natura)", "Geometric method in philosophy", "Freedom as living by reason", "Determinism", "Critique of religion"],
+      "major_works": ["Ethics", "Theological-Political Treatise", "Tractatus de Intellectus Emendatione"],
+      "influence": "Foundational for rationalism, pantheism, biblical criticism, and liberal democracy"
+    },
+    {
+      "name": "John Locke",
+      "born": "1632",
+      "died": "1704",
+      "era": "Early Modern",
+      "nationality": "English",
+      "key_ideas": ["Tabula rasa (mind as blank slate)", "Natural rights (life, liberty, property)", "Social contract", "Religious toleration", "Empiricism"],
+      "major_works": ["An Essay Concerning Human Understanding", "Two Treatises of Government", "A Letter Concerning Toleration"],
+      "influence": "Father of liberalism; foundational to US Declaration of Independence and human rights"
+    },
+    {
+      "name": "Nicolas Malebranche",
+      "born": "1638",
+      "died": "1715",
+      "era": "Early Modern",
+      "nationality": "French",
+      "key_ideas": ["Occasionalism", "Vision in God", "God as only true cause"],
+      "major_works": ["The Search After Truth"],
+      "influence": "Developed Cartesian system; influenced Leibniz and Berkeley"
+    },
+    {
+      "name": "Gottfried Wilhelm Leibniz",
+      "born": "1646",
+      "died": "1716",
+      "era": "Early Modern",
+      "nationality": "German",
+      "key_ideas": ["Monads", "Pre-established harmony", "Best of all possible worlds", "Calculus", "Principle of Sufficient Reason"],
+      "major_works": ["Monadology", "Discourse on Metaphysics", "Theodicy", "New Essays on Human Understanding"],
+      "influence": "Co-inventor of calculus; rationalism; logic; influenced Kant and Hegel"
+    },
+    {
+      "name": "George Berkeley",
+      "born": "1685",
+      "died": "1753",
+      "era": "Early Modern",
+      "nationality": "Irish",
+      "key_ideas": ["Esse est percipi (to be is to be perceived)", "Idealism", "Critique of abstract ideas", "Immaterialism"],
+      "major_works": ["A Treatise Concerning the Principles of Human Knowledge", "Three Dialogues"],
+      "influence": "Founder of idealism; influenced Kant, Hegel, and phenomenology"
+    },
+    {
+      "name": "Montesquieu",
+      "born": "1689",
+      "died": "1755",
+      "era": "Enlightenment",
+      "nationality": "French",
+      "key_ideas": ["Separation of powers", "Comparative government", "Spirit of the laws", "Climate theory of politics"],
+      "major_works": ["The Spirit of the Laws", "Persian Letters"],
+      "influence": "Foundational to constitutional government and separation of powers"
+    },
+    {
+      "name": "Voltaire",
+      "born": "1694",
+      "died": "1778",
+      "era": "Enlightenment",
+      "nationality": "French",
+      "key_ideas": ["Religious toleration", "Critique of the Church", "Deism", "Satire", "Civil liberties"],
+      "major_works": ["Candide", "Philosophical Letters", "Philosophical Dictionary"],
+      "influence": "Leading Enlightenment figure; shaped secular liberalism"
+    },
+    {
+      "name": "David Hume",
+      "born": "1711",
+      "died": "1776",
+      "era": "Enlightenment",
+      "nationality": "Scottish",
+      "key_ideas": ["Radical empiricism", "Problem of induction", "Skepticism about causation", "Bundle theory of self", "Is-ought problem"],
+      "major_works": ["A Treatise of Human Nature", "Enquiry Concerning Human Understanding", "Dialogues Concerning Natural Religion"],
+      "influence": "Awoke Kant from 'dogmatic slumber'; problem of induction still central"
+    },
+    {
+      "name": "Jean-Jacques Rousseau",
+      "born": "1712",
+      "died": "1778",
+      "era": "Enlightenment",
+      "nationality": "Swiss-French",
+      "key_ideas": ["Noble savage", "Social contract and general will", "Critique of civilization", "Natural education"],
+      "major_works": ["The Social Contract", "Emile", "Discourse on Inequality"],
+      "influence": "Influenced French Revolution, Romanticism, and progressive education"
+    },
+    {
+      "name": "Denis Diderot",
+      "born": "1713",
+      "died": "1784",
+      "era": "Enlightenment",
+      "nationality": "French",
+      "key_ideas": ["Materialism", "Atheism", "Encyclopédie project", "Moral relativism"],
+      "major_works": ["Encyclopédie (editor)", "Rameau's Nephew", "Jacques the Fatalist"],
+      "influence": "Led the Encyclopédie; spread Enlightenment ideas across Europe"
+    },
+    {
+      "name": "Jeremy Bentham",
+      "born": "1748",
+      "died": "1832",
+      "era": "Enlightenment",
+      "nationality": "English",
+      "key_ideas": ["Utilitarianism", "Greatest happiness principle", "Felicific calculus", "Panopticon", "Legal reform"],
+      "major_works": ["Introduction to the Principles of Morals and Legislation"],
+      "influence": "Founder of Utilitarianism; influenced law reform and social policy"
+    },
+    {
+      "name": "Immanuel Kant",
+      "born": "1724",
+      "died": "1804",
+      "era": "Enlightenment",
+      "nationality": "German",
+      "key_ideas": ["Categorical Imperative", "Transcendental idealism", "Synthetic a priori", "Phenomena vs. noumena", "Sapere aude"],
+      "major_works": ["Critique of Pure Reason", "Critique of Practical Reason", "Critique of Judgment", "Groundwork for the Metaphysics of Morals"],
+      "influence": "Copernican revolution in philosophy; shaped all subsequent philosophy"
+    },
+    {
+      "name": "Johann Gottfried Herder",
+      "born": "1744",
+      "died": "1803",
+      "era": "Enlightenment",
+      "nationality": "German",
+      "key_ideas": ["Philosophy of history", "Cultural relativism", "Nationalism and folk culture", "Expressivism"],
+      "major_works": ["Ideas on the Philosophy of the History of Humanity", "This Too a Philosophy of History"],
+      "influence": "Father of nationalism and historicism; influenced Romanticism"
+    },
+    {
+      "name": "Johann Gottlieb Fichte",
+      "born": "1762",
+      "died": "1814",
+      "era": "German Idealism",
+      "nationality": "German",
+      "key_ideas": ["Absolute Ego (I = I)", "Science of Knowledge (Wissenschaftslehre)", "German nationalism", "Moral activism"],
+      "major_works": ["Science of Knowledge", "Addresses to the German Nation"],
+      "influence": "First post-Kantian idealist; influenced Hegel and German nationalism"
+    },
+    {
+      "name": "Friedrich Wilhelm Joseph Schelling",
+      "born": "1775",
+      "died": "1854",
+      "era": "German Idealism",
+      "nationality": "German",
+      "key_ideas": ["Identity philosophy", "Nature philosophy (Naturphilosophie)", "Absolute as subject-object identity", "Ages of the World"],
+      "major_works": ["System of Transcendental Idealism", "Philosophy of Nature"],
+      "influence": "Influenced Romanticism, Hegel, and later existentialism"
+    },
+    {
+      "name": "Georg Wilhelm Friedrich Hegel",
+      "born": "1770",
+      "died": "1831",
+      "era": "German Idealism",
+      "nationality": "German",
+      "key_ideas": ["Dialectics (thesis-antithesis-synthesis)", "Absolute Spirit", "Philosophy of history", "Phenomenology of Spirit", "Master-slave dialectic"],
+      "major_works": ["Phenomenology of Spirit", "Science of Logic", "Philosophy of Right", "Encyclopedia of the Philosophical Sciences"],
+      "influence": "Most influential post-Kantian philosopher; shaped Marx, existentialism, and 20th-century philosophy"
+    },
+    {
+      "name": "Arthur Schopenhauer",
+      "born": "1788",
+      "died": "1860",
+      "era": "German Idealism",
+      "nationality": "German",
+      "key_ideas": ["Will as the thing-in-itself", "World as Will and Representation", "Pessimism", "Aesthetic salvation", "Compassion as the basis of ethics"],
+      "major_works": ["The World as Will and Representation"],
+      "influence": "Influenced Nietzsche, Freud, Wagner, and Eastern-Western philosophy dialogue"
+    },
+    {
+      "name": "August Comte",
+      "born": "1798",
+      "died": "1857",
+      "era": "19th Century",
+      "nationality": "French",
+      "key_ideas": ["Positivism", "Three stages of history", "Sociology (coined the term)", "Religion of Humanity"],
+      "major_works": ["Course of Positive Philosophy", "System of Positive Polity"],
+      "influence": "Father of positivism and sociology"
+    },
+    {
+      "name": "Ludwig Feuerbach",
+      "born": "1804",
+      "died": "1872",
+      "era": "19th Century",
+      "nationality": "German",
+      "key_ideas": ["Critique of religion as projection", "Materialism", "Sensualism", "Species-being"],
+      "major_works": ["The Essence of Christianity", "Principles of the Philosophy of the Future"],
+      "influence": "Influenced Marx and Young Hegelians; critique of religion"
+    },
+    {
+      "name": "John Stuart Mill",
+      "born": "1806",
+      "died": "1873",
+      "era": "19th Century",
+      "nationality": "English",
+      "key_ideas": ["Utilitarianism (qualitative pleasures)", "Harm principle", "Liberty", "Feminism", "Inductive logic"],
+      "major_works": ["On Liberty", "Utilitarianism", "A System of Logic", "The Subjection of Women"],
+      "influence": "Classical liberal; foundational to liberal democracy and utilitarian ethics"
+    },
+    {
+      "name": "Søren Kierkegaard",
+      "born": "1813",
+      "died": "1855",
+      "era": "19th Century",
+      "nationality": "Danish",
+      "key_ideas": ["Three stages of existence (aesthetic, ethical, religious)", "Leap of faith", "Subjectivity is truth", "Anxiety and despair", "Indirect communication"],
+      "major_works": ["Either/Or", "Fear and Trembling", "The Sickness Unto Death", "Concluding Unscientific Postscript"],
+      "influence": "Father of existentialism; influenced Heidegger, Sartre, and Christian existentialism"
+    },
+    {
+      "name": "Karl Marx",
+      "born": "1818",
+      "died": "1883",
+      "era": "19th Century",
+      "nationality": "German",
+      "key_ideas": ["Historical materialism", "Class struggle", "Alienation", "Surplus value", "Critique of capitalism", "Communism"],
+      "major_works": ["Capital (Das Kapital)", "Communist Manifesto", "Economic and Philosophic Manuscripts of 1844"],
+      "influence": "Most politically influential philosopher; shaped 20th-century history and social theory"
+    },
+    {
+      "name": "Friedrich Engels",
+      "born": "1820",
+      "died": "1895",
+      "era": "19th Century",
+      "nationality": "German",
+      "key_ideas": ["Dialectical materialism", "Historical materialism", "Co-founder of Marxism"],
+      "major_works": ["The Condition of the Working Class in England", "Anti-Dühring", "Socialism: Utopian and Scientific"],
+      "influence": "Co-founder of Marxism with Marx"
+    },
+    {
+      "name": "Herbert Spencer",
+      "born": "1820",
+      "died": "1903",
+      "era": "19th Century",
+      "nationality": "English",
+      "key_ideas": ["Social Darwinism", "Survival of the fittest (coined the phrase)", "Synthetic philosophy", "Laissez-faire liberalism"],
+      "major_works": ["System of Synthetic Philosophy", "Principles of Sociology"],
+      "influence": "Social Darwinism; influenced sociology and libertarianism"
+    },
+    {
+      "name": "Charles Sanders Peirce",
+      "born": "1839",
+      "died": "1914",
+      "era": "19th Century",
+      "nationality": "American",
+      "key_ideas": ["Pragmatism", "Semiotics", "Fallibilism", "Abductive reasoning"],
+      "major_works": ["Collected Papers", "How to Make Our Ideas Clear"],
+      "influence": "Founder of pragmatism and semiotics"
+    },
+    {
+      "name": "Friedrich Nietzsche",
+      "born": "1844",
+      "died": "1900",
+      "era": "19th Century",
+      "nationality": "German",
+      "key_ideas": ["God is dead", "Will to power", "Eternal recurrence", "Übermensch (Superman)", "Perspectivism", "Critique of morality"],
+      "major_works": ["Thus Spoke Zarathustra", "Beyond Good and Evil", "On the Genealogy of Morality", "The Birth of Tragedy", "The Gay Science"],
+      "influence": "One of most influential philosophers; shaped existentialism, postmodernism, and 20th century"
+    },
+    {
+      "name": "William James",
+      "born": "1842",
+      "died": "1910",
+      "era": "19th Century",
+      "nationality": "American",
+      "key_ideas": ["Pragmatism", "Radical empiricism", "Stream of consciousness", "The will to believe", "Pluralism"],
+      "major_works": ["The Principles of Psychology", "Pragmatism", "The Varieties of Religious Experience"],
+      "influence": "Major figure in pragmatism and psychology of religion"
+    },
+    {
+      "name": "Gottlob Frege",
+      "born": "1848",
+      "died": "1925",
+      "era": "19th Century",
+      "nationality": "German",
+      "key_ideas": ["Predicate logic", "Sense and reference (Sinn und Bedeutung)", "Logicism", "Concept script (Begriffsschrift)"],
+      "major_works": ["Begriffsschrift", "The Foundations of Arithmetic", "On Sense and Reference"],
+      "influence": "Father of analytic philosophy and modern logic"
+    },
+    {
+      "name": "Edmund Husserl",
+      "born": "1859",
+      "died": "1938",
+      "era": "20th Century",
+      "nationality": "German (Czech-born)",
+      "key_ideas": ["Phenomenology", "Intentionality of consciousness", "Epoché (bracketing)", "Lifeworld (Lebenswelt)", "Transcendental reduction"],
+      "major_works": ["Logical Investigations", "Ideas I", "Cartesian Meditations", "Crisis of European Sciences"],
+      "influence": "Founder of phenomenology; shaped Heidegger, Sartre, Merleau-Ponty"
+    },
+    {
+      "name": "John Dewey",
+      "born": "1859",
+      "died": "1952",
+      "era": "20th Century",
+      "nationality": "American",
+      "key_ideas": ["Instrumentalism/Pragmatism", "Learning by doing", "Democracy as a way of life", "Experience and nature"],
+      "major_works": ["Democracy and Education", "Experience and Nature", "The Quest for Certainty"],
+      "influence": "Shaped progressive education; major American pragmatist"
+    },
+    {
+      "name": "Henri Bergson",
+      "born": "1859",
+      "died": "1941",
+      "era": "20th Century",
+      "nationality": "French",
+      "key_ideas": ["Élan vital (vital impulse)", "Duration (durée)", "Intuition over intellect", "Process philosophy"],
+      "major_works": ["Time and Free Will", "Matter and Memory", "Creative Evolution"],
+      "influence": "Nobel Prize in Literature; influenced process philosophy, Whitehead, and French thought"
+    },
+    {
+      "name": "Alfred North Whitehead",
+      "born": "1861",
+      "died": "1947",
+      "era": "20th Century",
+      "nationality": "English",
+      "key_ideas": ["Process philosophy", "Actual occasions", "God as dipolar", "Creativity as ultimate category"],
+      "major_works": ["Process and Reality", "Science and the Modern World", "Principia Mathematica (with Russell)"],
+      "influence": "Founder of process philosophy; co-wrote Principia Mathematica with Russell"
+    },
+    {
+      "name": "Bertrand Russell",
+      "born": "1872",
+      "died": "1970",
+      "era": "20th Century",
+      "nationality": "English",
+      "key_ideas": ["Logicism", "Theory of descriptions", "Logical atomism", "Pacifism", "Russell's Paradox"],
+      "major_works": ["Principia Mathematica (with Whitehead)", "The Problems of Philosophy", "History of Western Philosophy", "Why I Am Not a Christian"],
+      "influence": "Co-founder of analytic philosophy; Nobel Prize in Literature; public intellectual"
+    },
+    {
+      "name": "G.E. Moore",
+      "born": "1873",
+      "died": "1958",
+      "era": "20th Century",
+      "nationality": "English",
+      "key_ideas": ["Common sense philosophy", "Naturalistic fallacy", "Intuitionism in ethics", "Open question argument"],
+      "major_works": ["Principia Ethica", "A Defence of Common Sense"],
+      "influence": "Co-founder of analytic philosophy; naturalistic fallacy central to meta-ethics"
+    },
+    {
+      "name": "Ernst Cassirer",
+      "born": "1874",
+      "died": "1945",
+      "era": "20th Century",
+      "nationality": "German",
+      "key_ideas": ["Philosophy of symbolic forms", "Myth, language, science as symbol systems", "Neo-Kantianism"],
+      "major_works": ["Philosophy of Symbolic Forms", "An Essay on Man"],
+      "influence": "Neo-Kantian; philosophy of culture and symbolic forms"
+    },
+    {
+      "name": "Karl Jaspers",
+      "born": "1883",
+      "died": "1969",
+      "era": "20th Century",
+      "nationality": "German",
+      "key_ideas": ["Existenz philosophy", "Boundary situations", "The Encompassing", "Axial Age theory"],
+      "major_works": ["Philosophy", "Reason and Existenz", "The Origin and Goal of History"],
+      "influence": "Major German existentialist; introduced 'Axial Age' concept"
+    },
+    {
+      "name": "José Ortega y Gasset",
+      "born": "1883",
+      "died": "1955",
+      "era": "20th Century",
+      "nationality": "Spanish",
+      "key_ideas": ["Perspectivism", "Circumstantialism (I am I and my circumstance)", "The revolt of the masses", "Vital reason"],
+      "major_works": ["The Revolt of the Masses", "Meditations on Quixote"],
+      "influence": "Most important 20th-century Spanish philosopher"
+    },
+    {
+      "name": "Martin Heidegger",
+      "born": "1889",
+      "died": "1976",
+      "era": "20th Century",
+      "nationality": "German",
+      "key_ideas": ["Being and Time (Sein und Zeit)", "Dasein", "Being-in-the-world", "Authenticity", "Throwness", "Ontological difference"],
+      "major_works": ["Being and Time", "Introduction to Metaphysics", "The Question Concerning Technology"],
+      "influence": "Most influential 20th-century continental philosopher; shaped existentialism and postmodernism"
+    },
+    {
+      "name": "Ludwig Wittgenstein",
+      "born": "1889",
+      "died": "1951",
+      "era": "20th Century",
+      "nationality": "Austrian",
+      "key_ideas": ["Picture theory of language (early)", "Language games (late)", "Family resemblance", "Whereof one cannot speak, thereof one must be silent", "Form of life"],
+      "major_works": ["Tractatus Logico-Philosophicus", "Philosophical Investigations"],
+      "influence": "One of most influential analytic philosophers; shaped philosophy of language"
+    },
+    {
+      "name": "Walter Benjamin",
+      "born": "1892",
+      "died": "1940",
+      "era": "20th Century",
+      "nationality": "German",
+      "key_ideas": ["Aura and mechanical reproduction", "Dialectical images", "Messianic time", "Critique of progress"],
+      "major_works": ["The Work of Art in the Age of Mechanical Reproduction", "Arcades Project", "Illuminations"],
+      "influence": "Critical theory; influenced media studies, cultural criticism, and Benjamin studies"
+    },
+    {
+      "name": "Max Horkheimer",
+      "born": "1895",
+      "died": "1973",
+      "era": "20th Century",
+      "nationality": "German",
+      "key_ideas": ["Critical theory", "Traditional vs. critical theory", "Instrumental reason", "Eclipse of reason"],
+      "major_works": ["Dialectic of Enlightenment (with Adorno)", "Eclipse of Reason"],
+      "influence": "Co-founder of Frankfurt School and Critical Theory"
+    },
+    {
+      "name": "Hannah Arendt",
+      "born": "1906",
+      "died": "1975",
+      "era": "20th Century",
+      "nationality": "German-American",
+      "key_ideas": ["Banality of evil", "Human condition (labor, work, action)", "Totalitarianism", "Public realm", "Natality"],
+      "major_works": ["The Origins of Totalitarianism", "The Human Condition", "Eichmann in Jerusalem"],
+      "influence": "Major political philosopher; totalitarianism studies; public sphere"
+    },
+    {
+      "name": "Karl Popper",
+      "born": "1902",
+      "died": "1994",
+      "era": "20th Century",
+      "nationality": "Austrian-British",
+      "key_ideas": ["Falsificationism", "Open society", "Critical rationalism", "Historicism critique", "Three Worlds"],
+      "major_works": ["The Logic of Scientific Discovery", "The Open Society and Its Enemies", "Conjectures and Refutations"],
+      "influence": "Shaped philosophy of science; falsificationism criterion"
+    },
+    {
+      "name": "Theodor Adorno",
+      "born": "1903",
+      "died": "1969",
+      "era": "20th Century",
+      "nationality": "German",
+      "key_ideas": ["Negative dialectics", "Culture industry", "Critique of Enlightenment", "Aesthetic theory"],
+      "major_works": ["Dialectic of Enlightenment (with Horkheimer)", "Negative Dialectics", "Aesthetic Theory", "Minima Moralia"],
+      "influence": "Frankfurt School; critical theory; aesthetic philosophy"
+    },
+    {
+      "name": "Jean-Paul Sartre",
+      "born": "1905",
+      "died": "1980",
+      "era": "20th Century",
+      "nationality": "French",
+      "key_ideas": ["Existence precedes essence", "Radical freedom and responsibility", "Bad faith", "Being-for-itself vs. Being-in-itself", "The Other"],
+      "major_works": ["Being and Nothingness", "Existentialism is a Humanism", "Critique of Dialectical Reason", "Nausea"],
+      "influence": "Leading existentialist; engaged public intellectual; Nobel Prize declined"
+    },
+    {
+      "name": "Emmanuel Levinas",
+      "born": "1906",
+      "died": "1995",
+      "era": "20th Century",
+      "nationality": "French (Lithuanian-born)",
+      "key_ideas": ["Ethics as first philosophy", "The face of the Other", "Infinity", "Responsibility for the Other"],
+      "major_works": ["Totality and Infinity", "Otherwise than Being"],
+      "influence": "Ethics of alterity; major influence on post-Holocaust Jewish thought and ethics"
+    },
+    {
+      "name": "W.V.O. Quine",
+      "born": "1908",
+      "died": "2000",
+      "era": "20th Century",
+      "nationality": "American",
+      "key_ideas": ["Naturalized epistemology", "Critique of analytic-synthetic distinction", "Indeterminacy of translation", "Web of belief"],
+      "major_works": ["Two Dogmas of Empiricism", "Word and Object", "From a Logical Point of View"],
+      "influence": "Most influential American analytic philosopher of 20th century"
+    },
+    {
+      "name": "Simone de Beauvoir",
+      "born": "1908",
+      "died": "1986",
+      "era": "20th Century",
+      "nationality": "French",
+      "key_ideas": ["The Second Sex", "Woman as the Other", "Existentialist feminism", "Situated freedom"],
+      "major_works": ["The Second Sex", "The Ethics of Ambiguity", "Memoirs of a Dutiful Daughter"],
+      "influence": "Mother of second-wave feminism; existentialist ethics"
+    },
+    {
+      "name": "Maurice Merleau-Ponty",
+      "born": "1908",
+      "died": "1961",
+      "era": "20th Century",
+      "nationality": "French",
+      "key_ideas": ["Embodied cognition", "Phenomenology of perception", "Bodily schema", "Flesh (chair)"],
+      "major_works": ["Phenomenology of Perception", "The Visible and the Invisible"],
+      "influence": "Embodied cognition; phenomenological approach to psychology"
+    },
+    {
+      "name": "A.J. Ayer",
+      "born": "1910",
+      "died": "1989",
+      "era": "20th Century",
+      "nationality": "English",
+      "key_ideas": ["Logical positivism", "Verification principle", "Emotivism in ethics", "Critique of metaphysics"],
+      "major_works": ["Language, Truth and Logic"],
+      "influence": "Brought logical positivism to English-speaking world"
+    },
+    {
+      "name": "J.L. Austin",
+      "born": "1911",
+      "died": "1960",
+      "era": "20th Century",
+      "nationality": "English",
+      "key_ideas": ["Ordinary language philosophy", "Speech act theory", "Performative utterances", "How to Do Things with Words"],
+      "major_works": ["How to Do Things with Words", "Sense and Sensibilia", "Philosophical Papers"],
+      "influence": "Founded speech act theory; ordinary language philosophy"
+    },
+    {
+      "name": "Albert Camus",
+      "born": "1913",
+      "died": "1960",
+      "era": "20th Century",
+      "nationality": "French-Algerian",
+      "key_ideas": ["Absurdism", "Revolt against the absurd", "Sisyphus must be imagined happy", "Anti-nihilism"],
+      "major_works": ["The Myth of Sisyphus", "The Stranger", "The Rebel"],
+      "influence": "Absurdism; Nobel Prize in Literature; engaged public intellectual"
+    },
+    {
+      "name": "Paul Ricoeur",
+      "born": "1913",
+      "died": "2005",
+      "era": "20th Century",
+      "nationality": "French",
+      "key_ideas": ["Hermeneutics", "Narrative identity", "The self as another", "Symbol and metaphor", "Memory, history, forgetting"],
+      "major_works": ["Time and Narrative", "Oneself as Another", "The Symbolism of Evil"],
+      "influence": "Major hermeneutic philosopher; narrative theory of identity"
+    },
+    {
+      "name": "Donald Davidson",
+      "born": "1917",
+      "died": "2003",
+      "era": "20th Century",
+      "nationality": "American",
+      "key_ideas": ["Anomalous monism", "Radical interpretation", "Principle of charity", "Event causation"],
+      "major_works": ["Essays on Actions and Events", "Inquiries into Truth and Interpretation"],
+      "influence": "Major analytic philosopher of action, mind, and language"
+    },
+    {
+      "name": "Hans-Georg Gadamer",
+      "born": "1900",
+      "died": "2002",
+      "era": "20th Century",
+      "nationality": "German",
+      "key_ideas": ["Philosophical hermeneutics", "Fusion of horizons", "Effective history", "Truth beyond method"],
+      "major_works": ["Truth and Method"],
+      "influence": "Founder of philosophical hermeneutics; lived to 102"
+    },
+    {
+      "name": "Herbert Marcuse",
+      "born": "1898",
+      "died": "1979",
+      "era": "20th Century",
+      "nationality": "German-American",
+      "key_ideas": ["One-dimensional man", "Repressive desublimation", "Great Refusal", "Eros and civilization"],
+      "major_works": ["Eros and Civilization", "One-Dimensional Man"],
+      "influence": "Frankfurt School; ideological father of 1968 student movements"
+    },
+    {
+      "name": "Gilbert Ryle",
+      "born": "1900",
+      "died": "1976",
+      "era": "20th Century",
+      "nationality": "English",
+      "key_ideas": ["Category mistake", "The Ghost in the Machine", "Knowing how vs. knowing that", "Ordinary language philosophy"],
+      "major_works": ["The Concept of Mind"],
+      "influence": "Ordinary language philosophy; critique of Cartesian dualism"
+    },
+    {
+      "name": "Peter Strawson",
+      "born": "1919",
+      "died": "2006",
+      "era": "20th Century",
+      "nationality": "English",
+      "key_ideas": ["Descriptive metaphysics", "Reactive attitudes", "Persons as irreducible", "Critique of Russell"],
+      "major_works": ["Individuals", "The Bounds of Sense", "Freedom and Resentment"],
+      "influence": "Major analytic philosopher; reactive attitudes central to free will debate"
+    },
+    {
+      "name": "John Rawls",
+      "born": "1921",
+      "died": "2002",
+      "era": "20th Century",
+      "nationality": "American",
+      "key_ideas": ["Veil of ignorance", "Original position", "Justice as fairness", "Difference principle", "Overlapping consensus"],
+      "major_works": ["A Theory of Justice", "Political Liberalism"],
+      "influence": "Most influential political philosopher of the 20th century"
+    },
+    {
+      "name": "Thomas Kuhn",
+      "born": "1922",
+      "died": "1996",
+      "era": "20th Century",
+      "nationality": "American",
+      "key_ideas": ["Paradigm shifts", "Normal science vs. revolutionary science", "Incommensurability", "Scientific community"],
+      "major_works": ["The Structure of Scientific Revolutions"],
+      "influence": "Transformed philosophy and history of science; 'paradigm shift' entered common usage"
+    },
+    {
+      "name": "Jean-François Lyotard",
+      "born": "1924",
+      "died": "1998",
+      "era": "20th Century",
+      "nationality": "French",
+      "key_ideas": ["Incredulity towards metanarratives", "Postmodern condition", "Language games", "The differend"],
+      "major_works": ["The Postmodern Condition", "The Differend"],
+      "influence": "Defined postmodernism philosophically"
+    },
+    {
+      "name": "Gilles Deleuze",
+      "born": "1925",
+      "died": "1995",
+      "era": "20th Century",
+      "nationality": "French",
+      "key_ideas": ["Difference and repetition", "Rhizome", "Plane of immanence", "Becoming", "Anti-Oedipus (with Guattari)"],
+      "major_works": ["Difference and Repetition", "Anti-Oedipus (with Guattari)", "A Thousand Plateaus"],
+      "influence": "Major post-structuralist; influenced cultural studies, political theory"
+    },
+    {
+      "name": "Hilary Putnam",
+      "born": "1926",
+      "died": "2016",
+      "era": "20th Century",
+      "nationality": "American",
+      "key_ideas": ["Semantic externalism", "Twin Earth thought experiment", "Functionalism in philosophy of mind", "Pragmatic realism"],
+      "major_works": ["Reason, Truth and History", "Mind, Language and Reality"],
+      "influence": "Major analytic philosopher of mind and language"
+    },
+    {
+      "name": "Michel Foucault",
+      "born": "1926",
+      "died": "1984",
+      "era": "20th Century",
+      "nationality": "French",
+      "key_ideas": ["Power/knowledge", "Discourse", "Genealogy", "Biopolitics", "Archaeology of knowledge", "Panopticism"],
+      "major_works": ["Discipline and Punish", "The History of Sexuality", "The Order of Things", "Madness and Civilization"],
+      "influence": "Most cited author in humanities; shaped cultural studies, gender theory, social sciences"
+    },
+    {
+      "name": "Louis Althusser",
+      "born": "1918",
+      "died": "1990",
+      "era": "20th Century",
+      "nationality": "French (Algerian-born)",
+      "key_ideas": ["Structural Marxism", "Ideological state apparatuses", "Interpellation", "Overdetermination", "Epistemological break"],
+      "major_works": ["For Marx", "Reading Capital", "Lenin and Philosophy"],
+      "influence": "Structural Marxism; shaped critical theory and cultural studies"
+    },
+    {
+      "name": "Noam Chomsky",
+      "born": "1928",
+      "died": "present",
+      "era": "20th Century",
+      "nationality": "American",
+      "key_ideas": ["Universal grammar", "Language acquisition device", "Manufacturing consent", "Anarcho-syndicalism"],
+      "major_works": ["Syntactic Structures", "Manufacturing Consent", "Language and Mind"],
+      "influence": "Father of modern linguistics; major political dissident intellectual"
+    },
+    {
+      "name": "Jürgen Habermas",
+      "born": "1929",
+      "died": "present",
+      "era": "20th Century",
+      "nationality": "German",
+      "key_ideas": ["Communicative rationality", "Public sphere", "Discourse ethics", "Lifeworld vs. system", "Theory of communicative action"],
+      "major_works": ["The Theory of Communicative Action", "The Structural Transformation of the Public Sphere", "Between Facts and Norms"],
+      "influence": "Leading Frankfurt School second generation; discourse ethics; public sphere theory"
+    },
+    {
+      "name": "Jean Baudrillard",
+      "born": "1929",
+      "died": "2007",
+      "era": "20th Century",
+      "nationality": "French",
+      "key_ideas": ["Simulacra and simulation", "Hyperreality", "Critique of consumer society", "The Gulf War Did Not Take Place"],
+      "major_works": ["Simulacra and Simulation", "The System of Objects", "The Consumer Society"],
+      "influence": "Postmodernism; media theory; consumer culture critique"
+    },
+    {
+      "name": "Jacques Derrida",
+      "born": "1930",
+      "died": "2004",
+      "era": "20th Century",
+      "nationality": "French (Algerian-born)",
+      "key_ideas": ["Deconstruction", "Différance", "Trace", "Logocentrism", "Binary oppositions"],
+      "major_works": ["Of Grammatology", "Writing and Difference", "Speech and Phenomena", "Margins of Philosophy"],
+      "influence": "Founder of deconstruction; shaped literary theory and humanities"
+    },
+    {
+      "name": "Richard Rorty",
+      "born": "1931",
+      "died": "2007",
+      "era": "20th Century",
+      "nationality": "American",
+      "key_ideas": ["Neo-pragmatism", "Anti-representationalism", "Contingency, irony, and solidarity", "Post-analytic philosophy"],
+      "major_works": ["Philosophy and the Mirror of Nature", "Contingency, Irony, and Solidarity"],
+      "influence": "Post-analytic neo-pragmatism; bridged analytic and continental philosophy"
+    },
+    {
+      "name": "Félix Guattari",
+      "born": "1930",
+      "died": "1992",
+      "era": "20th Century",
+      "nationality": "French",
+      "key_ideas": ["Schizoanalysis", "Anti-Oedipus (with Deleuze)", "Rhizome", "Machinic desire"],
+      "major_works": ["Anti-Oedipus (with Deleuze)", "A Thousand Plateaus (with Deleuze)"],
+      "influence": "Post-structuralism; political philosophy"
+    },
+    {
+      "name": "Saul Kripke",
+      "born": "1940",
+      "died": "2022",
+      "era": "20th Century",
+      "nationality": "American",
+      "key_ideas": ["Possible worlds semantics", "Naming and necessity", "Rigid designators", "Wittgenstein on rules (Kripkenstein)"],
+      "major_works": ["Naming and Necessity", "Wittgenstein on Rules and Private Language"],
+      "influence": "Revived metaphysics in analytic philosophy; modal logic semantics"
+    },
+    {
+      "name": "Daniel Dennett",
+      "born": "1942",
+      "died": "present",
+      "era": "20th Century",
+      "nationality": "American",
+      "key_ideas": ["Consciousness explained (no Cartesian theater)", "Multiple drafts model", "Intentional stance", "Evolution of mind", "Memes"],
+      "major_works": ["Consciousness Explained", "Darwin's Dangerous Idea", "Brainstorms"],
+      "influence": "Major philosopher of mind; popularized evolutionary view of consciousness"
+    },
+    {
+      "name": "Derek Parfit",
+      "born": "1942",
+      "died": "2017",
+      "era": "20th Century",
+      "nationality": "English",
+      "key_ideas": ["Personal identity (Reductionism)", "Non-identity problem", "Parfit's teletransportation", "Population ethics", "Reasons and persons"],
+      "major_works": ["Reasons and Persons", "On What Matters"],
+      "influence": "Most important British moral philosopher of late 20th century"
+    },
+    {
+      "name": "Peter Singer",
+      "born": "1946",
+      "died": "present",
+      "era": "Contemporary",
+      "nationality": "Australian",
+      "key_ideas": ["Effective altruism", "Animal liberation", "Utilitarian ethics", "Famine, affluence, and morality"],
+      "major_works": ["Animal Liberation", "Practical Ethics", "The Life You Can Save"],
+      "influence": "Shaped animal rights movement and effective altruism"
+    },
+    {
+      "name": "Slavoj Žižek",
+      "born": "1949",
+      "died": "present",
+      "era": "Contemporary",
+      "nationality": "Slovenian",
+      "key_ideas": ["Lacanian Marxism", "Ideology critique", "The Real", "Parallax view", "Pop culture philosophy"],
+      "major_works": ["The Sublime Object of Ideology", "The Plague of Fantasies", "Less Than Nothing"],
+      "influence": "Most prominent contemporary continental philosopher and public intellectual"
+    },
+    {
+      "name": "Alain Badiou",
+      "born": "1937",
+      "died": "present",
+      "era": "Contemporary",
+      "nationality": "French",
+      "key_ideas": ["Being and event", "Set theory ontology", "Truth procedures", "The subject", "Communism"],
+      "major_works": ["Being and Event", "Logics of Worlds", "Ethics"],
+      "influence": "Major contemporary French philosopher; set theory ontology"
+    },
+    {
+      "name": "Robert Nozick",
+      "born": "1938",
+      "died": "2002",
+      "era": "20th Century",
+      "nationality": "American",
+      "key_ideas": ["Libertarianism", "Entitlement theory", "Experience machine thought experiment", "Minimal state"],
+      "major_works": ["Anarchy, State, and Utopia", "Philosophical Explanations"],
+      "influence": "Libertarian political philosophy; rebuttal to Rawls"
+    },
+    {
+      "name": "Michael Dummett",
+      "born": "1925",
+      "died": "2011",
+      "era": "20th Century",
+      "nationality": "English",
+      "key_ideas": ["Anti-realism", "Intuitionism in logic", "Frege scholarship", "Meaning as use"],
+      "major_works": ["Frege: Philosophy of Language", "Truth and Other Enigmas", "The Logical Basis of Metaphysics"],
+      "influence": "Major analytic philosopher; anti-realism in philosophy of language"
+    }
+  ]
+}
