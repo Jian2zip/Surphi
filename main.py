@@ -40,8 +40,10 @@ def show_philosopher(p: dict) -> None:
     print(sep)
     print("  Core Ideas:")
     for idea in p["core_ideas"]:
-        for line in textwrap.wrap(idea, width=width - 6):
-            print(f"    • {line}")
+        lines = textwrap.wrap(idea, width=width - 6)
+        for i, line in enumerate(lines):
+            prefix = "    • " if i == 0 else "      "
+            print(f"{prefix}{line}")
 
     print(sep)
     print("  Influence:")
