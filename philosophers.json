@@ -1143,7 +1143,7 @@
     {
       "name": "Noam Chomsky",
       "born": "1928",
-      "died": "present",
+      "died": "living",
       "era": "20th Century",
       "nationality": "American",
       "key_ideas": ["Universal grammar", "Language acquisition device", "Manufacturing consent", "Anarcho-syndicalism"],
@@ -1153,7 +1153,7 @@
     {
       "name": "Jürgen Habermas",
       "born": "1929",
-      "died": "present",
+      "died": "living",
       "era": "20th Century",
       "nationality": "German",
       "key_ideas": ["Communicative rationality", "Public sphere", "Discourse ethics", "Lifeworld vs. system", "Theory of communicative action"],
@@ -1213,7 +1213,7 @@
     {
       "name": "Daniel Dennett",
       "born": "1942",
-      "died": "present",
+      "died": "living",
       "era": "20th Century",
       "nationality": "American",
       "key_ideas": ["Consciousness explained (no Cartesian theater)", "Multiple drafts model", "Intentional stance", "Evolution of mind", "Memes"],
@@ -1233,7 +1233,7 @@
     {
       "name": "Peter Singer",
       "born": "1946",
-      "died": "present",
+      "died": "living",
       "era": "Contemporary",
       "nationality": "Australian",
       "key_ideas": ["Effective altruism", "Animal liberation", "Utilitarian ethics", "Famine, affluence, and morality"],
@@ -1243,7 +1243,7 @@
     {
       "name": "Slavoj Žižek",
       "born": "1949",
-      "died": "present",
+      "died": "living",
       "era": "Contemporary",
       "nationality": "Slovenian",
       "key_ideas": ["Lacanian Marxism", "Ideology critique", "The Real", "Parallax view", "Pop culture philosophy"],
@@ -1253,7 +1253,7 @@
     {
       "name": "Alain Badiou",
       "born": "1937",
-      "died": "present",
+      "died": "living",
       "era": "Contemporary",
       "nationality": "French",
       "key_ideas": ["Being and event", "Set theory ontology", "Truth procedures", "The subject", "Communism"],

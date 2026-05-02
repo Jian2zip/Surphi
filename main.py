@@ -12,17 +12,27 @@ DATA_FILE = os.path.join(os.path.dirname(__file__), "philosophers.json")
 
 def load_philosophers():
     """Load philosophers from the JSON database."""
-    with open(DATA_FILE, "r", encoding="utf-8") as f:
-        data = json.load(f)
+    try:
+        with open(DATA_FILE, "r", encoding="utf-8") as f:
+            data = json.load(f)
+    except FileNotFoundError:
+        print(f"Error: Database file not found at '{DATA_FILE}'.", file=sys.stderr)
+        sys.exit(1)
+    except json.JSONDecodeError as exc:
+        print(f"Error: Could not parse '{DATA_FILE}': {exc}", file=sys.stderr)
+        sys.exit(1)
     return data["western_philosophers"]
 
 
 def list_eras(philosophers):
     """Return all distinct eras, preserving insertion order."""
+    seen_set = set()
     seen = []
     for p in philosophers:
-        if p["era"] not in seen:
-            seen.append(p["era"])
+        era = p["era"]
+        if era not in seen_set:
+            seen_set.add(era)
+            seen.append(era)
     return seen
 
 
