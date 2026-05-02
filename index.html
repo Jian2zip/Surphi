@@ -1,0 +1,1336 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>哲思源流 — 西方哲學的脈絡</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Noto+Sans+TC:wght@300;400&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ──────────────────────────────────────
+       RESET & BASE
+    ────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream:   #f9f5ef;
+      --parchment: #ede8de;
+      --ink:     #1a1713;
+      --ink-muted: #4a4540;
+      --gold:    #b8934a;
+      --gold-light: #d4a96a;
+      --border:  #d8cfc0;
+      --card-bg: #faf7f2;
+
+      --font-serif: 'Playfair Display', 'Noto Serif TC', Georgia, serif;
+      --font-body:  'Noto Sans TC', 'Noto Serif TC', sans-serif;
+
+      --max-w: 1100px;
+      --section-gap: 7rem;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.75;
+      overflow-x: hidden;
+    }
+
+    /* ──────────────────────────────────────
+       SCROLLBAR
+    ────────────────────────────────────── */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--cream); }
+    ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
+
+    /* ──────────────────────────────────────
+       NAV
+    ────────────────────────────────────── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.1rem 2.5rem;
+      background: rgba(249, 245, 239, 0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      transition: box-shadow .3s;
+    }
+    nav.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,.08); }
+
+    .nav-logo {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      color: var(--ink);
+      text-decoration: none;
+      letter-spacing: .02em;
+    }
+    .nav-logo span { color: var(--gold); }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--ink-muted);
+      font-size: .85rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      transition: color .25s;
+    }
+    .nav-links a:hover { color: var(--gold); }
+
+    /* hamburger (mobile) */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
+    .hamburger span {
+      display: block;
+      width: 24px; height: 2px;
+      background: var(--ink);
+      transition: .3s;
+    }
+
+    /* ──────────────────────────────────────
+       HERO
+    ────────────────────────────────────── */
+    #hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 6rem 2rem 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* subtle Greek meander border top */
+    #hero::before {
+      content: '';
+      position: absolute;
+      top: 80px; left: 0; right: 0;
+      height: 2px;
+      background: repeating-linear-gradient(
+        90deg,
+        var(--gold) 0, var(--gold) 12px,
+        transparent 12px, transparent 16px
+      );
+      opacity: .35;
+    }
+
+    .hero-eyebrow {
+      font-size: .78rem;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.4rem;
+    }
+
+    .hero-title {
+      font-family: var(--font-serif);
+      font-size: clamp(2.8rem, 6vw, 5.5rem);
+      font-weight: 400;
+      line-height: 1.1;
+      max-width: 780px;
+      margin-bottom: 1.5rem;
+    }
+    .hero-title em {
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    .hero-sub {
+      font-size: 1.05rem;
+      color: var(--ink-muted);
+      max-width: 560px;
+      font-weight: 300;
+      margin-bottom: 3rem;
+    }
+
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: .6rem;
+      padding: .85rem 2.2rem;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      text-decoration: none;
+      font-size: .85rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      transition: background .25s, color .25s;
+    }
+    .hero-cta:hover { background: var(--gold); color: var(--cream); }
+
+    .hero-quote {
+      position: absolute;
+      bottom: 3rem;
+      font-family: var(--font-serif);
+      font-style: italic;
+      color: var(--ink-muted);
+      font-size: .95rem;
+      opacity: .55;
+      text-align: center;
+    }
+    .hero-quote cite {
+      display: block;
+      font-style: normal;
+      font-size: .82rem;
+      letter-spacing: .06em;
+      margin-top: .3rem;
+    }
+
+    /* ──────────────────────────────────────
+       SECTION WRAPPER
+    ────────────────────────────────────── */
+    section { padding: var(--section-gap) 2rem; }
+    .container { max-width: var(--max-w); margin: 0 auto; }
+
+    .section-label {
+      font-size: .72rem;
+      letter-spacing: .25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: .75rem;
+    }
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      font-weight: 400;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+    .section-desc {
+      color: var(--ink-muted);
+      max-width: 640px;
+      font-size: .98rem;
+    }
+    .divider {
+      width: 48px; height: 1px;
+      background: var(--gold);
+      margin: 1.5rem 0 3rem;
+    }
+
+    /* ──────────────────────────────────────
+       WHAT IS PHILOSOPHY
+    ────────────────────────────────────── */
+    #what {
+      background: var(--parchment);
+    }
+    .what-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    .what-text p { margin-bottom: 1rem; font-size: .98rem; color: var(--ink-muted); }
+    .what-text p:last-child { margin-bottom: 0; }
+
+    .what-pillars {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+    }
+    .pillar {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      padding: 1.4rem 1.2rem;
+      transition: border-color .25s, transform .25s;
+    }
+    .pillar:hover { border-color: var(--gold); transform: translateY(-3px); }
+    .pillar-icon { font-size: 1.5rem; margin-bottom: .6rem; }
+    .pillar h4 {
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      margin-bottom: .4rem;
+    }
+    .pillar p { font-size: .82rem; color: var(--ink-muted); line-height: 1.6; }
+
+    /* ──────────────────────────────────────
+       TIMELINE
+    ────────────────────────────────────── */
+    #timeline { background: var(--cream); }
+
+    .timeline-wrapper {
+      position: relative;
+      padding-left: 2.5rem;
+    }
+    .timeline-wrapper::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 1px;
+      background: linear-gradient(to bottom, transparent, var(--gold) 5%, var(--gold) 95%, transparent);
+    }
+
+    .era {
+      margin-bottom: 3.5rem;
+      position: relative;
+    }
+    .era::before {
+      content: '';
+      position: absolute;
+      left: -2.55rem; top: .45rem;
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      background: var(--gold);
+      border: 2px solid var(--cream);
+      box-shadow: 0 0 0 2px var(--gold);
+    }
+    .era-period {
+      font-size: .72rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: .3rem;
+    }
+    .era-name {
+      font-family: var(--font-serif);
+      font-size: 1.3rem;
+      margin-bottom: .5rem;
+    }
+    .era-desc { font-size: .92rem; color: var(--ink-muted); max-width: 720px; }
+
+    /* ──────────────────────────────────────
+       PHILOSOPHER CARDS
+    ────────────────────────────────────── */
+    #philosophers { background: var(--parchment); }
+
+    /* filter tabs */
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .6rem;
+      margin-bottom: 2.5rem;
+    }
+    .filter-btn {
+      padding: .4rem 1.1rem;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--ink-muted);
+      font-family: var(--font-body);
+      font-size: .8rem;
+      letter-spacing: .08em;
+      cursor: pointer;
+      transition: .2s;
+    }
+    .filter-btn.active,
+    .filter-btn:hover {
+      background: var(--gold);
+      border-color: var(--gold);
+      color: var(--cream);
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      padding: 1.8rem 1.6rem;
+      cursor: pointer;
+      transition: transform .25s, box-shadow .25s, border-color .25s;
+      position: relative;
+      overflow: hidden;
+    }
+    .card::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 2px;
+      background: var(--gold);
+      transform: scaleX(0);
+      transition: transform .3s;
+    }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 12px 36px rgba(0,0,0,.08); border-color: var(--gold-light); }
+    .card:hover::after { transform: scaleX(1); }
+
+    .card[data-era="presocratic"] .card-era { background: #e8e0d0; }
+    .card[data-era="classical"]   .card-era { background: #dde6d5; }
+    .card[data-era="hellenistic"] .card-era { background: #d8dfe8; }
+    .card[data-era="roman"]       .card-era { background: #e8d8d8; }
+
+    .card-era {
+      display: inline-block;
+      font-size: .68rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      padding: .18rem .65rem;
+      border-radius: 2px;
+      color: var(--ink-muted);
+      margin-bottom: 1rem;
+    }
+    .card-name {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      font-weight: 400;
+      margin-bottom: .2rem;
+    }
+    .card-name-gr {
+      font-size: .82rem;
+      color: var(--ink-muted);
+      margin-bottom: .7rem;
+      font-style: italic;
+    }
+    .card-dates {
+      font-size: .75rem;
+      color: var(--gold);
+      letter-spacing: .08em;
+      margin-bottom: .9rem;
+    }
+    .card-school {
+      font-size: .78rem;
+      font-weight: 400;
+      color: var(--ink-muted);
+      margin-bottom: .8rem;
+      padding-bottom: .8rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .card-summary { font-size: .88rem; color: var(--ink-muted); line-height: 1.65; }
+
+    /* ──────────────────────────────────────
+       MODAL
+    ────────────────────────────────────── */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(26, 23, 19, .55);
+      backdrop-filter: blur(4px);
+      z-index: 200;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .3s;
+    }
+    .modal-overlay.open { opacity: 1; pointer-events: all; }
+
+    .modal {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      max-width: 680px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 2.5rem;
+      position: relative;
+      transform: translateY(20px);
+      transition: transform .3s;
+    }
+    .modal-overlay.open .modal { transform: translateY(0); }
+
+    .modal-close {
+      position: absolute;
+      top: 1.2rem; right: 1.4rem;
+      font-size: 1.4rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--ink-muted);
+      line-height: 1;
+      transition: color .2s;
+    }
+    .modal-close:hover { color: var(--ink); }
+
+    .modal-era { font-size: .72rem; letter-spacing: .18em; text-transform: uppercase; color: var(--gold); margin-bottom: .7rem; }
+    .modal-name { font-family: var(--font-serif); font-size: 2rem; margin-bottom: .2rem; }
+    .modal-name-gr { font-style: italic; color: var(--ink-muted); font-size: .95rem; margin-bottom: .4rem; }
+    .modal-dates { font-size: .82rem; color: var(--gold); margin-bottom: 1.2rem; }
+
+    .modal-section-title {
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      margin: 1.4rem 0 .5rem;
+      color: var(--ink);
+    }
+    .modal-body p { font-size: .92rem; color: var(--ink-muted); margin-bottom: .75rem; }
+    .modal-body ul { padding-left: 1.3rem; }
+    .modal-body ul li { font-size: .9rem; color: var(--ink-muted); margin-bottom: .4rem; }
+
+    .modal-divider { height: 1px; background: var(--border); margin: 1.2rem 0; }
+
+    .tag-list { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .8rem; }
+    .tag {
+      padding: .25rem .75rem;
+      border: 1px solid var(--border);
+      font-size: .75rem;
+      color: var(--ink-muted);
+      border-radius: 2px;
+    }
+
+    /* ──────────────────────────────────────
+       LINEAGE
+    ────────────────────────────────────── */
+    #lineage { background: var(--cream); }
+
+    .lineage-svg-wrap {
+      overflow-x: auto;
+      padding-bottom: 1rem;
+    }
+    .lineage-svg-wrap svg { min-width: 820px; }
+
+    /* ──────────────────────────────────────
+       SCHOOLS
+    ────────────────────────────────────── */
+    #schools { background: var(--parchment); }
+
+    .schools-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 1.3rem;
+    }
+    .school-card {
+      border: 1px solid var(--border);
+      padding: 1.6rem 1.4rem;
+      background: var(--card-bg);
+      transition: border-color .25s;
+    }
+    .school-card:hover { border-color: var(--gold); }
+    .school-icon { font-size: 1.6rem; margin-bottom: .7rem; }
+    .school-name {
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+      margin-bottom: .4rem;
+    }
+    .school-period { font-size: .75rem; color: var(--gold); margin-bottom: .7rem; }
+    .school-desc { font-size: .85rem; color: var(--ink-muted); line-height: 1.65; }
+
+    /* ──────────────────────────────────────
+       QUOTES MARQUEE
+    ────────────────────────────────────── */
+    #quotes {
+      background: var(--ink);
+      padding: 3rem 0;
+      overflow: hidden;
+    }
+    .marquee-track {
+      display: flex;
+      gap: 4rem;
+      animation: marquee 35s linear infinite;
+      white-space: nowrap;
+    }
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+    .marquee-item {
+      font-family: var(--font-serif);
+      font-style: italic;
+      color: var(--gold-light);
+      font-size: 1.05rem;
+      opacity: .75;
+      flex-shrink: 0;
+    }
+    .marquee-item span {
+      font-style: normal;
+      font-size: .72rem;
+      letter-spacing: .1em;
+      color: var(--border);
+      margin-left: .8rem;
+    }
+
+    /* ──────────────────────────────────────
+       FOOTER
+    ────────────────────────────────────── */
+    footer {
+      background: var(--ink);
+      color: var(--parchment);
+      text-align: center;
+      padding: 2.5rem 2rem;
+      font-size: .82rem;
+      letter-spacing: .05em;
+    }
+    footer a { color: var(--gold); text-decoration: none; }
+
+    /* ──────────────────────────────────────
+       FADE-IN ANIMATION
+    ────────────────────────────────────── */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity .6s ease, transform .6s ease;
+    }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    /* ──────────────────────────────────────
+       RESPONSIVE
+    ────────────────────────────────────── */
+    @media (max-width: 768px) {
+      .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: var(--cream); border-bottom: 1px solid var(--border); padding: 1rem 2rem; }
+      .nav-links.open { display: flex; }
+      .hamburger { display: flex; }
+
+      .what-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .what-pillars { grid-template-columns: 1fr 1fr; }
+
+      .modal { padding: 1.8rem 1.4rem; }
+    }
+
+    @media (max-width: 480px) {
+      .what-pillars { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════
+     NAVIGATION
+════════════════════════════════════════ -->
+<nav id="main-nav">
+  <a href="#hero" class="nav-logo">哲思<span>源流</span></a>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#what">何謂哲學</a></li>
+    <li><a href="#timeline">歷史脈絡</a></li>
+    <li><a href="#philosophers">哲學家</a></li>
+    <li><a href="#lineage">傳承圖</a></li>
+    <li><a href="#schools">學派</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="選單">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ═══════════════════════════════════════
+     HERO
+════════════════════════════════════════ -->
+<section id="hero">
+  <p class="hero-eyebrow">西方古典哲學</p>
+  <h1 class="hero-title">探索思想的<em>源流</em><br/>與哲人的智慧傳承</h1>
+  <p class="hero-sub">從泰利斯到馬可·奧理略，跨越千年的哲學脈絡——<br/>在此，凝視人類最深刻的自我追問。</p>
+  <a href="#what" class="hero-cta">開始探索 ↓</a>
+  <blockquote class="hero-quote">
+    "The unexamined life is not worth living."
+    <cite>— Socrates</cite>
+  </blockquote>
+</section>
+
+<!-- ═══════════════════════════════════════
+     WHAT IS PHILOSOPHY
+════════════════════════════════════════ -->
+<section id="what">
+  <div class="container">
+    <div class="what-grid fade-in">
+      <div class="what-text">
+        <p class="section-label">何謂哲學</p>
+        <h2 class="section-title">φιλοσοφία<br/>愛智之學</h2>
+        <div class="divider"></div>
+        <p>「哲學」源自希臘語 <em>philosophia</em>，意為「對智慧的熱愛」。它不提供確定的答案，而是透過嚴謹的追問，揭示隱藏在日常生活背後的根本問題。</p>
+        <p>古希臘人認為，哲學是一切學問的根基——無論是自然科學、倫理學，還是政治理論，皆從哲學的土壤中生長出來。</p>
+        <p>哲學思考訓練我們如何辨別真偽、如何正確推論、如何過一個有意義的人生——這正是它歷久彌新的原因。</p>
+      </div>
+      <div class="what-pillars">
+        <div class="pillar">
+          <div class="pillar-icon">🔍</div>
+          <h4>形上學</h4>
+          <p>探討存在的本質：世界是什麼？現實的根本是什麼？</p>
+        </div>
+        <div class="pillar">
+          <div class="pillar-icon">⚖️</div>
+          <h4>倫理學</h4>
+          <p>探究善惡與道德：我們應當如何生活？什麼是美好人生？</p>
+        </div>
+        <div class="pillar">
+          <div class="pillar-icon">🧠</div>
+          <h4>知識論</h4>
+          <p>分析知識的來源與界限：我們能知道什麼？知識如何可能？</p>
+        </div>
+        <div class="pillar">
+          <div class="pillar-icon">🏛️</div>
+          <h4>政治哲學</h4>
+          <p>探討正義與國家：什麼是理想的社會秩序與政體？</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     TIMELINE
+════════════════════════════════════════ -->
+<section id="timeline">
+  <div class="container">
+    <p class="section-label fade-in">歷史脈絡</p>
+    <h2 class="section-title fade-in">古典哲學的四個時代</h2>
+    <div class="divider fade-in"></div>
+    <div class="timeline-wrapper">
+
+      <div class="era fade-in">
+        <p class="era-period">約 BCE 624 — BCE 400</p>
+        <h3 class="era-name">前蘇格拉底時期 Pre-Socratic</h3>
+        <p class="era-desc">哲學從神話中誕生。米利都學派的泰利斯首次嘗試以自然原因（而非神意）解釋世界，開啟了理性探究的傳統。赫拉克利特、巴門尼德、德謨克利特等人進一步探討「萬物本原（ἀρχή）」——水、火、氣、原子——為後世哲學奠定本體論的基礎。</p>
+      </div>
+
+      <div class="era fade-in">
+        <p class="era-period">約 BCE 470 — BCE 322</p>
+        <h3 class="era-name">古典時期 Classical</h3>
+        <p class="era-desc">蘇格拉底、柏拉圖、亞里斯多德形成人類思想史上最偉大的師承鏈。蘇格拉底以詰問法（elenchus）轉向倫理探究；柏拉圖建立理型論（Theory of Forms）；亞里斯多德則系統化邏輯、生物學、倫理學與政治學，成為「百科全書式哲人」。</p>
+      </div>
+
+      <div class="era fade-in">
+        <p class="era-period">約 BCE 323 — BCE 31</p>
+        <h3 class="era-name">希臘化時期 Hellenistic</h3>
+        <p class="era-desc">亞歷山大大帝的征服使希臘文化擴散至地中海世界。哲學從城邦政治轉向個人幸福（eudaimonia）的追求。斯多噶學派強調理性與德行；伊比鳩魯學派以快樂為善；懷疑論者則懸置一切判斷。</p>
+      </div>
+
+      <div class="era fade-in">
+        <p class="era-period">約 BCE 31 — CE 529</p>
+        <h3 class="era-name">羅馬時期 Roman</h3>
+        <p class="era-desc">羅馬帝國繼承並發展希臘哲學，尤以斯多噶主義盛行。西塞羅將希臘哲學引介給拉丁世界；塞內卡、愛比克泰德與馬可·奧理略將斯多噶哲學付諸實踐。新柏拉圖主義（Neoplatonism）在普羅提諾手中達到頂峰，最終與基督宗教神學相融合。</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     PHILOSOPHERS
+════════════════════════════════════════ -->
+<section id="philosophers">
+  <div class="container">
+    <p class="section-label fade-in">哲學家列傳</p>
+    <h2 class="section-title fade-in">點擊卡片深入探索</h2>
+    <div class="divider fade-in"></div>
+
+    <div class="filter-bar fade-in">
+      <button class="filter-btn active" data-filter="all">全部</button>
+      <button class="filter-btn" data-filter="presocratic">前蘇格拉底</button>
+      <button class="filter-btn" data-filter="classical">古典時期</button>
+      <button class="filter-btn" data-filter="hellenistic">希臘化時期</button>
+      <button class="filter-btn" data-filter="roman">羅馬時期</button>
+    </div>
+
+    <div class="cards-grid" id="cards-grid"></div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     LINEAGE DIAGRAM
+════════════════════════════════════════ -->
+<section id="lineage">
+  <div class="container">
+    <p class="section-label fade-in">思想傳承</p>
+    <h2 class="section-title fade-in">哲學師承關係圖</h2>
+    <p class="section-desc fade-in">從前蘇格拉底時期到羅馬時期，思想如何透過師徒關係與學派延續、演化。</p>
+    <div class="divider fade-in"></div>
+    <div class="lineage-svg-wrap fade-in">
+      <svg viewBox="0 0 900 480" xmlns="http://www.w3.org/2000/svg" font-family="Georgia, serif" style="width:100%;height:auto;">
+        <defs>
+          <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+            <path d="M0,0 L0,6 L8,3 z" fill="#b8934a" opacity=".7"/>
+          </marker>
+        </defs>
+
+        <!-- Era bands -->
+        <rect x="0" y="0" width="900" height="480" fill="#f9f5ef"/>
+        <rect x="0"   y="30" width="170" height="420" fill="#f0ebe0" rx="0"/>
+        <rect x="170" y="30" width="220" height="420" fill="#e8f0e4" rx="0" opacity=".55"/>
+        <rect x="390" y="30" width="270" height="420" fill="#e4eaf0" rx="0" opacity=".55"/>
+        <rect x="660" y="30" width="240" height="420" fill="#f0e4e4" rx="0" opacity=".55"/>
+
+        <!-- Era labels -->
+        <text x="85"  y="22" text-anchor="middle" font-size="10" fill="#b8934a" letter-spacing="1">前蘇格拉底</text>
+        <text x="280" y="22" text-anchor="middle" font-size="10" fill="#6a8a60" letter-spacing="1">古典時期</text>
+        <text x="525" y="22" text-anchor="middle" font-size="10" fill="#5a7090" letter-spacing="1">希臘化時期</text>
+        <text x="780" y="22" text-anchor="middle" font-size="10" fill="#906060" letter-spacing="1">羅馬時期</text>
+
+        <!-- NODES helper: rounded rect + text -->
+        <!-- Pre-Socratics -->
+        <g class="node" transform="translate(20,60)">
+          <rect width="130" height="44" rx="3" fill="#faf7f2" stroke="#d8cfc0" stroke-width="1"/>
+          <text x="65" y="18" text-anchor="middle" font-size="12" fill="#1a1713">泰利斯</text>
+          <text x="65" y="33" text-anchor="middle" font-size="9" fill="#b8934a">Thales · BCE 624</text>
+        </g>
+        <g class="node" transform="translate(20,130)">
+          <rect width="130" height="44" rx="3" fill="#faf7f2" stroke="#d8cfc0" stroke-width="1"/>
+          <text x="65" y="18" text-anchor="middle" font-size="12" fill="#1a1713">阿那克西美尼</text>
+          <text x="65" y="33" text-anchor="middle" font-size="9" fill="#b8934a">Anaximenes · BCE 586</text>
+        </g>
+        <g class="node" transform="translate(20,200)">
+          <rect width="130" height="44" rx="3" fill="#faf7f2" stroke="#d8cfc0" stroke-width="1"/>
+          <text x="65" y="18" text-anchor="middle" font-size="12" fill="#1a1713">赫拉克利特</text>
+          <text x="65" y="33" text-anchor="middle" font-size="9" fill="#b8934a">Heraclitus · BCE 535</text>
+        </g>
+        <g class="node" transform="translate(20,270)">
+          <rect width="130" height="44" rx="3" fill="#faf7f2" stroke="#d8cfc0" stroke-width="1"/>
+          <text x="65" y="18" text-anchor="middle" font-size="12" fill="#1a1713">巴門尼德</text>
+          <text x="65" y="33" text-anchor="middle" font-size="9" fill="#b8934a">Parmenides · BCE 515</text>
+        </g>
+        <g class="node" transform="translate(20,340)">
+          <rect width="130" height="44" rx="3" fill="#faf7f2" stroke="#d8cfc0" stroke-width="1"/>
+          <text x="65" y="18" text-anchor="middle" font-size="12" fill="#1a1713">德謨克利特</text>
+          <text x="65" y="33" text-anchor="middle" font-size="9" fill="#b8934a">Democritus · BCE 460</text>
+        </g>
+
+        <!-- Classical -->
+        <g class="node" transform="translate(185,190)">
+          <rect width="130" height="44" rx="3" fill="#dde6d5" stroke="#9ab88a" stroke-width="1.5"/>
+          <text x="65" y="18" text-anchor="middle" font-size="13" font-weight="600" fill="#1a1713">蘇格拉底</text>
+          <text x="65" y="33" text-anchor="middle" font-size="9" fill="#6a8a60">Socrates · BCE 470</text>
+        </g>
+        <g class="node" transform="translate(185,280)">
+          <rect width="130" height="44" rx="3" fill="#dde6d5" stroke="#9ab88a" stroke-width="1.5"/>
+          <text x="65" y="18" text-anchor="middle" font-size="13" font-weight="600" fill="#1a1713">柏拉圖</text>
+          <text x="65" y="33" text-anchor="middle" font-size="9" fill="#6a8a60">Plato · BCE 428</text>
+        </g>
+        <g class="node" transform="translate(185,370)">
+          <rect width="130" height="44" rx="3" fill="#dde6d5" stroke="#9ab88a" stroke-width="1.5"/>
+          <text x="65" y="18" text-anchor="middle" font-size="13" font-weight="600" fill="#1a1713">亞里斯多德</text>
+          <text x="65" y="33" text-anchor="middle" font-size="9" fill="#6a8a60">Aristotle · BCE 384</text>
+        </g>
+
+        <!-- Hellenistic -->
+        <g class="node" transform="translate(405,80)">
+          <rect width="140" height="44" rx="3" fill="#d8dfe8" stroke="#7a90a8" stroke-width="1.5"/>
+          <text x="70" y="18" text-anchor="middle" font-size="12" fill="#1a1713">芝諾（斯多噶）</text>
+          <text x="70" y="33" text-anchor="middle" font-size="9" fill="#5a7090">Zeno of Citium · BCE 334</text>
+        </g>
+        <g class="node" transform="translate(405,180)">
+          <rect width="140" height="44" rx="3" fill="#d8dfe8" stroke="#7a90a8" stroke-width="1.5"/>
+          <text x="70" y="18" text-anchor="middle" font-size="12" fill="#1a1713">伊比鳩魯</text>
+          <text x="70" y="33" text-anchor="middle" font-size="9" fill="#5a7090">Epicurus · BCE 341</text>
+        </g>
+        <g class="node" transform="translate(405,280)">
+          <rect width="140" height="44" rx="3" fill="#d8dfe8" stroke="#7a90a8" stroke-width="1.5"/>
+          <text x="70" y="18" text-anchor="middle" font-size="12" fill="#1a1713">皮羅（懷疑論）</text>
+          <text x="70" y="33" text-anchor="middle" font-size="9" fill="#5a7090">Pyrrho · BCE 365</text>
+        </g>
+        <g class="node" transform="translate(405,370)">
+          <rect width="140" height="44" rx="3" fill="#d8dfe8" stroke="#7a90a8" stroke-width="1.5"/>
+          <text x="70" y="18" text-anchor="middle" font-size="12" fill="#1a1713">第歐根尼（犬儒）</text>
+          <text x="70" y="33" text-anchor="middle" font-size="9" fill="#5a7090">Diogenes · BCE 412</text>
+        </g>
+
+        <!-- Roman -->
+        <g class="node" transform="translate(670,80)">
+          <rect width="140" height="44" rx="3" fill="#e8d0d0" stroke="#a87070" stroke-width="1.5"/>
+          <text x="70" y="18" text-anchor="middle" font-size="12" fill="#1a1713">西塞羅</text>
+          <text x="70" y="33" text-anchor="middle" font-size="9" fill="#906060">Cicero · BCE 106</text>
+        </g>
+        <g class="node" transform="translate(670,170)">
+          <rect width="140" height="44" rx="3" fill="#e8d0d0" stroke="#a87070" stroke-width="1.5"/>
+          <text x="70" y="18" text-anchor="middle" font-size="12" fill="#1a1713">塞內卡</text>
+          <text x="70" y="33" text-anchor="middle" font-size="9" fill="#906060">Seneca · BCE 4</text>
+        </g>
+        <g class="node" transform="translate(670,260)">
+          <rect width="140" height="44" rx="3" fill="#e8d0d0" stroke="#a87070" stroke-width="1.5"/>
+          <text x="70" y="18" text-anchor="middle" font-size="12" fill="#1a1713">愛比克泰德</text>
+          <text x="70" y="33" text-anchor="middle" font-size="9" fill="#906060">Epictetus · CE 50</text>
+        </g>
+        <g class="node" transform="translate(670,350)">
+          <rect width="140" height="44" rx="3" fill="#e8d0d0" stroke="#a87070" stroke-width="1.5"/>
+          <text x="70" y="18" text-anchor="middle" font-size="12" fill="#1a1713">馬可·奧理略</text>
+          <text x="70" y="33" text-anchor="middle" font-size="9" fill="#906060">Marcus Aurelius · CE 121</text>
+        </g>
+
+        <!-- EDGES (lines with arrows) -->
+        <!-- Pre-Soc → Socrates (influence) -->
+        <line x1="150" y1="90" x2="185" y2="212" stroke="#b8934a" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrow)" opacity=".5"/>
+        <line x1="150" y1="222" x2="185" y2="212" stroke="#b8934a" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrow)" opacity=".5"/>
+        <line x1="150" y1="292" x2="185" y2="302" stroke="#b8934a" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrow)" opacity=".35"/>
+        <line x1="150" y1="362" x2="185" y2="392" stroke="#b8934a" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrow)" opacity=".35"/>
+
+        <!-- Socrates → Plato -->
+        <line x1="250" y1="234" x2="250" y2="280" stroke="#6a8a60" stroke-width="1.8" marker-end="url(#arrow)"/>
+        <!-- Plato → Aristotle -->
+        <line x1="250" y1="324" x2="250" y2="370" stroke="#6a8a60" stroke-width="1.8" marker-end="url(#arrow)"/>
+
+        <!-- Classical → Hellenistic -->
+        <line x1="315" y1="302" x2="405" y2="200" stroke="#7a90a8" stroke-width="1.2" stroke-dasharray="5,3" marker-end="url(#arrow)" opacity=".7"/>
+        <line x1="315" y1="392" x2="405" y2="200" stroke="#7a90a8" stroke-width="1.2" stroke-dasharray="5,3" marker-end="url(#arrow)" opacity=".5"/>
+        <line x1="315" y1="302" x2="405" y2="100" stroke="#7a90a8" stroke-width="1.2" stroke-dasharray="5,3" marker-end="url(#arrow)" opacity=".5"/>
+
+        <!-- Hellenistic → Roman (Stoic chain) -->
+        <line x1="545" y1="100" x2="670" y2="100" stroke="#a87070" stroke-width="1.4" marker-end="url(#arrow)" opacity=".8"/>
+        <line x1="545" y1="100" x2="670" y2="190" stroke="#a87070" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#arrow)" opacity=".6"/>
+        <line x1="545" y1="100" x2="670" y2="280" stroke="#a87070" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrow)" opacity=".5"/>
+        <line x1="545" y1="100" x2="670" y2="370" stroke="#a87070" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrow)" opacity=".4"/>
+
+        <!-- Roman chain -->
+        <line x1="740" y1="124" x2="740" y2="170" stroke="#a87070" stroke-width="1.2" marker-end="url(#arrow)" opacity=".7"/>
+        <line x1="740" y1="214" x2="740" y2="260" stroke="#a87070" stroke-width="1.2" marker-end="url(#arrow)" opacity=".7"/>
+        <line x1="740" y1="304" x2="740" y2="350" stroke="#a87070" stroke-width="1.2" marker-end="url(#arrow)" opacity=".7"/>
+
+        <!-- Legend -->
+        <line x1="20" y1="448" x2="55" y2="448" stroke="#6a8a60" stroke-width="1.8" marker-end="url(#arrow)"/>
+        <text x="60" y="452" font-size="10" fill="#4a4540">師承關係</text>
+        <line x1="160" y1="448" x2="195" y2="448" stroke="#b8934a" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
+        <text x="200" y="452" font-size="10" fill="#4a4540">思想影響</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SCHOOLS
+════════════════════════════════════════ -->
+<section id="schools">
+  <div class="container">
+    <p class="section-label fade-in">哲學學派</p>
+    <h2 class="section-title fade-in">六大古典學派</h2>
+    <div class="divider fade-in"></div>
+    <div class="schools-grid fade-in">
+
+      <div class="school-card">
+        <div class="school-icon">🔥</div>
+        <h3 class="school-name">斯多噶主義</h3>
+        <p class="school-period">BCE 301 — CE 200s · Stoicism</p>
+        <p class="school-desc">由芝諾於雅典創立，強調理性（Logos）是宇宙的法則。斯多噶派主張美德是唯一真正的善，透過克制慾望與接受命運，達到內心的寧靜（ataraxia）。</p>
+      </div>
+
+      <div class="school-card">
+        <div class="school-icon">🌿</div>
+        <h3 class="school-name">伊比鳩魯主義</h3>
+        <p class="school-period">BCE 307 — · Epicureanism</p>
+        <p class="school-desc">伊比鳩魯在「花園」創立學派，以快樂（hedone）為人生目標——但此快樂非縱欲，而是痛苦的缺席與靈魂的平靜。友誼是幸福的核心。</p>
+      </div>
+
+      <div class="school-card">
+        <div class="school-icon">🏛️</div>
+        <h3 class="school-name">柏拉圖主義</h3>
+        <p class="school-period">BCE 387 — · Platonism</p>
+        <p class="school-desc">柏拉圖在「學院」（Academy）發展理型論：感官世界只是永恆理型（Forms）的摹本，哲學的任務是引導靈魂回歸真實。</p>
+      </div>
+
+      <div class="school-card">
+        <div class="school-icon">📚</div>
+        <h3 class="school-name">亞里斯多德主義</h3>
+        <p class="school-period">BCE 335 — · Aristotelianism</p>
+        <p class="school-desc">亞里斯多德在「呂克昂」（Lyceum）創建百科全書式哲學體系，強調邏輯、實在論與目的論，幸福（eudaimonia）來自合乎德行的活動。</p>
+      </div>
+
+      <div class="school-card">
+        <div class="school-icon">🐕</div>
+        <h3 class="school-name">犬儒主義</h3>
+        <p class="school-period">BCE 400 — · Cynicism</p>
+        <p class="school-desc">第歐根尼拒絕社會習俗，主張回歸自然、過簡樸生活。他以極端的行為質問社會規範，批判財富、地位與名譽的價值。</p>
+      </div>
+
+      <div class="school-card">
+        <div class="school-icon">⚖️</div>
+        <h3 class="school-name">懷疑主義</h3>
+        <p class="school-period">BCE 360 — · Pyrrhonism</p>
+        <p class="school-desc">皮羅主張人無法獲得確定的知識，應懸置判斷（epoché）。此種判斷的懸置，弔詭地帶來靈魂的平靜，因為人不再為不確定的事物所困擾。</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     QUOTES MARQUEE
+════════════════════════════════════════ -->
+<div id="quotes" aria-hidden="true">
+  <div class="marquee-track" id="marquee-track"></div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     FOOTER
+════════════════════════════════════════ -->
+<footer>
+  <p>哲思源流 &mdash; 西方古典哲學導覽</p>
+  <p style="margin-top:.5rem;opacity:.5;">內容以教育目的整理，引用資料來源：Stanford Encyclopedia of Philosophy、Internet Encyclopedia of Philosophy</p>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-label="哲學家詳細資料">
+  <div class="modal" id="modal">
+    <button class="modal-close" id="modal-close" aria-label="關閉">✕</button>
+    <div id="modal-content"></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     DATA & SCRIPTS
+════════════════════════════════════════ -->
+<script>
+// ─── PHILOSOPHER DATA ───────────────────
+const philosophers = [
+  {
+    id: 'thales',
+    name: '泰利斯', nameGr: 'Θαλῆς / Thales',
+    dates: 'BCE 624 — BCE 546',
+    era: 'presocratic', eraLabel: '前蘇格拉底',
+    school: '米利都學派',
+    summary: '西方哲學史上第一位哲學家，以自然原因而非神話解釋世界，主張「水」是萬物的本原（ἀρχή）。',
+    body: `
+      <p class="modal-section-title">核心思想</p>
+      <p>泰利斯認為水（ὕδωρ）是萬物的本原（ἀρχή），一切事物都由水構成，且最終回歸於水。這一主張雖看似樸素，卻代表了人類思想史上的革命性轉變——從神話解釋轉向自然哲學。</p>
+      <p>他也是最早的數學家與天文學家之一，相傳曾預言日食（BCE 585），並在旅行埃及期間發展出幾何學知識。</p>
+      <p class="modal-section-title">歷史意義</p>
+      <p>亞里斯多德在《形上學》中將泰利斯列為第一位自然哲學家。他開創了「尋找萬物共同本原」的哲學傳統，直接影響了阿那克西美尼（主張氣為本原）等後繼者。</p>
+      <div class="modal-divider"></div>
+      <p class="modal-section-title">代表語錄</p>
+      <p><em>"萬物皆充滿神靈。"（Πάντα πλήρη θεῶν εἶναι）</em></p>
+    `,
+    tags: ['本原論', '自然哲學', '米利都學派', '水元素'],
+  },
+  {
+    id: 'heraclitus',
+    name: '赫拉克利特', nameGr: 'Ἡράκλειτος / Heraclitus',
+    dates: 'BCE 535 — BCE 475',
+    era: 'presocratic', eraLabel: '前蘇格拉底',
+    school: '愛菲索斯',
+    summary: '主張萬物皆在流變（πάντα ῥεῖ），宇宙的秩序由對立的統一構成，火是萬物流轉的象徵。',
+    body: `
+      <p class="modal-section-title">核心思想</p>
+      <p>赫拉克利特最著名的格言是「人不能兩次踏入同一條河流」，表達了他的核心洞見：萬物皆在不斷流變（πάντα ῥεῖ）。然而流變並非混沌——宇宙由隱藏的 Logos（理性法則）所統治。</p>
+      <p>他以「火」作為萬物本原的象徵，因為火的特質正是不斷燃燒、消耗與轉化。對立面（冷/熱、生/死、晝/夜）並非矛盾，而是相互依存、共同構成統一整體的張力。</p>
+      <p class="modal-section-title">與巴門尼德的對比</p>
+      <p>赫拉克利特與巴門尼德形成哲學史上最著名的對立：赫拉克利特主張「一切皆變」，巴門尼德主張「存在是不變的」。這對張力後來影響了柏拉圖建構其「永恆理型」與「變化世界」的二元論。</p>
+      <div class="modal-divider"></div>
+      <p class="modal-section-title">代表語錄</p>
+      <p><em>"You cannot step into the same river twice."</em></p>
+      <p><em>"一切都是一，一切都在流動。"</em></p>
+    `,
+    tags: ['流變論', 'Logos', '對立統一', '火元素'],
+  },
+  {
+    id: 'parmenides',
+    name: '巴門尼德', nameGr: 'Παρμενίδης / Parmenides',
+    dates: 'BCE 515 — BCE 450',
+    era: 'presocratic', eraLabel: '前蘇格拉底',
+    school: '愛利亞學派',
+    summary: '主張真正的存在（Being）是唯一、不變、永恆的，感官所見的變化世界只是虛幻的「意見之路」。',
+    body: `
+      <p class="modal-section-title">核心思想</p>
+      <p>巴門尼德在詩作《論自然》中區分了兩條道路：「真理之路」（存在是真實的、不變的）與「意見之路」（感官所見的多樣變化世界）。他認為真正的哲學思考必須跟隨理性而非感官。</p>
+      <p>他的核心命題：「存在者存在，不存在者不存在」（"It is, and it is impossible for it not to be"）。由此推論，真正的存在必然是：唯一的、不生不滅的、不變的、完整的。</p>
+      <p class="modal-section-title">深遠影響</p>
+      <p>巴門尼德的思想對柏拉圖影響極深——柏拉圖的「理型」（Forms）正是永恆、不變的存在，感官世界則是變化的摹本。柏拉圖甚至寫了《巴門尼德篇》來審視這些思想。</p>
+      <div class="modal-divider"></div>
+      <p class="modal-section-title">代表語錄</p>
+      <p><em>"思想與存在是同一的。"（τὸ γὰρ αὐτὸ νοεῖν ἐστίν τε καὶ εἶναι）</em></p>
+    `,
+    tags: ['本體論', '存在論', '愛利亞學派', '理性主義'],
+  },
+  {
+    id: 'democritus',
+    name: '德謨克利特', nameGr: 'Δημόκριτος / Democritus',
+    dates: 'BCE 460 — BCE 370',
+    era: 'presocratic', eraLabel: '前蘇格拉底',
+    school: '原子論',
+    summary: '與留基伯共同創立原子論——萬物皆由無限多、不可分割的「原子」（ἄτομον）在虛空中組合而成。',
+    body: `
+      <p class="modal-section-title">核心思想</p>
+      <p>德謨克利特的原子論主張，宇宙由兩種基本實在構成：原子（ἄτομον，不可再分割的微粒）與虛空（κενόν）。原子是永恆的、不可破壞的，各種原子在虛空中運動、碰撞、組合，形成一切我們所見的事物。</p>
+      <p>靈魂也是由特殊的球形原子構成。他的唯物主義觀點幾乎預見了兩千年後的近代原子論。</p>
+      <p class="modal-section-title">倫理學</p>
+      <p>德謨克利特在倫理學上強調「靈魂的好秩序」（εὐθυμίη，內心的快樂）——一種平靜、適度的幸福，而非官能享樂。他對伊比鳩魯哲學有直接的影響。</p>
+      <div class="modal-divider"></div>
+      <p class="modal-section-title">代表語錄</p>
+      <p><em>"Nothing exists except atoms and empty space; everything else is opinion."</em></p>
+    `,
+    tags: ['原子論', '唯物主義', '虛空', '自然哲學'],
+  },
+  {
+    id: 'socrates',
+    name: '蘇格拉底', nameGr: 'Σωκράτης / Socrates',
+    dates: 'BCE 470 — BCE 399',
+    era: 'classical', eraLabel: '古典時期',
+    school: '無正式學派（蘇格拉底學派）',
+    summary: '以「辯證詰問法」（elenchus）追尋道德真理，主張「美德即知識」，因被指控腐化雅典青年而被判處死刑。',
+    body: `
+      <p class="modal-section-title">蘇格拉底式方法</p>
+      <p>蘇格拉底本人未留下任何著作，其思想主要透過柏拉圖的對話錄保存。他的核心方法是「詰問法」（elenchus）：透過連續追問，揭露對話者思想中的矛盾，引導其承認無知，從而開啟真正的哲學探索。</p>
+      <p>他自比為「助產士」（maieutic）——不灌輸知識，而是幫助對話者「生產」出內心本有的真理。</p>
+      <p class="modal-section-title">倫理學核心</p>
+      <p>「美德即知識」（ἀρετὴ ἐπιστήμη）：蘇格拉底認為，人們之所以行惡，是因為無知——沒有人會在知道什麼是善的情況下選擇惡。道德的本質是一種智慧。</p>
+      <p>「未經審視的人生不值得過活」（ὁ ἀνεξέταστος βίος οὐ βιωτὸς ἀνθρώπῳ）——哲學的使命是不斷自我審視。</p>
+      <p class="modal-section-title">審判與死亡</p>
+      <p>BCE 399年，蘇格拉底被雅典法庭以「不敬神」和「腐化青年」的罪名判處死刑。他拒絕流亡的機會，從容飲下毒芹，以死捍衛哲學的尊嚴。</p>
+      <div class="modal-divider"></div>
+      <p class="modal-section-title">代表語錄</p>
+      <p><em>"我唯一所知的，就是我一無所知。"</em></p>
+      <p><em>"The unexamined life is not worth living."</em></p>
+    `,
+    tags: ['詰問法', '美德即知識', '助產術', '倫理學', '雅典'],
+  },
+  {
+    id: 'plato',
+    name: '柏拉圖', nameGr: 'Πλάτων / Plato',
+    dates: 'BCE 428 — BCE 348',
+    era: 'classical', eraLabel: '古典時期',
+    school: '柏拉圖學院（Academy）',
+    summary: '蘇格拉底的學生，建立理型論（Theory of Forms），以《理想國》構建哲學王治國的理想政體。',
+    body: `
+      <p class="modal-section-title">理型論</p>
+      <p>柏拉圖認為感官世界中的事物（如一張特定的桌子）只是「理型」（εἶδος / Idea）的不完美摹本。真正的「桌子之型」是永恆、不變、完美的，存在於理型世界中。知識就是對這些永恆理型的把握。</p>
+      <p>著名的「洞穴比喻」（Allegory of the Cave）形象地表達了這一思想：大多數人如同洞穴中的囚徒，只看到影子（現象），哲學家則走出洞穴，看見了太陽（善的理型）。</p>
+      <p class="modal-section-title">知識論</p>
+      <p>柏拉圖區分「知識」（episteme，關於理型的確定認識）與「意見」（doxa，關於感官現象的不穩定信念）。真正的教育是「轉向靈魂」（periagoge）——使靈魂從意見的幻影轉向知識的真實。</p>
+      <p class="modal-section-title">政治哲學</p>
+      <p>《理想國》（Πολιτεία）描繪了一個由「哲學王」統治的理想城邦，社會分為三個階層：統治者（哲學家）、護衛者（武士）、生產者（工匠農民），各司其職，整體呈現正義（δικαιοσύνη）。</p>
+      <div class="modal-divider"></div>
+      <p class="modal-section-title">代表語錄</p>
+      <p><em>"至善的理型是最高的認識對象，也是一切美好事物的原因。"</em></p>
+      <p><em>"Wise men speak because they have something to say; fools because they have to say something."</em></p>
+    `,
+    tags: ['理型論', '洞穴比喻', '理想國', '哲學王', '愛智慧'],
+  },
+  {
+    id: 'aristotle',
+    name: '亞里斯多德', nameGr: 'Ἀριστοτέλης / Aristotle',
+    dates: 'BCE 384 — BCE 322',
+    era: 'classical', eraLabel: '古典時期',
+    school: '呂克昂（Lyceum）',
+    summary: '柏拉圖的學生，建立邏輯學、生物學、詩學等系統，以「四因說」和「幸福論」影響兩千年西方思想。',
+    body: `
+      <p class="modal-section-title">與柏拉圖的分歧</p>
+      <p>亞里斯多德拒絕柏拉圖的理型論，主張「形式」（form）不能獨立於「質料」（matter）存在，而是內嵌於具體事物之中。每一個個別存在物都由質料（潛能）與形式（現實性）所構成。</p>
+      <p class="modal-section-title">四因說</p>
+      <ul>
+        <li><strong>質料因</strong>（material cause）：事物由什麼構成？</li>
+        <li><strong>形式因</strong>（formal cause）：事物的形狀或結構是什麼？</li>
+        <li><strong>動力因</strong>（efficient cause）：是什麼使它存在？</li>
+        <li><strong>目的因</strong>（final cause）：它的目的或功能是什麼？</li>
+      </ul>
+      <p class="modal-section-title">倫理學：幸福論</p>
+      <p>《尼各馬可倫理學》的核心概念是「幸福」（εὐδαιμονία）——不是瞬間的快樂，而是一種合乎德行（ἀρετή）的活動所形成的整體生命狀態。亞里斯多德認為人的本質是「理性的動物」，發揮理性是人生的最高目的。</p>
+      <p class="modal-section-title">邏輯學</p>
+      <p>亞里斯多德是邏輯學的奠基者，建立了三段論（syllogism）體系，這是人類第一套系統性的形式推論方法，直到近代邏輯出現前一直是邏輯學的標準框架。</p>
+      <div class="modal-divider"></div>
+      <p class="modal-section-title">代表語錄</p>
+      <p><em>"人是政治的動物。"（ὁ ἄνθρωπος φύσει πολιτικὸν ζῷόν）</em></p>
+      <p><em>"We are what we repeatedly do. Excellence, then, is not an act but a habit."</em></p>
+    `,
+    tags: ['四因說', '幸福論', '邏輯學', '實在論', '目的論'],
+  },
+  {
+    id: 'zeno',
+    name: '芝諾（斯多噶）', nameGr: 'Ζήνων / Zeno of Citium',
+    dates: 'BCE 334 — BCE 262',
+    era: 'hellenistic', eraLabel: '希臘化時期',
+    school: '斯多噶學派',
+    summary: '斯多噶學派的創始人，於雅典的彩廊（Stoa Poikile）講學，主張依理性生活、德行即善。',
+    body: `
+      <p class="modal-section-title">斯多噶主義的創立</p>
+      <p>芝諾來自賽普勒斯的基提翁，據說在一次商船失事後抵達雅典，接觸到犬儒派哲學。後來他在雅典廣場的彩廊（Stoa Poikile）開始教學，其追隨者因此被稱為「斯多噶派」（Stoics）。</p>
+      <p class="modal-section-title">核心哲學</p>
+      <p>宇宙由理性（Logos）統治，人作為理性存在，應依照理性（即自然）生活。外在的財富、地位、健康是「無關緊要的」（adiaphora）；唯有德行（arete）是真正的善。</p>
+      <p>情感的控制至關重要：斯多噶派區分「激情」（pathos，由虛假判斷引起的情緒）與「好的情感」（eupatheiai），前者應被理性克服。</p>
+      <div class="modal-divider"></div>
+      <p class="modal-section-title">代表語錄</p>
+      <p><em>"幸福不在於獲得自己所欲的，而在於欲求應當欲求的。"</em></p>
+    `,
+    tags: ['斯多噶', '理性', '德行', '激情', '宇宙公民'],
+  },
+  {
+    id: 'epicurus',
+    name: '伊比鳩魯', nameGr: 'Ἐπίκουρος / Epicurus',
+    dates: 'BCE 341 — BCE 270',
+    era: 'hellenistic', eraLabel: '希臘化時期',
+    school: '伊比鳩魯學派（花園）',
+    summary: '在雅典的「花園」創立學派，以快樂（hédoné）為善的定義，但強調靈魂平靜與痛苦缺席，而非縱欲。',
+    body: `
+      <p class="modal-section-title">快樂的哲學</p>
+      <p>伊比鳩魯認為，快樂（ἡδονή）是人生的目標，但他所說的快樂是「痛苦的缺席」（aponia，身體無痛）與「靈魂的平靜」（ataraxia）。真正的幸福不來自追求刺激，而是消除恐懼與慾望。</p>
+      <p class="modal-section-title">消除恐懼</p>
+      <p>他認為哲學的任務是消除四大恐懼：對神的恐懼（神不干預人事）、對死亡的恐懼（「死亡時我不存在，我存在時死亡不在」）、對痛苦的恐懼（痛苦是可以承受的）、對失去快樂的恐懼。</p>
+      <p class="modal-section-title">友誼的重要性</p>
+      <p>伊比鳩魯視友誼為幸福的最重要來源，他的「花園」是一個開放給所有人（包括女性和奴隸）的哲學共同體。</p>
+      <div class="modal-divider"></div>
+      <p class="modal-section-title">代表語錄</p>
+      <p><em>"Death is nothing to us; for when we are, death has not come, and when death has come, we are not."</em></p>
+      <p><em>"不要怕神，不要怕死，善是容易得到的，惡是容易忍受的。"（伊比鳩魯四藥）</em></p>
+    `,
+    tags: ['快樂主義', '靈魂平靜', '友誼', '原子論', '消除恐懼'],
+  },
+  {
+    id: 'diogenes',
+    name: '第歐根尼', nameGr: 'Διογένης / Diogenes',
+    dates: 'BCE 412 — BCE 323',
+    era: 'hellenistic', eraLabel: '希臘化時期',
+    school: '犬儒學派',
+    summary: '犬儒派最著名的哲學家，居住在木桶中，以激進的行為實踐「回歸自然」，批判社會習俗與虛偽。',
+    body: `
+      <p class="modal-section-title">回歸自然</p>
+      <p>第歐根尼師從安提斯泰尼（犬儒學派創始人），將犬儒主義推向極致。他公開拒絕社會約定（nomos），主張人應依照自然（physis）生活。他住在雅典廣場的木桶中，只有一件披風。</p>
+      <p>當亞歷山大大帝親自拜訪他，問是否有什麼需要時，他的回答是：「請你站到一邊，別擋住我的陽光。」</p>
+      <p class="modal-section-title">哲學表演</p>
+      <p>他白天提燈在市場遊走，聲稱在「尋找一個真正的人」。這類行為是一種哲學實踐（askesis）——透過引發公眾的震驚與思考，迫使人們審視自己的行為與價值觀。</p>
+      <div class="modal-divider"></div>
+      <p class="modal-section-title">代表語錄</p>
+      <p><em>"我是世界公民。"（Κοσμοπολίτης εἰμί）</em></p>
+      <p><em>"The foundation of every state is the education of its youth."</em></p>
+    `,
+    tags: ['犬儒主義', '自然', '習俗批判', '世界公民', '苦行'],
+  },
+  {
+    id: 'seneca',
+    name: '塞內卡', nameGr: 'Lucius Annaeus Seneca',
+    dates: 'BCE 4 — CE 65',
+    era: 'roman', eraLabel: '羅馬時期',
+    school: '斯多噶學派',
+    summary: '羅馬政治家、悲劇作家與哲學家，以《道德書簡》和《論生命的短暫》闡述斯多噶哲學的實踐智慧。',
+    body: `
+      <p class="modal-section-title">生命即行動</p>
+      <p>塞內卡最著名的著作《論生命的短暫》（De Brevitate Vitae）開篇即言：「生命並不短暫，是我們讓它變短的。」他認為人們將時間浪費在享樂、雄心與懶惰中，而非哲學的沉思。</p>
+      <p class="modal-section-title">斯多噶實踐</p>
+      <p>《道德書簡》（Epistulae Morales）是寫給友人魯西流斯的124封信，每封信都以具體的日常情境為起點，闡述斯多噶哲學的修身要點：克制欲望、接受命運、把握當下。</p>
+      <p class="modal-section-title">悲劇結局</p>
+      <p>他曾擔任尼祿皇帝的家師與顧問，後因被指控參與謀反而被命令自殺，他以斯多噶哲學的從容面對死亡，成為其哲學的最終見證。</p>
+      <div class="modal-divider"></div>
+      <p class="modal-section-title">代表語錄</p>
+      <p><em>"Omnia, Lucili, aliena sunt, tempus tantum nostrum est."</em></p>
+      <p><em>"一切都是別人的，唯有時間是我們的。"</em></p>
+    `,
+    tags: ['斯多噶', '時間哲學', '道德書簡', '生命意義'],
+  },
+  {
+    id: 'marcus',
+    name: '馬可·奧理略', nameGr: 'Marcus Aurelius Antoninus',
+    dates: 'CE 121 — CE 180',
+    era: 'roman', eraLabel: '羅馬時期',
+    school: '斯多噶學派',
+    summary: '羅馬帝國皇帝，以私人日記《沉思錄》留下最真實的斯多噶哲學實踐，是哲學王理想的歷史縮影。',
+    body: `
+      <p class="modal-section-title">哲學王的現實</p>
+      <p>柏拉圖夢想的「哲學王」在馬可·奧理略身上得到了歷史的實現。他統治羅馬帝國近二十年，同時以希臘文私下書寫《沉思錄》（Τὰ εἰς ἑαυτόν）——一本從未打算發表的個人哲學日記。</p>
+      <p class="modal-section-title">《沉思錄》的精神</p>
+      <p>全書十二卷充滿斯多噶哲學的核心主題：接受不在控制之內的事物（命運、死亡、他人的評價）；全心投入在控制之內的事物（自己的思想與行動）；保持理性的判斷力，不被情緒左右。</p>
+      <p>書中不斷提醒自己的短暫性：「人生如露，萬物如煙。」</p>
+      <p class="modal-section-title">政治與哲學的張力</p>
+      <p>他在書中反覆承認統治的艱辛，但仍堅持哲學賦予他的義務感：「你失去的時間，永遠找不回來；但每個當下，你都可以選擇如何生活。」</p>
+      <div class="modal-divider"></div>
+      <p class="modal-section-title">代表語錄</p>
+      <p><em>"你擁有駕馭自己思想的能力，而非外部事件。認清這一點，你便找到了力量。"</em></p>
+      <p><em>"The impediment to action advances action. What stands in the way becomes the way."</em></p>
+    `,
+    tags: ['斯多噶', '沉思錄', '哲學王', '克己', '命運'],
+  },
+];
+
+// ─── QUOTES ─────────────────────────────
+const quotes = [
+  { text: "The unexamined life is not worth living.", author: "Socrates" },
+  { text: "We are what we repeatedly do.", author: "Aristotle" },
+  { text: "I know that I know nothing.", author: "Socrates" },
+  { text: "Everything flows.", author: "Heraclitus" },
+  { text: "Death is nothing to us.", author: "Epicurus" },
+  { text: "一切都是別人的，唯有時間是我們的。", author: "Seneca" },
+  { text: "The impediment to action advances action.", author: "Marcus Aurelius" },
+  { text: "Man is a political animal.", author: "Aristotle" },
+  { text: "Being is, non-being is not.", author: "Parmenides" },
+  { text: "I am a citizen of the world.", author: "Diogenes" },
+];
+
+// ─── RENDER CARDS ────────────────────────
+function renderCards(filter) {
+  const grid = document.getElementById('cards-grid');
+  grid.innerHTML = '';
+  const filtered = filter === 'all' ? philosophers : philosophers.filter(p => p.era === filter);
+  filtered.forEach(p => {
+    const card = document.createElement('div');
+    card.className = 'card fade-in';
+    card.dataset.era = p.era;
+    card.innerHTML = `
+      <span class="card-era">${p.eraLabel}</span>
+      <h3 class="card-name">${p.name}</h3>
+      <p class="card-name-gr">${p.nameGr}</p>
+      <p class="card-dates">${p.dates}</p>
+      <p class="card-school">${p.school}</p>
+      <p class="card-summary">${p.summary}</p>
+    `;
+    card.addEventListener('click', () => openModal(p));
+    grid.appendChild(card);
+    // trigger fade-in
+    requestAnimationFrame(() => { requestAnimationFrame(() => { card.classList.add('visible'); }); });
+  });
+}
+
+// ─── MODAL ──────────────────────────────
+function openModal(p) {
+  const overlay = document.getElementById('modal-overlay');
+  const content = document.getElementById('modal-content');
+  content.innerHTML = `
+    <p class="modal-era">${p.eraLabel} · ${p.school}</p>
+    <h2 class="modal-name">${p.name}</h2>
+    <p class="modal-name-gr">${p.nameGr}</p>
+    <p class="modal-dates">${p.dates}</p>
+    <div class="modal-divider"></div>
+    <div class="modal-body">${p.body}</div>
+    <div class="tag-list">${p.tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
+  `;
+  overlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  document.getElementById('modal-overlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+document.getElementById('modal-close').addEventListener('click', closeModal);
+document.getElementById('modal-overlay').addEventListener('click', e => {
+  if (e.target === e.currentTarget) closeModal();
+});
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+// ─── FILTER TABS ────────────────────────
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    renderCards(btn.dataset.filter);
+  });
+});
+
+// ─── MARQUEE ────────────────────────────
+(function buildMarquee() {
+  const track = document.getElementById('marquee-track');
+  const doubled = [...quotes, ...quotes]; // duplicate for seamless loop
+  doubled.forEach(q => {
+    const el = document.createElement('p');
+    el.className = 'marquee-item';
+    el.innerHTML = `"${q.text}" <span>— ${q.author}</span>`;
+    track.appendChild(el);
+  });
+})();
+
+// ─── SCROLL ANIMATIONS ──────────────────
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+}, { threshold: 0.08 });
+
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// ─── NAV SCROLL ─────────────────────────
+window.addEventListener('scroll', () => {
+  document.getElementById('main-nav').classList.toggle('scrolled', window.scrollY > 20);
+});
+
+// ─── HAMBURGER ──────────────────────────
+document.getElementById('hamburger').addEventListener('click', () => {
+  document.getElementById('nav-links').classList.toggle('open');
+});
+
+// ─── INIT ───────────────────────────────
+renderCards('all');
+</script>
+</body>
+</html>
