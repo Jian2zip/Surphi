@@ -1,0 +1,260 @@
+{
+  "eastern_philosophers": [
+    {
+      "name": "孔子 (Confucius)",
+      "born": "551 BCE",
+      "died": "479 BCE",
+      "origin": "China",
+      "tradition": "Confucianism",
+      "key_works": ["論語 (Analects)"],
+      "core_ideas": [
+        "仁 (Rén) – Benevolence / Humaneness",
+        "禮 (Lǐ) – Ritual propriety",
+        "義 (Yì) – Righteousness",
+        "君子 (Jūnzǐ) – The noble person as moral ideal",
+        "正名 (Zhèngmíng) – Rectification of names"
+      ],
+      "influence": "Founded Confucianism; shaped Chinese, Korean, Japanese, and Vietnamese ethics, politics, and education for over two millennia."
+    },
+    {
+      "name": "老子 (Laozi)",
+      "born": "c. 6th century BCE",
+      "died": "unknown",
+      "origin": "China",
+      "tradition": "Taoism",
+      "key_works": ["道德經 (Tao Te Ching)"],
+      "core_ideas": [
+        "道 (Dào) – The Way as the fundamental principle of the universe",
+        "無為 (Wúwéi) – Non-action / effortless action",
+        "自然 (Zìrán) – Naturalness, spontaneity",
+        "柔弱勝剛強 – Softness overcomes hardness"
+      ],
+      "influence": "Founding figure of Taoism; profoundly influenced Chinese philosophy, religion, arts, and statecraft."
+    },
+    {
+      "name": "莊子 (Zhuangzi)",
+      "born": "c. 369 BCE",
+      "died": "c. 286 BCE",
+      "origin": "China",
+      "tradition": "Taoism",
+      "key_works": ["莊子 (Zhuangzi)"],
+      "core_ideas": [
+        "相對主義 – Relativism of perspectives",
+        "齊物論 – Equalisation of all things",
+        "逍遙遊 – Free and easy wandering",
+        "蝴蝶夢 – The butterfly dream (nature of reality and self)"
+      ],
+      "influence": "Developed and deepened Taoist philosophy; inspired Chan/Zen Buddhism and Chinese literary tradition."
+    },
+    {
+      "name": "孟子 (Mencius)",
+      "born": "c. 372 BCE",
+      "died": "c. 289 BCE",
+      "origin": "China",
+      "tradition": "Confucianism",
+      "key_works": ["孟子 (Mencius)"],
+      "core_ideas": [
+        "性善論 – Human nature is inherently good",
+        "仁政 – Benevolent government",
+        "民為貴 – The people are most important (proto-democratic thought)",
+        "四端 – Four moral sprouts (compassion, shame, modesty, moral judgment)"
+      ],
+      "influence": "Called the 'Second Sage' of Confucianism; his optimistic view of human nature became orthodox Neo-Confucian doctrine."
+    },
+    {
+      "name": "荀子 (Xunzi)",
+      "born": "c. 310 BCE",
+      "died": "c. 235 BCE",
+      "origin": "China",
+      "tradition": "Confucianism",
+      "key_works": ["荀子 (Xunzi)"],
+      "core_ideas": [
+        "性惡論 – Human nature is inherently bad; goodness is acquired",
+        "禮義之化 – Moral transformation through ritual and righteousness",
+        "天人之分 – Separation of Heaven and human agency",
+        "名學 – Theory of names and language"
+      ],
+      "influence": "Synthesised Confucian and Legalist ideas; influenced Han Feizi and the early Han dynasty's statecraft."
+    },
+    {
+      "name": "墨子 (Mozi)",
+      "born": "c. 470 BCE",
+      "died": "c. 391 BCE",
+      "origin": "China",
+      "tradition": "Mohism",
+      "key_works": ["墨子 (Mozi)"],
+      "core_ideas": [
+        "兼愛 (Jiān'ài) – Universal love / impartial caring",
+        "非攻 – Opposition to aggressive warfare",
+        "尚賢 – Meritocracy",
+        "節用 – Frugality",
+        "天志 – Will of Heaven as moral standard"
+      ],
+      "influence": "Founded Mohism, the main rival to Confucianism in the pre-Qin era; pioneered early formal logic and scientific thinking in China."
+    },
+    {
+      "name": "韓非子 (Han Feizi)",
+      "born": "c. 280 BCE",
+      "died": "233 BCE",
+      "origin": "China",
+      "tradition": "Legalism",
+      "key_works": ["韓非子 (Han Feizi)"],
+      "core_ideas": [
+        "法 (Fǎ) – Law as the basis of governance",
+        "術 (Shù) – Administrative techniques",
+        "勢 (Shì) – Positional power of the ruler",
+        "性惡 – Pessimistic view of human nature"
+      ],
+      "influence": "Synthesised Legalist thought; directly shaped the Qin dynasty's unification of China and continues to influence political realism."
+    },
+    {
+      "name": "朱熹 (Zhu Xi)",
+      "born": "1130 CE",
+      "died": "1200 CE",
+      "origin": "China",
+      "tradition": "Neo-Confucianism (Cheng-Zhu school)",
+      "key_works": ["四書集注 (Collected Commentaries on the Four Books)", "近思錄 (Reflections on Things at Hand)"],
+      "core_ideas": [
+        "理 (Lǐ) – Principle / Pattern underlying all things",
+        "氣 (Qì) – Vital force / material energy",
+        "格物致知 – Investigation of things to extend knowledge",
+        "太極 – The Supreme Ultimate"
+      ],
+      "influence": "Systematised Neo-Confucianism; his commentaries became the official curriculum for imperial examinations in China, Korea, and Japan."
+    },
+    {
+      "name": "王陽明 (Wang Yangming)",
+      "born": "1472 CE",
+      "died": "1529 CE",
+      "origin": "China",
+      "tradition": "Neo-Confucianism (Wang Yangming school / Xinxue)",
+      "key_works": ["傳習錄 (Instructions for Practical Living)", "大學問 (Inquiry on the Great Learning)"],
+      "core_ideas": [
+        "心即理 – Mind is principle",
+        "致良知 – Extension of innate moral knowledge",
+        "知行合一 – Unity of knowledge and action",
+        "心外無物 – Nothing exists outside the mind"
+      ],
+      "influence": "Founded the Yangming school; enormously influential in Ming China, Joseon Korea, Tokugawa Japan, and the modern New Confucian movement."
+    },
+    {
+      "name": "悉達多·喬達摩 (Siddhartha Gautama / The Buddha)",
+      "born": "c. 563 BCE",
+      "died": "c. 483 BCE",
+      "origin": "Lumbini (modern Nepal / northern India)",
+      "tradition": "Buddhism",
+      "key_works": ["Dhammapada", "Majjhima Nikāya (Middle Length Discourses)"],
+      "core_ideas": [
+        "四聖諦 – The Four Noble Truths (suffering, its origin, its cessation, the path)",
+        "八正道 – The Noble Eightfold Path",
+        "無常 (Anicca) – Impermanence",
+        "無我 (Anattā) – Non-self",
+        "緣起 (Pratītyasamutpāda) – Dependent origination"
+      ],
+      "influence": "Founded Buddhism, one of the world's major religions and philosophical systems, which spread throughout Asia and now globally."
+    },
+    {
+      "name": "龍樹 (Nāgārjuna)",
+      "born": "c. 150 CE",
+      "died": "c. 250 CE",
+      "origin": "South India",
+      "tradition": "Madhyamaka Buddhism",
+      "key_works": ["中論 (Mūlamadhyamakakārikā)", "大智度論 (Mahāprajñāpāramitā Śāstra)"],
+      "core_ideas": [
+        "空性 (Śūnyatā) – Emptiness; all phenomena lack inherent existence",
+        "中道 – The Middle Way between existence and non-existence",
+        "二諦 – Two truths (conventional and ultimate)",
+        "Prasaṅga – Reductio ad absurdum as philosophical method"
+      ],
+      "influence": "Founded Madhyamaka; considered the 'Second Buddha'; foundational to Mahāyāna, Tibetan, Chan/Zen, and Huayan Buddhism."
+    },
+    {
+      "name": "商羯羅 (Adi Shankaracharya)",
+      "born": "c. 788 CE",
+      "died": "c. 820 CE",
+      "origin": "Kerala, India",
+      "tradition": "Advaita Vedanta (Hinduism)",
+      "key_works": ["Brahmasūtrabhāṣya", "Vivekacūḍāmaṇi (Crest Jewel of Discrimination)"],
+      "core_ideas": [
+        "不二論 (Advaita) – Non-dualism: Brahman alone is real",
+        "梵我一如 – Ātman (self) is identical to Brahman (ultimate reality)",
+        "幻 (Māyā) – The world of multiplicity is illusion",
+        "解脫 (Moksha) – Liberation through knowledge (jñāna)"
+      ],
+      "influence": "Consolidated Advaita Vedanta as the dominant school of Hindu philosophy; revived Hinduism against Buddhist influence in India."
+    },
+    {
+      "name": "羅摩奴闍 (Rāmānuja)",
+      "born": "c. 1017 CE",
+      "died": "1137 CE",
+      "origin": "Tamil Nadu, India",
+      "tradition": "Vishishtadvaita Vedanta (Hinduism)",
+      "key_works": ["Sri Bhashya (Commentary on the Brahma Sutras)", "Vedārthasaṃgraha"],
+      "core_ideas": [
+        "限定不二論 (Vishishtadvaita) – Qualified non-dualism",
+        "個我與梵同一而有別 – Individual souls and the world are real but form the body of Brahman",
+        "虔信 (Bhakti) – Devotion as the path to liberation",
+        "恩典 (Prapatti) – Self-surrender to God"
+      ],
+      "influence": "Founded Vishishtadvaita Vedanta; shaped Vaishnavism and the Sri Vaishnava tradition; a major counterpoint to Shankara."
+    },
+    {
+      "name": "道元 (Dōgen Zenji)",
+      "born": "1200 CE",
+      "died": "1253 CE",
+      "origin": "Japan",
+      "tradition": "Sōtō Zen Buddhism",
+      "key_works": ["正法眼藏 (Shōbōgenzō)", "普勸坐禪儀 (Fukan Zazengi)"],
+      "core_ideas": [
+        "只管打坐 (Shikantaza) – Just sitting; zazen as itself enlightenment",
+        "修證一等 – Practice and enlightenment are one",
+        "有時 (Uji) – Being-time: existence is time",
+        "山水經 – Mountains and rivers as expressions of Buddha-nature"
+      ],
+      "influence": "Founded Sōtō Zen in Japan; considered the greatest Japanese philosopher; profoundly influenced Heidegger studies and comparative philosophy."
+    },
+    {
+      "name": "西田幾多郎 (Nishida Kitarō)",
+      "born": "1870 CE",
+      "died": "1945 CE",
+      "origin": "Japan",
+      "tradition": "Kyoto School",
+      "key_works": ["善の研究 (An Inquiry into the Good)", "場所の論理 (The Logic of Place)"],
+      "core_ideas": [
+        "純粋経験 – Pure experience as the foundation of reality",
+        "場所 (Basho) – Place / Topos: absolute nothingness as the locus of all being",
+        "絶対無 – Absolute nothingness",
+        "自覚 – Self-awareness as the structure of reality"
+      ],
+      "influence": "Founded the Kyoto School; first major Japanese philosopher to synthesise Eastern and Western thought using Western academic methods."
+    },
+    {
+      "name": "李滉 / 退溪 (Yi Hwang / Toegye)",
+      "born": "1501 CE",
+      "died": "1570 CE",
+      "origin": "Korea",
+      "tradition": "Korean Neo-Confucianism",
+      "key_works": ["聖學十圖 (Ten Diagrams on Sage Learning)", "退溪集"],
+      "core_ideas": [
+        "理發說 – Principle (Li) has its own active agency",
+        "四端七情論 – Four beginnings and seven emotions debate",
+        "敬 (Gyeong) – Reverence/mindfulness as the foundation of self-cultivation"
+      ],
+      "influence": "The most revered Korean Confucian philosopher; his thought shaped Joseon Korea's intellectual culture and influenced Tokugawa Japan."
+    },
+    {
+      "name": "李珥 / 栗谷 (Yi I / Yulgok)",
+      "born": "1536 CE",
+      "died": "1584 CE",
+      "origin": "Korea",
+      "tradition": "Korean Neo-Confucianism",
+      "key_works": ["聖學輯要 (Essential Teachings of the Sages)", "擊蒙要訣"],
+      "core_ideas": [
+        "氣發理乘說 – Qi is what activates; Li rides Qi",
+        "理通氣局 – Principle is universally pervasive; Qi is locally particularised",
+        "誠 (Seong) – Sincerity / authenticity as the highest virtue"
+      ],
+      "influence": "The leading rival to Toegye; shaped the Kiho school of Korean Confucianism and influenced modern Korean philosophy and education."
+    }
+  ]
+}
