@@ -1,180 +1,160 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Surphi | 性哲學關係圖譜</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;700&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>漸好 · The World Is Slowly Getting Better</title>
+<meta name="description" content="十二則過去五年間、經聯合國與世界衛生組織等機構驗證的紀錄，說明世界正在緩慢但真實地變好。Twelve verified records from the past five years showing the world is slowly, but really, getting better.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Serif+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="ambient ambient-a"></div>
-  <div class="ambient ambient-b"></div>
 
-  <div class="page-shell">
-    <header class="hero glass-panel">
-      <nav class="topbar">
-        <div class="brand">Surphi</div>
-        <div class="nav-links">
-          <a href="#tree">關係圖譜</a>
-          <a href="#origins">思想起點</a>
-          <a href="#flow">理論流動</a>
-        </div>
-      </nav>
+<div class="wrap">
 
-      <div class="hero-grid">
-        <section class="hero-copy">
-          <p class="eyebrow">PHILOSOPHY RESEARCH INTERFACE</p>
-          <h1>把性哲學讀成一張<br>可展開的知識地圖。</h1>
-          <p class="lead">
-            Surphi 以極簡與流動的互動方式整理哲學中的性、欲望、禁忌與權力。
-            你可以從古典秩序出發，沿著思想裂縫，看見薩德、巴塔耶與傅柯如何重新定義這個問題。
-          </p>
+  <header class="hero">
+    <p class="kicker">A SLOW, VERIFIED CASE · 2021 – 2025</p>
+    <h1>世界，正在慢慢變好<br><span class="en">The World Is Slowly Getting Better</span></h1>
+    <div class="hero-lede">
+      <p class="zh">新聞頭條每天提醒我們世界的傷口，卻很少報導傷口正在癒合。以下十二則紀錄，取材自過去五年，並經聯合國、世界衛生組織、國際能源總署等機構的資料驗證——它們共同描繪出一條緩慢卻真實的上升曲線。</p>
+      <p class="en">Headlines remind us daily of the world's wounds, but rarely report on their healing. The twelve records below are drawn from the past five years and verified against data from the WHO, the UN, the IEA, and other institutions — together they trace a slow but real upward curve.</p>
+    </div>
+  </header>
 
-          <div class="hero-actions">
-            <button class="primary-button" type="button" data-focus="foucault">進入傅柯路徑</button>
-            <button class="secondary-button" type="button" data-focus="classical">觀看古典起點</button>
-          </div>
-        </section>
+  <main class="record-list">
 
-        <section id="tree" class="tree-stage glass-panel">
-          <div class="stage-copy">
-            <span class="stage-label">Obsidian-inspired graph</span>
-            <p>點擊節點，查看它與前後思想的關聯。</p>
-          </div>
-
-          <div class="tree-canvas">
-            <svg class="tree-lines" viewBox="0 0 1000 660" preserveAspectRatio="none" aria-hidden="true">
-              <line class="branch branch-classical" x1="160" y1="126" x2="370" y2="245"></line>
-              <line class="branch branch-classical" x1="190" y1="314" x2="370" y2="340"></line>
-              <line class="branch branch-classical" x1="162" y1="502" x2="370" y2="380"></line>
-              <line class="branch branch-sade" x1="430" y1="292" x2="622" y2="214"></line>
-              <line class="branch branch-bataille" x1="430" y1="356" x2="622" y2="410"></line>
-              <line class="branch branch-forward" x1="695" y1="245" x2="878" y2="332"></line>
-              <line class="branch branch-forward" x1="695" y1="405" x2="878" y2="332"></line>
-              <line class="branch branch-cross" x1="160" y1="126" x2="190" y2="314"></line>
-              <line class="branch branch-cross" x1="190" y1="314" x2="162" y2="502"></line>
-              <line class="branch branch-cross" x1="370" y1="245" x2="370" y2="340"></line>
-              <line class="branch branch-cross" x1="370" y1="340" x2="370" y2="380"></line>
-              <line class="branch branch-cross" x1="622" y1="214" x2="622" y2="410"></line>
-            </svg>
-
-            <button class="tree-node node-classical" type="button" data-node="classical" style="--x: 7%; --y: 12%;">
-              <span class="node-year">古典</span>
-              <strong>柏拉圖</strong>
-            </button>
-
-            <button class="tree-node node-classical" type="button" data-node="aristotle" style="--x: 10%; --y: 41%;">
-              <span class="node-year">古典</span>
-              <strong>亞里斯多德</strong>
-            </button>
-
-            <button class="tree-node node-classical" type="button" data-node="theology" style="--x: 7%; --y: 69%;">
-              <span class="node-year">神學</span>
-              <strong>奧古斯丁 / 阿奎那</strong>
-            </button>
-
-            <button class="tree-node node-core active" type="button" data-node="sade" style="--x: 35%; --y: 33%;">
-              <span class="node-year">18 世紀</span>
-              <strong>薩德侯爵</strong>
-            </button>
-
-            <button class="tree-node node-core" type="button" data-node="bataille" style="--x: 35%; --y: 54%;">
-              <span class="node-year">20 世紀</span>
-              <strong>喬治・巴塔耶</strong>
-            </button>
-
-            <button class="tree-node node-core" type="button" data-node="foucault" style="--x: 61%; --y: 31%;">
-              <span class="node-year">後現代</span>
-              <strong>米歇爾・傅柯</strong>
-            </button>
-
-            <button class="tree-node node-future" type="button" data-node="contemporary" style="--x: 86%; --y: 46%;">
-              <span class="node-year">延伸</span>
-              <strong>當代性 / 性別理論</strong>
-            </button>
-          </div>
-
-          <aside class="tree-detail glass-panel" id="detailPanel" aria-live="polite">
-            <p class="detail-kicker">Active thread</p>
-            <h2 id="detailTitle">薩德侯爵</h2>
-            <p id="detailSummary">
-              薩德打破了古典與神學對性的限制，將欲望、暴力與越界推到理性難以收束的地帶。
-            </p>
-            <div class="detail-flow" id="detailFlow"></div>
-          </aside>
-        </section>
+    <article class="record" id="r01">
+      <div class="record-year">2021</div>
+      <div class="record-body">
+        <h2><span class="zh">全球首支瘧疾疫苗問世</span><span class="en">The World's First Malaria Vaccine</span></h2>
+        <p class="zh">世界衛生組織正式建議在瘧疾中高傳播地區為兒童施打 RTS,S/AS01 疫苗——這是人類史上第一支獲推薦大規模使用的瘧疾疫苗。迦納、肯亞與馬拉威的試點計畫顯示，接種兒童的死亡率下降 13%，重症住院率下降 22%。</p>
+        <p class="en">The WHO recommended RTS,S/AS01 for children in regions of moderate-to-high malaria transmission — the first malaria vaccine ever endorsed for widespread use. Pilot data from Ghana, Kenya, and Malawi showed a 13% drop in child deaths and a 22% drop in severe-malaria hospitalizations.</p>
+        <a class="source" href="https://www.who.int/news/item/06-10-2021-who-recommends-groundbreaking-malaria-vaccine-for-children-at-risk" target="_blank" rel="noopener">WHO, 2021 →</a>
       </div>
-    </header>
+    </article>
 
-    <main>
-      <section id="origins" class="section glass-panel reveal">
-        <div class="section-heading">
-          <p class="eyebrow">CLASSICAL BACKGROUND</p>
-          <h2>思想如何從秩序走向裂縫</h2>
-          <p>
-            Surphi 的閱讀方式不是單純列出哲學家，而是把問題放進思想環境。
-            古典哲學與神學先把性安置在理性、德性與目的之下，後來的性哲學才得以從中撕開一道裂口。
-          </p>
-        </div>
+    <article class="record" id="r02">
+      <div class="record-year">2023</div>
+      <div class="record-body">
+        <h2><span class="zh">第二支瘧疾疫苗獲推薦，供應瓶頸解除</span><span class="en">A Second Malaria Vaccine Clears the Supply Bottleneck</span></h2>
+        <p class="zh">世衛組織推薦牛津大學研發的 R21/Matrix-M 疫苗，成本更低、產能更大，解決了第一支疫苗長期供不應求的問題。截至 2024 年，已有至少 28 個非洲國家計畫將瘧疾疫苗納入常規免疫接種計畫。</p>
+        <p class="en">The WHO recommended Oxford's R21/Matrix-M vaccine — cheaper and easier to produce at scale — resolving years of supply shortage for the first vaccine. By 2024, at least 28 African countries planned to add a malaria vaccine to routine immunization.</p>
+        <a class="source" href="https://www.who.int/news/item/02-10-2023-who-recommends-r21-matrix-m-vaccine-for-malaria-prevention-in-updated-advice-on-immunization" target="_blank" rel="noopener">WHO, 2023 →</a>
+      </div>
+    </article>
 
-        <div class="origin-grid">
-          <article class="origin-card">
-            <span>Plato</span>
-            <h3>愛欲被提升</h3>
-            <p>柏拉圖把欲望導向美與真理，性不是終點，而是一段上升運動。</p>
-          </article>
-          <article class="origin-card">
-            <span>Aristotle</span>
-            <h3>自然與目的</h3>
-            <p>亞里斯多德使身體與倫理落在一套自然功能與社會秩序中。</p>
-          </article>
-          <article class="origin-card">
-            <span>Augustine / Aquinas</span>
-            <h3>神學與節制</h3>
-            <p>性快感被視為應被管理與節制的力量，合法性多被放在婚姻與生殖內。</p>
-          </article>
-        </div>
-      </section>
+    <article class="record" id="r03">
+      <div class="record-year">2023–24</div>
+      <div class="record-body">
+        <h2><span class="zh">新增愛滋病毒感染數，創 1980 年代以來新低</span><span class="en">Fewer New HIV Infections Than Any Year Since the 1980s</span></h2>
+        <p class="zh">2023 年全球新增愛滋病毒感染人數約 130 萬，較 2010 年下降 39%；愛滋相關死亡人數則較 2010 年腰斬，從 130 萬降至約 63 萬。全球逾四分之三的愛滋病毒感染者已接受抗病毒治療。</p>
+        <p class="en">An estimated 1.3 million people acquired HIV in 2023 — 39% fewer than in 2010 — while AIDS-related deaths fell by nearly half over the same period, from 1.3 million to about 630,000. More than three in four people living with HIV are now on treatment.</p>
+        <a class="source" href="https://www.unaids.org/en/UNAIDS-global-AIDS-update-2025" target="_blank" rel="noopener">UNAIDS →</a>
+      </div>
+    </article>
 
-      <section id="flow" class="section glass-panel reveal">
-        <div class="section-heading narrow">
-          <p class="eyebrow">THEORETICAL FLOW</p>
-          <h2>理論不是跳躍，而是流動</h2>
-          <p>
-            每個節點都不是孤立的名字，而是上一層秩序的回應、反抗或重寫。
-            這個流程帶你從規訓走向越界，再從越界走向權力分析。
-          </p>
-        </div>
+    <article class="record" id="r04">
+      <div class="record-year">2024</div>
+      <div class="record-body">
+        <h2><span class="zh">五歲以下兒童死亡率降至歷史新低</span><span class="en">Under-Five Child Mortality Falls to a Record Low</span></h2>
+        <p class="zh">聯合國兒童死亡率估計機構間小組（UN IGME）指出，全球五歲以下兒童死亡率自 1990 年以來下降了 60%，從每千名活產 93.5 人降至 37.4 人——意味著一個孩子活到五歲的機會，比三十多年前高出許多。</p>
+        <p class="en">According to the UN Inter-agency Group for Child Mortality Estimation, the global under-five mortality rate has fallen 60% since 1990 — from 93.5 to 37.4 deaths per 1,000 live births — meaning a child's odds of reaching age five are far better than a generation ago.</p>
+        <a class="source" href="https://data.unicef.org/resources/levels-and-trends-in-child-mortality-2024/" target="_blank" rel="noopener">UNICEF / UN IGME, 2024 →</a>
+      </div>
+    </article>
 
-        <div class="flow-ribbon">
-          <article class="flow-step active">
-            <span>01</span>
-            <h3>古典秩序</h3>
-            <p>性被納入理性、德性、婚姻與目的論的架構。</p>
-          </article>
-          <article class="flow-step">
-            <span>02</span>
-            <h3>薩德的裂口</h3>
-            <p>欲望以衝撞道德的姿態出現，開始不再服從傳統正當性。</p>
-          </article>
-          <article class="flow-step">
-            <span>03</span>
-            <h3>巴塔耶的越界</h3>
-            <p>情色成為超出日常秩序的經驗，連結禁忌、死亡與神聖。</p>
-          </article>
-          <article class="flow-step">
-            <span>04</span>
-            <h3>傅柯的轉向</h3>
-            <p>性不只是欲望，更是被話語、制度與權力生產的現代對象。</p>
-          </article>
-        </div>
-      </section>
-    </main>
-  </div>
+    <article class="record" id="r05">
+      <div class="record-year">2024</div>
+      <div class="record-body">
+        <h2><span class="zh">埃及、維德角獲認證根除瘧疾</span><span class="en">Egypt and Cabo Verde Certified Malaria-Free</span></h2>
+        <p class="zh">世界衛生組織正式認證埃及與維德角為「無瘧疾國家」，需連續三年境內零本土傳播病例方能取得此認證。2025 年喬治亞、蘇利南與東帝汶相繼跟進，全球累計已有 47 個國家與地區獲得此殊榮。</p>
+        <p class="en">The WHO certified Egypt and Cabo Verde as malaria-free — a status requiring at least three consecutive years without indigenous transmission. Georgia, Suriname, and Timor-Leste followed in 2025, bringing the global total to 47 countries and territories.</p>
+        <a class="source" href="https://www.who.int/teams/global-malaria-programme/elimination/countries-and-territories-certified-malaria-free-by-who" target="_blank" rel="noopener">WHO →</a>
+      </div>
+    </article>
 
-  <script src="script.js"></script>
+    <article class="record" id="r06">
+      <div class="record-year">2024</div>
+      <div class="record-body">
+        <h2><span class="zh">亞馬遜雨林砍伐率降至九年新低</span><span class="en">Amazon Deforestation Falls to a Nine-Year Low</span></h2>
+        <p class="zh">巴西國家太空研究院（INPE）數據顯示，2023 至 2024 年度亞馬遜雨林砍伐面積年減 30.6%，創下九年來最低紀錄；到 2025 年，砍伐率已連續第三年下降。</p>
+        <p class="en">Data from Brazil's National Space Research Institute (INPE) showed Amazon deforestation fell 30.6% year-on-year in 2023–24, the lowest level in nine years — and by 2025, the rate had declined for a third consecutive year.</p>
+        <a class="source" href="https://news.mongabay.com/2024/11/amazon-deforestation-in-brazil-plunges-31-to-lowest-level-in-9-years/" target="_blank" rel="noopener">Mongabay / INPE, 2024 →</a>
+      </div>
+    </article>
+
+    <article class="record" id="r07">
+      <div class="record-year">2024</div>
+      <div class="record-body">
+        <h2><span class="zh">臭氧層持續癒合，步入正軌</span><span class="en">The Ozone Layer Keeps Healing, on Schedule</span></h2>
+        <p class="zh">聯合國報告指出，2024 年南極臭氧層破洞是 1992 年以來第七小的紀錄，形成得慢、癒合得也快。在《蒙特婁議定書》推動下，超過 99% 的臭氧層破壞物質已被淘汰，北極臭氧層預計 2045 年、南極則於 2066 年前恢復至 1980 年前的水準。</p>
+        <p class="en">A UN report found the 2024 Antarctic ozone hole was the seventh-smallest since 1992, forming slowly and closing quickly. Under the Montreal Protocol, over 99% of ozone-depleting substances have been phased out; the Arctic ozone layer is on track to fully recover by 2045, the Antarctic by 2066.</p>
+        <a class="source" href="https://news.un.org/en/story/2024/09/1154366" target="_blank" rel="noopener">UN News, 2024 →</a>
+      </div>
+    </article>
+
+    <article class="record" id="r08">
+      <div class="record-year">2024</div>
+      <div class="record-body">
+        <h2><span class="zh">全球平均壽命回升至疫情前水準</span><span class="en">Global Life Expectancy Recovers to Pre-Pandemic Levels</span></h2>
+        <p class="zh">COVID-19 疫情曾在 2021 年將全球平均壽命拉低到 70.9 歲，但到 2023–2024 年已回升至 73.2–73.3 歲，幾乎所有國家與地區的壽命都已恢復或超越疫情前水準。</p>
+        <p class="en">Global life expectancy at birth, dragged down to 70.9 years by COVID-19 in 2021, climbed back to 73.2–73.3 years by 2023–2024 — with nearly every country and area now matching or exceeding its pre-pandemic level.</p>
+        <a class="source" href="https://ourworldindata.org/data-insights/life-expectancy-is-returning-to-pre-pandemic-levels" target="_blank" rel="noopener">Our World in Data →</a>
+      </div>
+    </article>
+
+    <article class="record" id="r09">
+      <div class="record-year">2024</div>
+      <div class="record-body">
+        <h2><span class="zh">全球太陽能裝置量連續 22 年刷新紀錄</span><span class="en">Global Solar Additions Set a Record for the 22nd Year Running</span></h2>
+        <p class="zh">國際能源總署（IEA）指出，2024 年全球新增太陽能發電裝置容量達 553 GW，年增 30%，是成長最快的發電技術；全球再生能源新增裝置量也連續第 22 年刷新歷史紀錄。</p>
+        <p class="en">The IEA reported 553 GW of new solar capacity added globally in 2024 — up 30% year-on-year and the fastest-growing power technology — marking the 22nd consecutive year that renewable capacity additions set a new record.</p>
+        <a class="source" href="https://www.iea.org/reports/renewables-2024/executive-summary" target="_blank" rel="noopener">IEA, 2024 →</a>
+      </div>
+    </article>
+
+    <article class="record" id="r10">
+      <div class="record-year">2024</div>
+      <div class="record-body">
+        <h2><span class="zh">婚姻平權持續擴張</span><span class="en">Marriage Equality Keeps Expanding</span></h2>
+        <p class="zh">愛沙尼亞（2024 年生效）成為第一個承認同性婚姻的後蘇聯國家；希臘成為第一個立法承認同性婚姻的東正教國家；列支敦斯登與泰國也在同年通過相關法案，泰國成為亞洲第二個實現婚姻平權的國家。</p>
+        <p class="en">Estonia became the first post-Soviet country to recognize same-sex marriage (effective 2024); Greece became the first Orthodox Christian country to legalize it; Liechtenstein and Thailand passed their own laws the same year, making Thailand the second country in Asia with marriage equality.</p>
+        <a class="source" href="https://en.wikipedia.org/wiki/2024_in_LGBTQ_rights" target="_blank" rel="noopener">2024 in LGBTQ Rights →</a>
+      </div>
+    </article>
+
+    <article class="record" id="r11">
+      <div class="record-year">2025</div>
+      <div class="record-body">
+        <h2><span class="zh">幾內亞龍線蟲病：僅剩 10 例，史上最低</span><span class="en">Guinea Worm Disease: Just 10 Cases Left, an All-Time Low</span></h2>
+        <p class="zh">2025 年全球僅通報 10 例人類幾內亞龍線蟲病病例，較 2024 年再減 33%。1986 年卡特中心接手根除計畫時，全球估計每年有 350 萬病例；如今這項疾病有望成為繼天花之後，人類第二個徹底根除的疾病。</p>
+        <p class="en">Only 10 human Guinea worm cases were reported worldwide in 2025 — down 33% from 2024, and the lowest number ever recorded. When the Carter Center took over the eradication campaign in 1986, an estimated 3.5 million cases occurred annually; the disease is now on the verge of becoming only the second in history, after smallpox, to be eradicated.</p>
+        <a class="source" href="https://www.cartercenter.org/news/guinea-worm-announcement/" target="_blank" rel="noopener">The Carter Center, 2025 →</a>
+      </div>
+    </article>
+
+    <article class="record" id="r12">
+      <div class="record-year">2025</div>
+      <div class="record-body">
+        <h2><span class="zh">再生能源首度超越煤炭，成為全球最大電力來源</span><span class="en">Renewables Overtake Coal as the World's Largest Power Source</span></h2>
+        <p class="zh">國際能源總署數據顯示，2025 年上半年，全球再生能源發電量首次超越煤炭，成為單一最大電力來源——比先前預測的時程還要提前，標誌著全球能源結構的一個歷史轉折點。</p>
+        <p class="en">IEA data showed that in the first half of 2025, renewables overtook coal to become the world's single largest source of electricity generation for the first time — earlier than previously forecast, marking a historic turning point in the global energy mix.</p>
+        <a class="source" href="https://www.iea.org/reports/electricity-mid-year-update-2025/supply-renewables-grow-the-most-followed-by-gas-and-nuclear" target="_blank" rel="noopener">IEA, 2025 →</a>
+      </div>
+    </article>
+
+  </main>
+
+  <footer class="closing">
+    <p class="zh">進步不是必然，也不是均勻分布的——它是無數決策、資金與長年堅持工作換來的結果，許多地方仍在等待這些曲線抵達。閱讀這些數字，不是要我們停止批判，而是提醒我們：改變確實正在發生，而且是可以被測量、被驗證、被延續的。</p>
+    <p class="en">Progress is neither inevitable nor evenly distributed — it is the outcome of countless decisions, funding, and years of sustained work, and many places are still waiting for these curves to reach them. These numbers are not a reason to stop being critical; they are a reminder that change is real, measurable, and worth continuing.</p>
+    <p class="meta">彙整於 2026 年 9 月 · Compiled September 2026 · 每則紀錄均附原始資料來源 · Each record links to its primary source.</p>
+  </footer>
+
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
