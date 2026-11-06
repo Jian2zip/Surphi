@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Surphi | 歐陸哲學 1990–2020s</title>
+  <meta name="description" content="以 26 篇高影響力期刊論文，簡介 1990 年代至 2020 年代歐陸哲學的觀念發展與衍伸：解構、生命政治、政治的回歸、新唯物論、思辨實在論、去殖民與人類世。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;700&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient ambient-a"></div>
+  <div class="ambient ambient-b"></div>
+  <div class="ambient ambient-c"></div>
+
+  <div class="page-shell">
+    <header class="hero glass-panel">
+      <nav class="topbar" aria-label="主要導覽">
+        <a class="brand" href="../index.html">Surphi <small>歐陸哲學 1990–2020s</small></a>
+        <div class="nav-links">
+          <a href="#map">思潮圖譜</a>
+          <a href="#timeline">時間軸</a>
+          <a href="#themes">七條思潮</a>
+          <a href="#method">選文方法</a>
+          <a class="nav-back" href="../index.html">性哲學圖譜 ↗</a>
+        </div>
+      </nav>
+
+      <div class="hero-intro">
+        <div class="hero-copy">
+          <p class="eyebrow">Continental philosophy · 1990–2021</p>
+          <h1>三十年的歐陸思想，<br>從 <span id="heroCount">26</span> 篇論文讀起。</h1>
+          <p class="lead">
+            這個專區以期刊論文為單位，簡介 1990 年代到 2020 年代歐陸哲學的觀念發展與衍伸：
+            從德希達的正義、德勒茲的控制社會，一路走到新唯物論、去殖民思想與人類世。
+            每一篇都附上繁中導讀、關鍵概念、後續影響與完整書目。
+          </p>
+          <div class="hero-actions">
+            <a class="primary-button" href="#map">從思潮圖譜開始</a>
+            <a class="secondary-button" href="#timeline">按年代閱讀</a>
+          </div>
+        </div>
+        <ul class="hero-stats" id="heroStats" aria-label="收錄概況"></ul>
+      </div>
+
+      <section id="map" class="map-stage" aria-labelledby="mapTitle">
+        <div class="stage-copy">
+          <span class="stage-label" id="mapTitle">Thought map · 思潮圖譜</span>
+          <p>點擊節點，查看這條思潮的論文，以及它如何衍伸到其他思潮。</p>
+        </div>
+        <div class="map-layout">
+          <div class="map-canvas" id="mapCanvas">
+            <svg class="map-lines" id="mapLines" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"></svg>
+          </div>
+          <aside class="map-detail glass-panel" id="mapDetail" aria-live="polite"></aside>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section id="timeline" class="section glass-panel reveal" aria-labelledby="timelineTitle">
+        <div class="section-heading">
+          <p class="eyebrow">Timeline · 1990–2021</p>
+          <h2 id="timelineTitle">四個十年，七條線索</h2>
+          <p>每一列是一條思潮，每一個點是一篇論文。點擊圓點閱讀導讀，或用下方標籤只看某一條思潮。</p>
+        </div>
+        <div class="chip-row" id="timelineFilters" role="group" aria-label="依思潮篩選"></div>
+        <div class="timeline-scroll">
+          <div class="timeline" id="timelineTrack"></div>
+        </div>
+        <div class="decade-grid" id="decadeGrid"></div>
+      </section>
+
+      <div id="themes" class="themes" aria-label="七條思潮"></div>
+
+      <section id="method" class="section glass-panel reveal" aria-labelledby="methodTitle">
+        <div class="section-heading">
+          <p class="eyebrow">Method &amp; bibliography</p>
+          <h2 id="methodTitle">選文方法與完整書目</h2>
+        </div>
+        <div class="method-grid">
+          <div class="method-card">
+            <h3>收錄標準</h3>
+            <ol>
+              <li><strong>只收期刊論文</strong>，包含期刊刊出的譯文與論壇文章。專書與專書章節即使影響巨大（例如《神聖人》《性別麻煩》《有限性之後》），也只在導讀中作為背景提及。</li>
+              <li><strong>出版於 1990–2021 年</strong>，四個十年都有代表作。</li>
+              <li><strong>具高度影響力</strong>：Crossref 被引次數相對較高，或者開啟、代表了一個至今仍被廣泛使用的概念（如控制社會、死亡政治、能動實在論），或者引發了有記錄的學術辯論。</li>
+              <li><strong>範圍</strong>：歐陸哲學本身，加上三個衍伸領域：性別與新唯物論、去殖民與後殖民、人類世與技術哲學。</li>
+            </ol>
+          </div>
+          <div class="method-card">
+            <h3>關於引用數</h3>
+            <p>
+              卡片上的「Crossref 被引」是 <span id="checkedDate">2026-11-06</span> 查詢 Crossref 得到的數字，只計算有 DOI、且出版者有向 Crossref 回報參考文獻的引用，通常遠低於 Google Scholar。
+            </p>
+            <p>
+              <em>New Left Review</em> 等期刊近年才補登 DOI，數字明顯偏低；<em>Cardozo Law Review</em>、<em>October</em>、<em>Collapse</em>、<em>Social Research</em> 上的論文沒有 DOI，無法計算。因此引用數只能當作相對參考，不能拿來比較不同期刊的論文。
+            </p>
+            <p class="method-note">
+              導讀是本站以繁體中文撰寫的摘要與詮釋，不是原文翻譯。若要引用，請查閱原刊。
+            </p>
+          </div>
+        </div>
+        <h3 class="biblio-title">書目（依出版年）</h3>
+        <ol class="biblio" id="bibliography"></ol>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Surphi · 歐陸哲學 1990–2020s　｜　<a href="../index.html">回到性哲學關係圖譜</a></p>
+    </footer>
+  </div>
+
+  <dialog class="drawer" id="paperDrawer" aria-labelledby="drawerTitle">
+    <div class="drawer-inner" id="drawerInner"></div>
+  </dialog>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
