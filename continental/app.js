@@ -40,6 +40,8 @@
   function renderHero() {
     const years = PAPERS.map((p) => p.year);
     $("#heroCount").textContent = PAPERS.length;
+    $("#heroArt").innerHTML =
+      SurphiArt.figure("hero-cont") + `<div class="hero-stack" aria-hidden="true">${SurphiArt.stack("Différance")}</div>`;
     $("#heroStats").innerHTML = [
       [THEMES.length, "條思潮"],
       [PAPERS.length, "篇期刊論文"],
@@ -138,6 +140,7 @@
       .join("");
 
     $("#mapDetail").innerHTML = `
+      <div class="detail-art">${SurphiArt.svg(t.id, t.name)}</div>
       <p class="detail-kicker" style="color:${t.color}">思潮 ${t.no} · ${t.span}</p>
       <h2>${esc(t.name)}</h2>
       <p class="detail-orig">${esc(t.orig)}</p>
@@ -266,6 +269,7 @@
               <h2 id="theme-title-${t.id}">${esc(t.name)}</h2>
               <p class="theme-orig">${esc(t.orig)}</p>
               <span class="theme-span">${t.span} · ${papersOf(t.id).length} 篇</span>
+              ${SurphiArt.figure(t.id, t.name, "theme-art")}
             </div>
             <div class="theme-body">
               <p>${esc(t.intro)}</p>
@@ -333,6 +337,7 @@
         <a class="chip" href="#theme-${t.id}" data-close style="${styleVars(t)}"><span class="swatch"></span>思潮 ${t.no}｜${esc(t.name)}</a>
         <button type="button" class="close-button" data-close aria-label="關閉導讀">×</button>
       </div>
+      <div class="drawer-art" aria-hidden="true">${SurphiArt.svg(t.id)}</div>
       <p class="drawer-meta"><b>${p.year}</b>${esc(p.author.zh)} · ${esc(p.author.orig)}</p>
       <h2 id="drawerTitle">${esc(p.title.zh)}</h2>
       <p class="drawer-orig">${esc(p.title.orig)}</p>

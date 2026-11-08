@@ -40,6 +40,8 @@
   /* ───────── Hero ───────── */
 
   function renderHero() {
+    $("#heroArt").innerHTML =
+      SurphiArt.figure("hero-sex") + `<div class="hero-stack" aria-hidden="true">${SurphiArt.stack("Erōs")}</div>`;
     $("#heroStats").innerHTML = [
       [ERAS.length, "個時期"],
       [TEXTS.length, "個文本"],
@@ -143,6 +145,7 @@
         : "";
 
     $("#mapDetail").innerHTML = `
+      <div class="detail-art">${SurphiArt.svg(e.id, e.name)}</div>
       <p class="detail-kicker" style="color:${e.color}">時期 ${e.no} · ${e.span}</p>
       <h2>${esc(e.name)}</h2>
       <p class="detail-orig">${esc(e.orig)}</p>
@@ -229,6 +232,7 @@
               <h2 id="era-title-${e.id}">${esc(e.name)}</h2>
               <p class="theme-orig">${esc(e.orig)}</p>
               <span class="theme-span">${e.span} · ${textsOf(e.id).length} 個文本</span>
+              ${SurphiArt.figure(e.id, e.name, "theme-art")}
             </div>
             <div class="theme-body">
               <p>${esc(e.intro)}</p>
@@ -295,6 +299,7 @@
         <a class="chip" href="#era-${e.id}" data-close style="${styleVars(e)}"><span class="swatch"></span>時期 ${e.no}｜${esc(shortEra(e))}</a>
         <button type="button" class="close-button" data-close aria-label="關閉導讀">×</button>
       </div>
+      <div class="drawer-art" aria-hidden="true">${SurphiArt.svg(e.id)}</div>
       <p class="drawer-meta"><b>${esc(t.date)}</b>${esc(t.author.zh)} · ${esc(t.author.orig)}　${kindBadge(t)}</p>
       <h2 id="drawerTitle">${esc(t.title.zh)}</h2>
       <p class="drawer-orig">${esc(t.title.orig)}</p>

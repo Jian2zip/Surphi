@@ -7,7 +7,7 @@
   <meta name="description" content="以 26 篇高影響力期刊論文，簡介 1990 年代至 2020 年代歐陸哲學的觀念發展與衍伸：解構、生命政治、政治的回歸、新唯物論、思辨實在論、去殖民與人類世。">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;700;900&family=Playfair+Display:wght@700;900&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Noto+Sans+TC:wght@400;500;700;900&family=Caveat:wght@500;700&family=LXGW+WenKai+TC&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -42,7 +42,10 @@
             <a class="secondary-button" href="#timeline">按年代閱讀</a>
           </div>
         </div>
-        <ul class="hero-stats" id="heroStats" aria-label="收錄概況"></ul>
+        <div class="hero-side">
+          <div class="hero-art" id="heroArt"></div>
+          <ul class="hero-stats" id="heroStats" aria-label="收錄概況"></ul>
+        </div>
       </div>
 
       <section id="map" class="map-stage" aria-labelledby="mapTitle">
@@ -118,6 +121,7 @@
   </dialog>
 
   <script src="data.js"></script>
+  <script src="../art.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

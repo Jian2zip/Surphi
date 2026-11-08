@@ -1,68 +1,82 @@
 /* Surphi｜性哲學關係圖譜
-   雜誌編輯風：紙色底、墨黑粗框、直角版塊、粗宋體大標、編輯紅單一強調色；深色模式跟隨系統。
-   版面架構與 continental/styles.css 一致，時間軸改為分段時間長廊。 */
+   海報風：紅色滿版 hero、黑體標題＋紅色手寫點綴、撕紙邊緣與紙紋、抽象二創畫（art.js）。
+   深色模式跟隨系統。版面架構與 continental/styles.css 一致，時間軸改為分段時間長廊。 */
 
 :root {
   color-scheme: light;
-  --bg: #f3f0e8;
-  --bg-deep: #e9e4d8;
-  --surface: #fbfaf6;
-  --hover: #ebe6da;
-  --ink: #111111;
-  --text: #26241f;
-  --muted: #5e5a52;
-  --line: rgba(17, 17, 17, 0.16);
-  --line-strong: #111111;
+  --bg: #e9e6e1;
+  --bg-deep: #dfdbd4;
+  --surface: #f4f2ee;
+  --hover: #dedad3;
   --grid: rgba(17, 17, 17, 0.07);
-  --accent: #e63312;
-  --accent-deep: #c22a0d;
-  --accent-soft: #fbe3dc;
-  --on-accent: #ffffff;
+  --red: #f2352a;
+  --pink: #f6c9c3;
+  --paper: #f4f2ee;
+  --accent: #f2352a;
+  --accent-soft: #f8d9d4;
+  --on-accent: #111111;
   --backdrop: rgba(17, 17, 17, 0.5);
+  --c-ink: #111111;
+  --c-text: #24221f;
+  --c-muted: #5b5853;
+  --c-line: rgba(17, 17, 17, 0.16);
+  --c-line-strong: #111111;
+  --c-accent-deep: #b8221a;
+  /* 實際使用的文字色；hero 會在紅底上局部改寫 */
+  --ink: var(--c-ink);
+  --text: var(--c-text);
+  --muted: var(--c-muted);
+  --line: var(--c-line);
+  --line-strong: var(--c-line-strong);
+  --accent-deep: var(--c-accent-deep);
   --shadow: none;
   --shadow-soft: none;
   --radius-xl: 0;
   --radius-lg: 0;
   --radius-md: 0;
-  --font-display: "Playfair Display", "Noto Serif TC", "Songti TC", serif;
-  --font-serif: "Noto Serif TC", "Songti TC", serif;
-  --font-sans: "Manrope", "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", system-ui, sans-serif;
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0.2 0 0 0 -0.07'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url%28%23n%29'/%3E%3C/svg%3E");
+  --torn-top: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 20' preserveAspectRatio='none'%3E%3Cpath d='M0 20 L0 7.9 L8 11.8 L15 10.4 L26 4.7 L39 4.4 L51 4.8 L59 9.1 L76 5.5 L85 11.5 L105 10.9 L116 15.7 L123 14.3 L133 5.7 L141 7.7 L158 6.2 L172 11.7 L183 10.6 L190 4.7 L199 12.2 L211 7.8 L225 9.4 L235 13.5 L251 6.9 L265 10.3 L284 12.8 L294 15.8 L301 9.0 L318 5.8 L331 4.5 L346 13.2 L360 14.5 L370 12.3 L385 11.0 L397 14.1 L416 9.7 L432 4.7 L448 11.8 L467 13.9 L477 8.6 L493 4.3 L505 6.0 L513 4.7 L530 5.6 L539 8.7 L557 5.0 L570 10.6 L588 13.8 L606 7.3 L618 8.3 L636 15.5 L644 6.1 L654 6.8 L666 11.1 L676 4.0 L688 8.4 L702 15.4 L718 10.2 L732 12.1 L739 14.8 L756 14.5 L773 8.7 L785 5.2 L799 4.7 L806 6.5 L815 8.1 L821 4.0 L830 5.2 L841 4.3 L859 11.4 L867 7.0 L878 8.4 L886 14.2 L905 9.6 L918 5.0 L926 8.1 L935 13.9 L944 4.3 L963 10.3 L971 10.5 L977 10.3 L997 14.4 L1000 8 L1000 20Z'/%3E%3C/svg%3E");
+  --torn-bottom: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 20' preserveAspectRatio='none'%3E%3Cpath d='M0 0 L0 9.4 L14 15.1 L26 10.1 L41 6.2 L54 11.6 L71 5.1 L81 5.1 L98 12.3 L105 15.8 L125 11.8 L139 5.9 L145 10.3 L152 6.3 L162 4.4 L174 9.3 L192 10.2 L207 10.0 L222 9.5 L232 16.0 L252 14.1 L268 7.8 L277 7.5 L284 13.2 L296 14.2 L307 15.5 L325 4.0 L334 14.9 L346 15.8 L358 4.9 L373 13.3 L383 5.0 L393 15.6 L410 5.4 L419 5.2 L426 13.6 L435 10.7 L447 6.3 L463 5.6 L478 5.4 L490 6.6 L500 15.7 L517 7.6 L535 6.5 L547 14.3 L562 5.2 L582 6.6 L591 13.3 L602 7.6 L609 5.1 L623 6.9 L638 8.5 L650 15.5 L663 10.9 L681 6.2 L689 14.9 L706 7.0 L715 12.9 L734 6.4 L754 14.6 L768 9.1 L776 4.5 L795 6.9 L811 7.1 L828 11.2 L839 6.1 L855 4.8 L864 10.7 L882 11.4 L892 15.0 L901 4.2 L910 9.3 L917 6.1 L928 10.9 L936 8.3 L955 15.8 L970 12.3 L984 5.7 L990 4.2 L1000 8 L1000 0Z'/%3E%3C/svg%3E");
+  --font-sans: "Inter", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif;
+  --font-display: var(--font-sans);
+  --font-serif: var(--font-sans);
+  --font-hand: "Caveat", "LXGW WenKai TC", cursive;
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     color-scheme: dark;
-    --bg: #121110;
-    --bg-deep: #0c0b0a;
-    --surface: #1a1917;
-    --hover: #27251f;
-    --ink: #f3f0e8;
-    --text: #dcd7cc;
-    --muted: #a39d91;
-    --line: rgba(243, 240, 232, 0.18);
-    --line-strong: #f3f0e8;
-    --grid: rgba(243, 240, 232, 0.07);
-    --accent-deep: #ff6b4f;
-    --accent-soft: rgba(230, 51, 18, 0.18);
+    --bg: #151413;
+    --bg-deep: #0f0e0d;
+    --surface: #1e1d1b;
+    --hover: #2a2825;
+    --grid: rgba(239, 236, 230, 0.06);
+    --accent-soft: rgba(242, 53, 42, 0.18);
     --backdrop: rgba(0, 0, 0, 0.65);
+    --c-ink: #efece6;
+    --c-text: #d8d3ca;
+    --c-muted: #a29c92;
+    --c-line: rgba(239, 236, 230, 0.16);
+    --c-line-strong: #efece6;
+    --c-accent-deep: #ff6a5c;
   }
 }
 
 :root[data-theme="dark"] {
   color-scheme: dark;
-  --bg: #121110;
-  --bg-deep: #0c0b0a;
-  --surface: #1a1917;
-  --hover: #27251f;
-  --ink: #f3f0e8;
-  --text: #dcd7cc;
-  --muted: #a39d91;
-  --line: rgba(243, 240, 232, 0.18);
-  --line-strong: #f3f0e8;
-  --grid: rgba(243, 240, 232, 0.07);
-  --accent-deep: #ff6b4f;
-  --accent-soft: rgba(230, 51, 18, 0.18);
+  --bg: #151413;
+  --bg-deep: #0f0e0d;
+  --surface: #1e1d1b;
+  --hover: #2a2825;
+  --grid: rgba(239, 236, 230, 0.06);
+  --accent-soft: rgba(242, 53, 42, 0.18);
   --backdrop: rgba(0, 0, 0, 0.65);
+  --c-ink: #efece6;
+  --c-text: #d8d3ca;
+  --c-muted: #a29c92;
+  --c-line: rgba(239, 236, 230, 0.16);
+  --c-line-strong: #efece6;
+  --c-accent-deep: #ff6a5c;
 }
 
 * {
@@ -79,7 +93,7 @@ body {
   color: var(--ink);
   font-family: var(--font-sans);
   line-height: 1.6;
-  background: var(--bg);
+  background: var(--grain), var(--bg);
   min-height: 100vh;
   overflow-x: hidden;
 }
@@ -134,7 +148,7 @@ a {
 
 .glass-panel {
   background: var(--surface);
-  border: 2px solid var(--ink);
+  border: 0;
   box-shadow: none;
 }
 
@@ -144,7 +158,8 @@ h3 {
   margin: 0;
   font-family: var(--font-display);
   color: var(--ink);
-  font-weight: 900;
+  font-weight: 500;
+  letter-spacing: -0.03em;
 }
 
 .eyebrow,
@@ -152,12 +167,14 @@ h3 {
 .detail-kicker,
 .detail-sub,
 .drawer-label {
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-  font-size: 0.74rem;
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 1.45rem;
   color: var(--accent-deep);
-  font-weight: 800;
+  font-weight: 700;
   margin: 0;
+  font-family: var(--font-hand);
+  line-height: 1.1;
 }
 
 :focus-visible {
@@ -169,7 +186,18 @@ h3 {
 
 .hero {
   border-radius: 0;
-  padding: 28px 32px;
+  padding: 28px 32px 44px;
+  background: var(--red);
+  border: 0;
+  --ink: #111111;
+  --text: #111111;
+  --muted: rgba(17, 17, 17, 0.72);
+  --line: rgba(17, 17, 17, 0.25);
+  --line-strong: #111111;
+  --accent-deep: #111111;
+  color: var(--ink);
+  -webkit-mask: var(--torn-bottom) bottom / 100% 18px no-repeat, linear-gradient(#000 0 0) 0 0 / 100% calc(100% - 17px) no-repeat;
+  mask: var(--torn-bottom) bottom / 100% 18px no-repeat, linear-gradient(#000 0 0) 0 0 / 100% calc(100% - 17px) no-repeat;
 }
 
 .topbar {
@@ -179,27 +207,27 @@ h3 {
   gap: 18px;
   margin-bottom: 0;
   padding-bottom: 14px;
-  border-bottom: 4px solid var(--ink);
+  border-bottom: 2px solid var(--ink);
 }
 
 .brand {
   display: inline-flex;
   align-items: baseline;
   gap: 10px;
-  font-size: 1.6rem;
-  font-weight: 900;
-  letter-spacing: -0.01em;
+  font-size: 1.45rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
   text-transform: none;
   text-decoration: none;
-  font-family: var(--font-display);
+  font-family: var(--font-sans);
 }
 
 .brand small {
   font-size: 0.82rem;
   letter-spacing: 0.06em;
   text-transform: none;
-  color: var(--muted);
-  font-weight: 700;
+  color: var(--ink);
+  font-weight: 600;
   font-family: var(--font-sans);
 }
 
@@ -215,19 +243,21 @@ h3 {
   color: var(--ink);
   font-size: 0.95rem;
   transition: color 0.3s ease;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .nav-links a:hover {
-  color: var(--accent-deep);
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 .nav-links .nav-back {
   padding: 6px 14px;
   border-radius: 0;
-  background: var(--accent);
+  background: var(--ink);
   border: 0;
-  color: var(--on-accent);
+  color: var(--paper);
 }
 
 .hero-intro {
@@ -239,10 +269,11 @@ h3 {
 }
 
 h1 {
-  font-size: clamp(2.4rem, 6vw, 5.2rem);
-  line-height: 1.04;
-  letter-spacing: -0.02em;
+  font-size: clamp(2.6rem, 6.4vw, 5.6rem);
+  line-height: 1.02;
+  letter-spacing: -0.045em;
   margin: 16px 0 24px;
+  font-weight: 500;
 }
 
 .lead {
@@ -275,10 +306,10 @@ h1 {
 }
 
 .primary-button {
-  color: var(--on-accent);
-  background: var(--accent);
+  color: var(--paper);
+  background: var(--ink);
   box-shadow: none;
-  border-color: var(--accent);
+  border-color: var(--ink);
 }
 
 .secondary-button {
@@ -287,14 +318,14 @@ h1 {
 }
 
 .primary-button:hover {
-  background: var(--ink);
-  border-color: var(--ink);
-  color: var(--bg);
+  background: var(--paper);
+  border-color: var(--paper);
+  color: #111111;
 }
 
 .secondary-button:hover {
   background: var(--ink);
-  color: var(--bg);
+  color: var(--red);
 }
 
 .hero-stats {
@@ -313,21 +344,24 @@ h1 {
   border-radius: 0;
   background: none;
   border: 0;
-  border-top: 2px solid var(--ink);
+  border-top: 1px solid var(--ink);
 }
 
 .hero-stats strong {
-  font-family: var(--font-display);
-  font-size: 2.6rem;
+  font-family: var(--font-sans);
+  font-size: 2.2rem;
   line-height: 1;
   min-width: 2.8em;
-  font-weight: 900;
-  color: var(--accent);
+  font-weight: 500;
+  color: var(--ink);
+  letter-spacing: -0.04em;
 }
 
 .hero-stats span {
-  color: var(--muted);
-  font-size: 0.92rem;
+  color: var(--ink);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
 }
 
 /* ───────── Thought map ───────── */
@@ -350,7 +384,7 @@ h1 {
 
 .stage-copy p {
   margin: 0;
-  color: var(--muted);
+  color: var(--text);
 }
 
 .map-layout {
@@ -363,8 +397,8 @@ h1 {
   position: relative;
   min-height: 580px;
   border-radius: 0;
-  background: var(--bg);
-  border: 2px solid var(--ink);
+  background: var(--surface);
+  border: 0;
   overflow: hidden;
 }
 
@@ -395,7 +429,7 @@ h1 {
   stroke-width: 1.4;
   stroke-linecap: butt;
   stroke-dasharray: 3 5;
-  opacity: 0.4;
+  opacity: 0.35;
   transition: stroke 0.45s ease, opacity 0.45s ease, stroke-width 0.45s ease;
 }
 
@@ -420,8 +454,8 @@ h1 {
   padding: 14px 16px 14px 30px;
   text-align: left;
   border-radius: 0;
-  border: 2px solid var(--ink);
-  background: var(--surface);
+  border: 0;
+  background: var(--bg);
   box-shadow: none;
   color: var(--ink);
   font: inherit;
@@ -453,10 +487,11 @@ h1 {
 .map-node strong {
   display: block;
   margin-top: 4px;
-  font-family: var(--font-display);
+  font-family: var(--font-sans);
   font-size: 1.02rem;
   line-height: 1.4;
-  font-weight: 900;
+  font-weight: 700;
+  letter-spacing: -0.01em;
 }
 
 .node-meta {
@@ -473,7 +508,6 @@ h1 {
 
 .map-node.active {
   background: var(--ink);
-  border-color: var(--ink);
   box-shadow: none;
   color: var(--bg);
 }
@@ -495,10 +529,11 @@ h1 {
   overflow-y: auto;
   background: var(--surface);
   box-shadow: none;
+  border: 0;
 }
 
 .map-detail h2 {
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   line-height: 1.2;
   margin: 8px 0 4px;
 }
@@ -574,7 +609,7 @@ h1 {
   text-align: left;
   padding: 10px 12px;
   border-radius: 0;
-  border: 1px dashed var(--ink);
+  border: 1px dashed var(--line-strong);
   background: transparent;
   font: inherit;
   font-size: 0.86rem;
@@ -622,8 +657,10 @@ h1 {
 
 .section {
   margin-top: 24px;
-  padding: 40px;
+  padding: 48px 40px 40px;
   border-radius: 0;
+  -webkit-mask: var(--torn-top) top / 100% 18px no-repeat, linear-gradient(#000 0 0) 0 17px / 100% calc(100% - 17px) no-repeat;
+  mask: var(--torn-top) top / 100% 18px no-repeat, linear-gradient(#000 0 0) 0 17px / 100% calc(100% - 17px) no-repeat;
 }
 
 .section-heading {
@@ -631,10 +668,11 @@ h1 {
 }
 
 .section-heading h2 {
-  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  font-size: clamp(2.2rem, 5vw, 4rem);
   margin: 12px 0 14px;
-  line-height: 1.08;
-  letter-spacing: -0.02em;
+  line-height: 1.04;
+  letter-spacing: -0.045em;
+  font-weight: 500;
 }
 
 .section-heading p {
@@ -656,14 +694,14 @@ h1 {
   gap: 8px;
   padding: 8px 14px;
   border-radius: 0;
-  border: 1px solid var(--ink);
+  border: 1px solid var(--line-strong);
   background: transparent;
   color: var(--ink);
   font: inherit;
   font-size: 0.86rem;
   cursor: pointer;
   transition: background 0.25s ease, color 0.25s ease;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .chip:hover {
@@ -762,7 +800,7 @@ a.chip {
   padding: 10px 11px;
   border-radius: 0;
   background: var(--bg);
-  border: 1px solid var(--ink);
+  border: 0;
   border-left: 4px solid var(--c);
   color: var(--ink);
   font: inherit;
@@ -848,10 +886,12 @@ a.chip {
 
 .theme-section {
   margin-top: 24px;
-  padding: 40px;
+  padding: 52px 40px 40px;
   border-radius: 0;
   scroll-margin-top: 16px;
-  border-top: 12px solid var(--c);
+  box-shadow: inset 0 14px 0 var(--c);
+  -webkit-mask: var(--torn-top) top / 100% 18px no-repeat, linear-gradient(#000 0 0) 0 17px / 100% calc(100% - 17px) no-repeat;
+  mask: var(--torn-top) top / 100% 18px no-repeat, linear-gradient(#000 0 0) 0 17px / 100% calc(100% - 17px) no-repeat;
 }
 
 .theme-header {
@@ -878,10 +918,11 @@ a.chip {
 }
 
 .theme-header h2 {
-  font-size: clamp(2rem, 4.4vw, 3.4rem);
-  line-height: 1.12;
+  font-size: clamp(2rem, 4.4vw, 3.6rem);
+  line-height: 1.06;
   margin: 12px 0 8px;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.045em;
+  font-weight: 500;
 }
 
 .theme-orig {
@@ -930,7 +971,7 @@ a.chip {
   padding: 6px 12px;
   border-radius: 0;
   background: transparent;
-  border: 1px solid var(--ink);
+  border: 1px solid var(--line-strong);
   font-size: 0.85rem;
   font-weight: 700;
 }
@@ -958,7 +999,7 @@ a.chip {
   text-align: left;
   border-radius: 0;
   background: var(--bg);
-  border: 2px solid var(--ink);
+  border: 0;
   box-shadow: none;
   color: var(--ink);
   font: inherit;
@@ -980,10 +1021,10 @@ a.chip {
 }
 
 .card-year {
-  font-family: var(--font-display);
-  font-size: 1.12rem;
-  font-weight: 900;
-  line-height: 1.3;
+  font-family: var(--font-hand);
+  font-size: 1.7rem;
+  font-weight: 700;
+  line-height: 1;
   color: var(--c);
   font-variant-numeric: tabular-nums;
 }
@@ -1009,10 +1050,11 @@ a.chip {
 }
 
 .card-title {
-  font-family: var(--font-display);
+  font-family: var(--font-sans);
   font-size: 1.06rem;
-  font-weight: 900;
+  font-weight: 700;
   line-height: 1.5;
+  letter-spacing: -0.01em;
 }
 
 .card-orig {
@@ -1067,7 +1109,7 @@ a.chip {
   border-radius: 0;
   background: transparent;
   border: 0;
-  border-top: 4px solid var(--ink);
+  border-top: 2px solid var(--ink);
 }
 
 .method-card h3 {
@@ -1106,7 +1148,7 @@ a.chip {
   margin: 34px 0 14px;
   font-size: 1.3rem;
   padding-top: 16px;
-  border-top: 4px solid var(--ink);
+  border-top: 2px solid var(--ink);
 }
 
 .biblio {
@@ -1152,8 +1194,9 @@ a.chip {
   font-size: 0.86rem;
   padding: 28px 12px 8px;
   margin-top: 24px;
-  border-top: 4px solid var(--ink);
-  font-weight: 700;
+  border-top: 2px solid var(--ink);
+  font-weight: 800;
+  letter-spacing: 0.04em;
 }
 
 /* ───────── Drawer ───────── */
@@ -1187,7 +1230,7 @@ a.chip {
   overflow-y: auto;
   padding: 26px 32px 40px;
   background: var(--surface);
-  border-left: 4px solid var(--ink);
+  border-left: 0;
   box-shadow: none;
 }
 
@@ -1233,6 +1276,8 @@ a.chip {
   font-size: clamp(1.8rem, 3.6vw, 2.6rem);
   line-height: 1.15;
   margin: 10px 0 8px;
+  font-weight: 500;
+  letter-spacing: -0.035em;
 }
 
 .drawer-orig {
@@ -1247,7 +1292,7 @@ a.chip {
   padding: 16px 18px;
   border-radius: 0;
   background: var(--bg);
-  border: 1px solid var(--ink);
+  border: 0;
   font-size: 0.88rem;
   line-height: 1.7;
 }
@@ -1275,8 +1320,8 @@ a.chip {
   gap: 6px;
   padding: 8px 14px;
   border-radius: 0;
-  background: var(--accent);
-  color: var(--on-accent);
+  background: var(--red);
+  color: #111111;
   text-decoration: none;
   font-weight: 700;
   font-size: 0.84rem;
@@ -1301,7 +1346,7 @@ a.chip {
   border-radius: 0;
   background: var(--bg);
   border-left: 6px solid var(--c);
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: 1.05rem;
   line-height: 1.8;
 }
@@ -1366,6 +1411,125 @@ a.chip {
 .drawer-nav small {
   display: block;
   color: var(--muted);
+}
+
+/* 抽屜與側欄裡的手寫小標縮小一級 */
+.detail-kicker,
+.detail-sub,
+.drawer-label {
+  font-size: 1.2rem;
+}
+
+/* ───────── Generated art（art.js 抽象二創畫） ───────── */
+
+.hero .map-layout {
+  --ink: var(--c-ink);
+  --text: var(--c-text);
+  --muted: var(--c-muted);
+  --line: var(--c-line);
+  --line-strong: var(--c-line-strong);
+  --accent-deep: var(--c-accent-deep);
+  color: var(--ink);
+}
+
+.hero-side {
+  display: grid;
+  gap: 22px;
+  align-content: end;
+}
+
+.hero-art {
+  position: relative;
+}
+
+.art {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.art .r { fill: #f2352a; }
+.art .p { fill: #f6c9c3; }
+.art .k { fill: #111111; }
+.art .w { fill: #efebe4; }
+.art .g { fill: #8c867c; }
+.art .rs { fill: none; stroke: #f2352a; }
+.art .ks { fill: none; stroke: #111111; }
+.art .ws { fill: none; stroke: #efebe4; }
+
+.art .hand {
+  font-family: var(--font-hand);
+  font-weight: 700;
+  fill: #f2352a;
+}
+
+.art .hand-ink { fill: #111111; }
+.art .hand-paper { fill: #efebe4; }
+
+.art-figure {
+  margin: 0;
+}
+
+.art-figure .art {
+  aspect-ratio: 300 / 380;
+  height: auto;
+}
+
+.art-figure figcaption {
+  margin-top: 8px;
+  font-family: var(--font-hand);
+  font-size: 1.1rem;
+  line-height: 1.2;
+  color: var(--muted);
+}
+
+.hero .art-figure {
+  width: min(320px, 100%);
+  margin-left: auto;
+  transform: rotate(1.6deg);
+}
+
+.hero .art-figure figcaption {
+  color: var(--ink);
+}
+
+/* 重複堆疊的字，疊在 hero 畫作左下 */
+.hero-stack {
+  position: absolute;
+  left: -7%;
+  bottom: 9%;
+  display: grid;
+  pointer-events: none;
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: clamp(1.3rem, 2.2vw, 2rem);
+  line-height: 0.62;
+  letter-spacing: -0.05em;
+  color: #111111;
+}
+
+.hero-stack span {
+  display: block;
+  transform: scaleY(calc(1 + var(--i) * 0.07));
+  transform-origin: left top;
+}
+
+.detail-art {
+  height: 150px;
+  margin: -22px -22px 18px;
+  overflow: hidden;
+}
+
+.theme-art {
+  margin-top: 28px;
+  max-width: 220px;
+  transform: rotate(-1.2deg);
+}
+
+.drawer-art {
+  height: 150px;
+  margin: 0 -32px 22px;
+  overflow: hidden;
 }
 
 /* ───────── Motion ───────── */
@@ -1485,6 +1649,23 @@ a.chip {
 }
 
 @media (max-width: 720px) {
+
+  .hero-stack {
+    display: none;
+  }
+
+  .hero .art-figure {
+    width: min(240px, 70%);
+    margin-left: 0;
+  }
+
+  .theme-art {
+    max-width: 220px;
+  }
+
+  .drawer-art {
+    margin: 0 -18px 18px;
+  }
   .page-shell {
     width: calc(100% - 16px);
     margin: 8px auto 24px;
