@@ -1,23 +1,67 @@
 /* Surphi｜歐陸哲學 1990–2020s
-   沿用主站的液態玻璃語彙：淺藍漸層、毛玻璃面板、漂浮節點。 */
+   沿用主站的雜誌編輯風：紙色底、墨黑粗框、直角版塊、粗宋體大標、編輯紅強調色；深色模式跟隨系統。 */
 
 :root {
-  --bg: #edf3ff;
-  --bg-deep: #dfe8fb;
-  --line: rgba(255, 255, 255, 0.3);
-  --line-strong: rgba(255, 255, 255, 0.55);
-  --ink: #0d172b;
-  --text: #24314a;
-  --muted: #56637b;
-  --accent: #5d87ff;
-  --accent-deep: #3a5fd0;
-  --shadow: 0 24px 80px rgba(51, 71, 118, 0.18);
-  --shadow-soft: 0 14px 34px rgba(65, 94, 162, 0.13);
-  --radius-xl: 34px;
-  --radius-lg: 26px;
-  --radius-md: 18px;
+  color-scheme: light;
+  --bg: #f3f0e8;
+  --bg-deep: #e9e4d8;
+  --surface: #fbfaf6;
+  --hover: #ebe6da;
+  --ink: #111111;
+  --text: #26241f;
+  --muted: #5e5a52;
+  --line: rgba(17, 17, 17, 0.16);
+  --line-strong: #111111;
+  --grid: rgba(17, 17, 17, 0.07);
+  --accent: #e63312;
+  --accent-deep: #c22a0d;
+  --accent-soft: #fbe3dc;
+  --on-accent: #ffffff;
+  --backdrop: rgba(17, 17, 17, 0.5);
+  --shadow: none;
+  --shadow-soft: none;
+  --radius-xl: 0;
+  --radius-lg: 0;
+  --radius-md: 0;
+  --font-display: "Playfair Display", "Noto Serif TC", "Songti TC", serif;
   --font-serif: "Noto Serif TC", "Songti TC", serif;
   --font-sans: "Manrope", "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", system-ui, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #121110;
+    --bg-deep: #0c0b0a;
+    --surface: #1a1917;
+    --hover: #27251f;
+    --ink: #f3f0e8;
+    --text: #dcd7cc;
+    --muted: #a39d91;
+    --line: rgba(243, 240, 232, 0.18);
+    --line-strong: #f3f0e8;
+    --grid: rgba(243, 240, 232, 0.07);
+    --accent-deep: #ff6b4f;
+    --accent-soft: rgba(230, 51, 18, 0.18);
+    --backdrop: rgba(0, 0, 0, 0.65);
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #121110;
+  --bg-deep: #0c0b0a;
+  --surface: #1a1917;
+  --hover: #27251f;
+  --ink: #f3f0e8;
+  --text: #dcd7cc;
+  --muted: #a39d91;
+  --line: rgba(243, 240, 232, 0.18);
+  --line-strong: #f3f0e8;
+  --grid: rgba(243, 240, 232, 0.07);
+  --accent-deep: #ff6b4f;
+  --accent-soft: rgba(230, 51, 18, 0.18);
+  --backdrop: rgba(0, 0, 0, 0.65);
 }
 
 * {
@@ -34,13 +78,7 @@ body {
   color: var(--ink);
   font-family: var(--font-sans);
   line-height: 1.6;
-  background:
-    radial-gradient(circle at 18% 12%, rgba(160, 196, 255, 0.65), transparent 22%),
-    radial-gradient(circle at 80% 8%, rgba(255, 255, 255, 0.85), transparent 18%),
-    radial-gradient(circle at 72% 46%, rgba(192, 230, 255, 0.45), transparent 28%),
-    radial-gradient(circle at 20% 78%, rgba(206, 196, 255, 0.35), transparent 26%),
-    linear-gradient(180deg, var(--bg), var(--bg-deep));
-  background-color: var(--bg);
+  background: var(--bg);
   min-height: 100vh;
   overflow-x: hidden;
 }
@@ -59,6 +97,7 @@ a {
   filter: blur(60px);
   opacity: 0.5;
   pointer-events: none;
+  display: none;
 }
 
 .ambient-a {
@@ -93,19 +132,18 @@ a {
 }
 
 .glass-panel {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.14));
-  border: 1px solid var(--line);
-  box-shadow: var(--shadow);
-  backdrop-filter: blur(28px) saturate(160%);
-  -webkit-backdrop-filter: blur(28px) saturate(160%);
+  background: var(--surface);
+  border: 2px solid var(--ink);
+  box-shadow: none;
 }
 
 h1,
 h2,
 h3 {
   margin: 0;
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   color: var(--ink);
+  font-weight: 900;
 }
 
 .eyebrow,
@@ -114,7 +152,7 @@ h3 {
 .detail-sub,
 .drawer-label {
   text-transform: uppercase;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.18em;
   font-size: 0.74rem;
   color: var(--accent-deep);
   font-weight: 800;
@@ -129,8 +167,8 @@ h3 {
 /* ───────── Hero ───────── */
 
 .hero {
-  border-radius: var(--radius-xl);
-  padding: 24px;
+  border-radius: 0;
+  padding: 28px 32px;
 }
 
 .topbar {
@@ -138,18 +176,21 @@ h3 {
   justify-content: space-between;
   align-items: center;
   gap: 18px;
-  margin-bottom: 12px;
+  margin-bottom: 0;
+  padding-bottom: 14px;
+  border-bottom: 4px solid var(--ink);
 }
 
 .brand {
   display: inline-flex;
   align-items: baseline;
   gap: 10px;
-  font-size: 0.85rem;
-  font-weight: 800;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
+  font-size: 1.6rem;
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  text-transform: none;
   text-decoration: none;
+  font-family: var(--font-display);
 }
 
 .brand small {
@@ -157,7 +198,8 @@ h3 {
   letter-spacing: 0.06em;
   text-transform: none;
   color: var(--muted);
-  font-weight: 600;
+  font-weight: 700;
+  font-family: var(--font-sans);
 }
 
 .nav-links {
@@ -169,21 +211,22 @@ h3 {
 
 .nav-links a {
   text-decoration: none;
-  color: var(--muted);
+  color: var(--ink);
   font-size: 0.95rem;
   transition: color 0.3s ease;
+  font-weight: 700;
 }
 
 .nav-links a:hover {
-  color: var(--ink);
+  color: var(--accent-deep);
 }
 
 .nav-links .nav-back {
   padding: 6px 14px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.45);
-  border: 1px solid var(--line-strong);
-  color: var(--ink);
+  border-radius: 0;
+  background: var(--accent);
+  border: 0;
+  color: var(--on-accent);
 }
 
 .hero-intro {
@@ -191,21 +234,22 @@ h3 {
   grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.7fr);
   gap: 32px;
   align-items: end;
-  padding: 26px 10px 30px;
+  padding: 40px 0 36px;
 }
 
 h1 {
-  font-size: clamp(2.3rem, 5.2vw, 4.4rem);
-  line-height: 1.1;
-  letter-spacing: -0.03em;
-  margin: 14px 0 20px;
+  font-size: clamp(2.4rem, 6vw, 5.2rem);
+  line-height: 1.04;
+  letter-spacing: -0.02em;
+  margin: 16px 0 24px;
 }
 
 .lead {
-  color: var(--muted);
+  color: var(--text);
   line-height: 1.9;
   max-width: 42em;
   margin: 0;
+  font-size: 1.04rem;
 }
 
 .hero-actions {
@@ -220,30 +264,36 @@ h1 {
   display: inline-flex;
   align-items: center;
   padding: 13px 20px;
-  border-radius: 999px;
-  border: 0;
+  border-radius: 0;
   font: inherit;
   font-weight: 700;
   text-decoration: none;
   cursor: pointer;
-  transition: transform 0.35s ease, background 0.35s ease, box-shadow 0.35s ease;
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+  border: 2px solid var(--ink);
 }
 
 .primary-button {
-  color: white;
-  background: linear-gradient(135deg, #5f86f5, #6fb8f2);
-  box-shadow: 0 16px 36px rgba(93, 135, 255, 0.3);
+  color: var(--on-accent);
+  background: var(--accent);
+  box-shadow: none;
+  border-color: var(--accent);
 }
 
 .secondary-button {
   color: var(--ink);
-  background: rgba(255, 255, 255, 0.5);
-  border: 1px solid var(--line-strong);
+  background: transparent;
 }
 
-.primary-button:hover,
+.primary-button:hover {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--bg);
+}
+
 .secondary-button:hover {
-  transform: translateY(-3px);
+  background: var(--ink);
+  color: var(--bg);
 }
 
 .hero-stats {
@@ -251,24 +301,27 @@ h1 {
   margin: 0;
   padding: 0;
   display: grid;
-  gap: 10px;
+  gap: 0;
 }
 
 .hero-stats li {
   display: flex;
   align-items: baseline;
   gap: 12px;
-  padding: 14px 18px;
-  border-radius: 20px;
-  background: rgba(255, 255, 255, 0.36);
-  border: 1px solid var(--line-strong);
+  padding: 14px 0;
+  border-radius: 0;
+  background: none;
+  border: 0;
+  border-top: 2px solid var(--ink);
 }
 
 .hero-stats strong {
-  font-family: var(--font-serif);
-  font-size: 1.9rem;
+  font-family: var(--font-display);
+  font-size: 2.6rem;
   line-height: 1;
   min-width: 4.2em;
+  font-weight: 900;
+  color: var(--accent);
 }
 
 .hero-stats span {
@@ -279,10 +332,10 @@ h1 {
 /* ───────── Thought map ───────── */
 
 .map-stage {
-  padding: 18px;
-  border-radius: 32px;
-  background: rgba(255, 255, 255, 0.12);
-  border: 1px solid var(--line);
+  padding: 20px 0 0;
+  border-radius: 0;
+  background: none;
+  border: 0;
 }
 
 .stage-copy {
@@ -291,7 +344,7 @@ h1 {
   align-items: baseline;
   flex-wrap: wrap;
   gap: 8px 16px;
-  padding: 6px 6px 14px;
+  padding: 0 0 14px;
 }
 
 .stage-copy p {
@@ -308,11 +361,9 @@ h1 {
 .map-canvas {
   position: relative;
   min-height: 580px;
-  border-radius: 28px;
-  background:
-    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.36), rgba(255, 255, 255, 0.1)),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.08));
-  border: 1px solid rgba(255, 255, 255, 0.36);
+  border-radius: 0;
+  background: var(--bg);
+  border: 2px solid var(--ink);
   overflow: hidden;
 }
 
@@ -320,30 +371,14 @@ h1 {
   content: "";
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(rgba(255, 255, 255, 0.13) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.12) 1px, transparent 1px);
-  background-size: 60px 60px;
-  mask-image: radial-gradient(circle at center, black 55%, transparent 100%);
-  -webkit-mask-image: radial-gradient(circle at center, black 55%, transparent 100%);
+  background: linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 48px 48px;
   pointer-events: none;
 }
 
 .map-canvas::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(circle at 16% 18%, rgba(255, 255, 255, 0.9) 0 2px, transparent 3px),
-    radial-gradient(circle at 23% 52%, rgba(255, 255, 255, 0.7) 0 1.5px, transparent 3px),
-    radial-gradient(circle at 48% 34%, rgba(255, 255, 255, 0.75) 0 1.5px, transparent 3px),
-    radial-gradient(circle at 54% 88%, rgba(255, 255, 255, 0.65) 0 1.4px, transparent 3px),
-    radial-gradient(circle at 76% 12%, rgba(255, 255, 255, 0.78) 0 1.7px, transparent 3px),
-    radial-gradient(circle at 80% 78%, rgba(255, 255, 255, 0.92) 0 2px, transparent 3px),
-    radial-gradient(circle at 92% 30%, rgba(255, 255, 255, 0.68) 0 1.5px, transparent 3px),
-    radial-gradient(circle at 8% 90%, rgba(255, 255, 255, 0.72) 0 1.8px, transparent 3px);
-  opacity: 0.85;
-  pointer-events: none;
+  display: none;
 }
 
 .map-lines {
@@ -355,23 +390,23 @@ h1 {
 
 .map-edge {
   fill: none;
-  stroke: rgba(255, 255, 255, 0.85);
-  stroke-width: 1.6;
-  stroke-linecap: round;
-  stroke-dasharray: 2 5;
-  opacity: 0.75;
+  stroke: var(--ink);
+  stroke-width: 1.4;
+  stroke-linecap: butt;
+  stroke-dasharray: 3 5;
+  opacity: 0.4;
   transition: stroke 0.45s ease, opacity 0.45s ease, stroke-width 0.45s ease;
 }
 
 .map-edge.is-active {
   stroke: var(--c, var(--accent));
-  stroke-width: 2.6;
+  stroke-width: 3;
   stroke-dasharray: none;
-  opacity: 0.9;
+  opacity: 1;
 }
 
 .map-edge.is-dim {
-  opacity: 0.3;
+  opacity: 0.15;
 }
 
 .map-node {
@@ -383,45 +418,44 @@ h1 {
   width: min(196px, 25%);
   padding: 14px 16px 14px 30px;
   text-align: left;
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.26));
-  box-shadow: 0 20px 44px rgba(65, 94, 162, 0.14);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  border-radius: 0;
+  border: 2px solid var(--ink);
+  background: var(--surface);
+  box-shadow: none;
   color: var(--ink);
   font: inherit;
   cursor: pointer;
-  animation: floatNode 8s ease-in-out infinite;
+  animation: none;
   animation-delay: var(--delay, 0s);
-  transition: box-shadow 0.45s ease, border-color 0.45s ease, background 0.45s ease, opacity 0.45s ease;
+  transition: background 0.25s ease, color 0.25s ease, opacity 0.25s ease;
 }
 
 .map-node::before {
   content: "";
   position: absolute;
-  width: 9px;
-  height: 9px;
+  width: 10px;
+  height: 10px;
   left: 14px;
   top: 18px;
   border-radius: 50%;
   background: var(--c);
-  box-shadow: 0 0 14px var(--c);
+  box-shadow: none;
 }
 
 .node-no {
   font-size: 0.72rem;
   letter-spacing: 0.16em;
   font-weight: 800;
-  color: var(--muted);
+  color: var(--accent-deep);
 }
 
 .map-node strong {
   display: block;
   margin-top: 4px;
-  font-family: var(--font-serif);
-  font-size: 0.98rem;
+  font-family: var(--font-display);
+  font-size: 1.02rem;
   line-height: 1.4;
+  font-weight: 900;
 }
 
 .node-meta {
@@ -432,32 +466,39 @@ h1 {
 }
 
 .map-node:hover {
-  border-color: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 24px 54px rgba(65, 94, 162, 0.2);
+  box-shadow: none;
+  background: var(--hover);
 }
 
 .map-node.active {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(255, 255, 255, 0.55));
-  border-color: var(--c);
-  box-shadow: 0 24px 54px rgba(65, 94, 162, 0.24), 0 0 0 3px rgba(255, 255, 255, 0.5);
+  background: var(--ink);
+  border-color: var(--ink);
+  box-shadow: none;
+  color: var(--bg);
+}
+
+.map-node.active .node-no,
+.map-node.active .node-meta {
+  color: inherit;
+  opacity: 0.75;
 }
 
 .map-node.is-dim {
-  opacity: 0.62;
+  opacity: 0.55;
 }
 
 .map-detail {
-  border-radius: 28px;
+  border-radius: 0;
   padding: 22px;
   max-height: 580px;
   overflow-y: auto;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.56), rgba(255, 255, 255, 0.26));
-  box-shadow: var(--shadow-soft);
+  background: var(--surface);
+  box-shadow: none;
 }
 
 .map-detail h2 {
-  font-size: 1.55rem;
-  line-height: 1.3;
+  font-size: 1.8rem;
+  line-height: 1.2;
   margin: 8px 0 4px;
 }
 
@@ -493,19 +534,19 @@ h1 {
   gap: 10px;
   align-items: start;
   text-align: left;
-  padding: 10px 12px;
-  border-radius: 14px;
-  background: rgba(255, 255, 255, 0.46);
-  border: 1px solid var(--line-strong);
+  padding: 10px 2px;
+  border-radius: 0;
+  background: transparent;
+  border: 0;
   color: var(--ink);
   font: inherit;
   cursor: pointer;
-  transition: transform 0.3s ease, background 0.3s ease;
+  transition: background 0.25s ease;
+  border-top: 1px solid var(--line);
 }
 
 .paper-pill:hover {
-  transform: translateX(3px);
-  background: rgba(255, 255, 255, 0.75);
+  background: var(--hover);
 }
 
 .pill-year {
@@ -531,9 +572,9 @@ h1 {
   width: 100%;
   text-align: left;
   padding: 10px 12px;
-  border-radius: 14px;
-  border: 1px dashed rgba(255, 255, 255, 0.85);
-  background: rgba(255, 255, 255, 0.24);
+  border-radius: 0;
+  border: 1px dashed var(--ink);
+  background: transparent;
   font: inherit;
   font-size: 0.86rem;
   line-height: 1.65;
@@ -543,7 +584,7 @@ h1 {
 }
 
 .link-item:hover {
-  background: rgba(255, 255, 255, 0.6);
+  background: var(--hover);
 }
 
 .link-item b {
@@ -568,7 +609,8 @@ h1 {
   margin-top: 16px;
   color: var(--accent-deep);
   font-weight: 700;
-  text-decoration: none;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .text-link:hover {
@@ -579,8 +621,8 @@ h1 {
 
 .section {
   margin-top: 24px;
-  padding: 34px;
-  border-radius: var(--radius-xl);
+  padding: 40px;
+  border-radius: 0;
 }
 
 .section-heading {
@@ -588,12 +630,14 @@ h1 {
 }
 
 .section-heading h2 {
-  font-size: clamp(1.8rem, 3.6vw, 2.8rem);
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
   margin: 12px 0 14px;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
 }
 
 .section-heading p {
-  color: var(--muted);
+  color: var(--text);
   line-height: 1.85;
   margin: 0;
 }
@@ -610,18 +654,19 @@ h1 {
   align-items: center;
   gap: 8px;
   padding: 8px 14px;
-  border-radius: 999px;
-  border: 1px solid var(--line-strong);
-  background: rgba(255, 255, 255, 0.36);
+  border-radius: 0;
+  border: 1px solid var(--ink);
+  background: transparent;
   color: var(--ink);
   font: inherit;
   font-size: 0.86rem;
   cursor: pointer;
-  transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  transition: background 0.25s ease, color 0.25s ease;
+  font-weight: 700;
 }
 
 .chip:hover {
-  background: rgba(255, 255, 255, 0.65);
+  background: var(--hover);
 }
 
 a.chip {
@@ -629,10 +674,11 @@ a.chip {
 }
 
 .chip[aria-pressed="true"] {
-  background: rgba(255, 255, 255, 0.88);
-  border-color: var(--c, var(--accent));
-  box-shadow: 0 8px 20px rgba(65, 94, 162, 0.14);
+  background: var(--ink);
+  border-color: var(--ink);
+  box-shadow: none;
   font-weight: 700;
+  color: var(--bg);
 }
 
 /* ───────── Timeline ───────── */
@@ -640,9 +686,9 @@ a.chip {
 .timeline-scroll {
   overflow-x: auto;
   padding-bottom: 6px;
-  border-radius: 24px;
-  background: rgba(255, 255, 255, 0.18);
-  border: 1px solid var(--line);
+  border-radius: 0;
+  background: var(--bg);
+  border: 2px solid var(--ink);
 }
 
 .timeline {
@@ -667,11 +713,11 @@ a.chip {
   bottom: 0;
   left: var(--x);
   width: 1px;
-  background: rgba(255, 255, 255, 0.55);
+  background: var(--grid);
 }
 
 .grid-line.is-decade {
-  background: rgba(58, 95, 208, 0.22);
+  background: var(--line);
 }
 
 .lane {
@@ -681,7 +727,7 @@ a.chip {
 }
 
 .lane + .lane {
-  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  border-top: 1px solid var(--line);
 }
 
 .lane.is-dim {
@@ -723,7 +769,7 @@ a.chip {
   height: 2px;
   margin-top: -1px;
   background: linear-gradient(90deg, transparent, var(--c) 8%, var(--c) 92%, transparent);
-  opacity: 0.28;
+  opacity: 0.55;
 }
 
 .t-dot {
@@ -747,9 +793,10 @@ a.chip {
   inset: 7px;
   border-radius: 50%;
   background: var(--c);
-  border: 3px solid rgba(255, 255, 255, 0.95);
-  box-shadow: 0 4px 12px rgba(30, 50, 100, 0.25);
+  border: 3px solid var(--surface);
+  box-shadow: none;
   transition: transform 0.3s ease;
+  outline: 2px solid var(--ink);
 }
 
 .t-dot:hover::before,
@@ -812,10 +859,11 @@ a.chip {
 }
 
 .decade-card {
-  padding: 20px;
-  border-radius: 22px;
-  background: rgba(255, 255, 255, 0.32);
-  border: 1px solid var(--line-strong);
+  padding: 16px 0 0;
+  border-radius: 0;
+  background: transparent;
+  border: 0;
+  border-top: 4px solid var(--ink);
 }
 
 .decade-card .eyebrow {
@@ -823,7 +871,7 @@ a.chip {
 }
 
 .decade-card h3 {
-  font-size: 1.08rem;
+  font-size: 1.25rem;
   line-height: 1.45;
   margin: 8px 0 10px;
 }
@@ -832,7 +880,7 @@ a.chip {
   margin: 0;
   font-size: 0.88rem;
   line-height: 1.8;
-  color: var(--muted);
+  color: var(--text);
 }
 
 .decade-papers {
@@ -848,9 +896,10 @@ a.chip {
 
 .theme-section {
   margin-top: 24px;
-  padding: 34px;
-  border-radius: var(--radius-xl);
+  padding: 40px;
+  border-radius: 0;
   scroll-margin-top: 16px;
+  border-top: 12px solid var(--c);
 }
 
 .theme-header {
@@ -867,19 +916,20 @@ a.chip {
   font-size: 0.8rem;
   font-weight: 800;
   letter-spacing: 0.16em;
-  color: var(--muted);
+  color: var(--ink);
 }
 
 .theme-no .swatch {
   width: 11px;
   height: 11px;
-  box-shadow: 0 0 14px var(--c);
+  box-shadow: none;
 }
 
 .theme-header h2 {
-  font-size: clamp(1.7rem, 3.2vw, 2.5rem);
-  line-height: 1.25;
+  font-size: clamp(2rem, 4.4vw, 3.4rem);
+  line-height: 1.12;
   margin: 12px 0 8px;
+  letter-spacing: -0.02em;
 }
 
 .theme-orig {
@@ -892,12 +942,13 @@ a.chip {
   display: inline-block;
   margin-top: 14px;
   padding: 5px 12px;
-  border-radius: 999px;
+  border-radius: 0;
   font-size: 0.8rem;
   font-weight: 700;
   font-variant-numeric: tabular-nums;
-  background: rgba(255, 255, 255, 0.5);
-  border: 1px solid var(--line-strong);
+  background: var(--ink);
+  border: 0;
+  color: var(--bg);
 }
 
 .theme-body p {
@@ -925,9 +976,9 @@ a.chip {
   align-items: baseline;
   gap: 6px;
   padding: 6px 12px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.46);
-  border: 1px solid var(--line-strong);
+  border-radius: 0;
+  background: transparent;
+  border: 1px solid var(--ink);
   font-size: 0.85rem;
   font-weight: 700;
 }
@@ -953,20 +1004,20 @@ a.chip {
   height: 100%;
   padding: 20px;
   text-align: left;
-  border-radius: 24px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.26));
-  border: 1px solid var(--line-strong);
-  box-shadow: var(--shadow-soft);
+  border-radius: 0;
+  background: var(--bg);
+  border: 2px solid var(--ink);
+  box-shadow: none;
   color: var(--ink);
   font: inherit;
   cursor: pointer;
-  transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+  transition: transform 0.25s ease, background 0.25s ease;
 }
 
 .paper-card:hover {
-  transform: translateY(-4px);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.4));
-  box-shadow: 0 22px 48px rgba(65, 94, 162, 0.2);
+  transform: translateY(-3px);
+  background: var(--hover);
+  box-shadow: none;
 }
 
 .card-meta {
@@ -977,9 +1028,9 @@ a.chip {
 }
 
 .card-year {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 900;
   line-height: 1;
   color: var(--c);
   font-variant-numeric: tabular-nums;
@@ -1006,9 +1057,9 @@ a.chip {
 }
 
 .card-title {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-size: 1.06rem;
-  font-weight: 700;
+  font-weight: 900;
   line-height: 1.5;
 }
 
@@ -1042,7 +1093,7 @@ a.chip {
   gap: 10px;
   font-size: 0.78rem;
   color: var(--muted);
-  border-top: 1px solid rgba(255, 255, 255, 0.6);
+  border-top: 1px solid var(--line);
 }
 
 .card-foot b {
@@ -1060,10 +1111,11 @@ a.chip {
 }
 
 .method-card {
-  padding: 24px;
-  border-radius: 24px;
-  background: rgba(255, 255, 255, 0.32);
-  border: 1px solid var(--line-strong);
+  padding: 20px 0 0;
+  border-radius: 0;
+  background: transparent;
+  border: 0;
+  border-top: 4px solid var(--ink);
 }
 
 .method-card h3 {
@@ -1093,14 +1145,16 @@ a.chip {
 
 .method-note {
   padding: 10px 14px;
-  border-radius: 14px;
-  background: rgba(255, 255, 255, 0.5);
-  border-left: 3px solid var(--accent);
+  border-radius: 0;
+  background: var(--accent-soft);
+  border-left: 4px solid var(--accent);
 }
 
 .biblio-title {
   margin: 34px 0 14px;
   font-size: 1.3rem;
+  padding-top: 16px;
+  border-top: 4px solid var(--ink);
 }
 
 .biblio {
@@ -1142,9 +1196,12 @@ a.chip {
 
 .site-footer {
   text-align: center;
-  color: var(--muted);
+  color: var(--ink);
   font-size: 0.86rem;
   padding: 28px 12px 8px;
+  margin-top: 24px;
+  border-top: 4px solid var(--ink);
+  font-weight: 700;
 }
 
 /* ───────── Drawer ───────── */
@@ -1170,20 +1227,16 @@ a.chip {
 }
 
 .drawer::backdrop {
-  background: rgba(20, 34, 70, 0.26);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
+  background: var(--backdrop);
 }
 
 .drawer-inner {
   height: 100%;
   overflow-y: auto;
   padding: 26px 32px 40px;
-  background: linear-gradient(180deg, rgba(247, 250, 255, 0.94), rgba(232, 240, 255, 0.92));
-  backdrop-filter: blur(30px) saturate(150%);
-  -webkit-backdrop-filter: blur(30px) saturate(150%);
-  border-left: 1px solid rgba(255, 255, 255, 0.8);
-  box-shadow: -30px 0 80px rgba(40, 60, 120, 0.2);
+  background: var(--surface);
+  border-left: 4px solid var(--ink);
+  box-shadow: none;
 }
 
 .drawer-top {
@@ -1199,8 +1252,8 @@ a.chip {
   height: 40px;
   flex: none;
   border-radius: 50%;
-  border: 1px solid rgba(13, 23, 43, 0.12);
-  background: rgba(255, 255, 255, 0.8);
+  border: 2px solid var(--ink);
+  background: transparent;
   font-size: 1.3rem;
   line-height: 1;
   color: var(--ink);
@@ -1208,7 +1261,8 @@ a.chip {
 }
 
 .close-button:hover {
-  background: white;
+  background: var(--ink);
+  color: var(--bg);
 }
 
 .drawer-meta {
@@ -1224,8 +1278,8 @@ a.chip {
 }
 
 .drawer h2 {
-  font-size: clamp(1.5rem, 3vw, 2rem);
-  line-height: 1.35;
+  font-size: clamp(1.8rem, 3.6vw, 2.6rem);
+  line-height: 1.15;
   margin: 10px 0 8px;
 }
 
@@ -1239,9 +1293,9 @@ a.chip {
 .cite-box {
   margin-top: 18px;
   padding: 16px 18px;
-  border-radius: 18px;
-  background: rgba(255, 255, 255, 0.7);
-  border: 1px solid rgba(255, 255, 255, 0.95);
+  border-radius: 0;
+  background: var(--bg);
+  border: 1px solid var(--ink);
   font-size: 0.88rem;
   line-height: 1.7;
 }
@@ -1268,9 +1322,9 @@ a.chip {
   align-items: center;
   gap: 6px;
   padding: 8px 14px;
-  border-radius: 999px;
-  background: linear-gradient(135deg, #5f86f5, #6fb8f2);
-  color: white;
+  border-radius: 0;
+  background: var(--accent);
+  color: var(--on-accent);
   text-decoration: none;
   font-weight: 700;
   font-size: 0.84rem;
@@ -1292,9 +1346,9 @@ a.chip {
 .drawer-question {
   margin: 0;
   padding: 16px 18px;
-  border-radius: 18px;
-  background: rgba(255, 255, 255, 0.55);
-  border-left: 3px solid var(--c);
+  border-radius: 0;
+  background: var(--bg);
+  border-left: 6px solid var(--c);
   font-family: var(--font-serif);
   font-size: 1.05rem;
   line-height: 1.8;
@@ -1331,15 +1385,15 @@ a.chip {
   gap: 12px;
   margin-top: 32px;
   padding-top: 18px;
-  border-top: 1px solid rgba(13, 23, 43, 0.08);
+  border-top: 2px solid var(--ink);
 }
 
 .drawer-nav button {
   max-width: 48%;
   padding: 10px 14px;
-  border-radius: 14px;
-  border: 1px solid rgba(255, 255, 255, 0.95);
-  background: rgba(255, 255, 255, 0.6);
+  border-radius: 0;
+  border: 1px solid var(--ink);
+  background: transparent;
   font: inherit;
   font-size: 0.82rem;
   line-height: 1.5;
@@ -1354,7 +1408,7 @@ a.chip {
 }
 
 .drawer-nav button:hover {
-  background: white;
+  background: var(--hover);
 }
 
 .drawer-nav small {
@@ -1483,7 +1537,7 @@ a.chip {
   .hero,
   .section,
   .theme-section {
-    border-radius: 26px;
+    border-radius: 0;
   }
 
   .hero {
@@ -1518,7 +1572,7 @@ a.chip {
 
   .map-stage {
     padding: 12px;
-    border-radius: 24px;
+    border-radius: 0;
   }
 
   /* 手機版：不縮小圖譜，改成可點選的節點清單 */
@@ -1582,8 +1636,8 @@ a.chip {
 
   .drawer-inner {
     border-left: 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.85);
-    border-radius: 26px 26px 0 0;
+    border-top: 4px solid var(--ink);
+    border-radius: 0;
     padding: 20px 18px 36px;
   }
 }

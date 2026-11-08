@@ -11,7 +11,7 @@ Open `index.html` in a browser to view the site. No build step is needed.
 - `index.html` : 首頁（關係圖譜、時間長廊、時期章節、選文方法與出處）
 - `data.js` : 時期、文本、時期間承繼關係；修改內容只需編輯此檔
 - `script.js` : 圖譜、時間長廊、導讀抽屜與出處的渲染與互動
-- `styles.css` : 液態玻璃樣式，版面架構與 `continental/styles.css` 一致
+- `styles.css` : 雜誌編輯風樣式（紙色底、墨黑粗框、直角版塊、粗宋體大標、編輯紅 #E63312，深色模式跟隨系統），版面架構與 `continental/styles.css` 一致
 
 原典附標準引用位置（Stephanus、Bekker、康德學院版 AA 等）與公開全文連結（Project Gutenberg、New Advent、維基文庫、Korpora）；研究論文附 DOI 與 2026-11-08 的 Crossref 被引次數。涉及性暴力或病理化語言的文本加註內容提示。單篇導讀可用 `index.html#text:<id>` 直接連結，例如 `#text:lacan-1963`。
 
@@ -22,7 +22,7 @@ Open `index.html` in a browser to view the site. No build step is needed.
 - `continental/index.html` : 專區頁面（思潮圖譜、時間軸、思潮章節、選文方法與書目）
 - `continental/data.js` : 思潮、論文、思潮間衍伸關係與十年敘事的資料；修改內容只需編輯此檔
 - `continental/app.js` : 圖譜、時間軸、論文導讀抽屜與書目的渲染與互動
-- `continental/styles.css` : 沿用主站液態玻璃風格的專區樣式
+- `continental/styles.css` : 沿用主站雜誌編輯風的專區樣式
 
 選文規則：只收期刊論文（含期刊刊出的譯文），出版於 1990–2021 年。書目於 2026-11-06 以 Crossref 與出版者頁面核對，引用數為當日 Crossref 數字。單篇導讀可用 `continental/index.html#paper:<id>` 直接連結，例如 `#paper:mbembe-2003`。
 
